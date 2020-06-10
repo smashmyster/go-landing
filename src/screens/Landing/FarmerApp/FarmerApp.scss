@@ -1,0 +1,26 @@
+.farmer-app-container{
+    .farmer-app-info{
+        padding-left: 3rem;
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 2rem;
+        z-index: 2;
+        .farmer-app-info-content{
+            width: fit-content;
+        }
+    }
+    .farmer-app-example{
+
+        .app-img-background{
+            border-left: 360px solid transparent;
+            border-bottom: 485px solid #346e3d;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .farmer-app-container{
+        flex-direction: column !important;
+    }
+}

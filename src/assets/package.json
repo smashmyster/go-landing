@@ -1,0 +1,7 @@
+{
+    "name": "assets",
+    "main": "index.tsx",
+    "version": "0.0.1",
+    "description": "Khula Web Assets",
+    "files": []
+}

@@ -1,0 +1,8 @@
+node_modules/**/*
+npm-debug.*
+*.jks
+*.p12
+*.key
+*.mobileprovision
+*.DS_Store
+/package-lock.json

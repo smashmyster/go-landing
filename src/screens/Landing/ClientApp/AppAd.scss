@@ -1,0 +1,129 @@
+.app-container{
+    &.row{
+        display: flex;
+    }
+    font-family: 'Roboto',sans-serif;
+    color:$khula-charcoal;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .app-header{
+        font-size: 1.87rem;
+        margin-bottom: 0.8rem
+    }
+    .app-description{
+        font-size:$sixteen-px;
+        color: $accent-charcoal;
+        width:29rem;
+        line-height: $twenty-four-px;
+    }
+    .app-links{
+        &.mobile{
+            display: none;
+        }
+        &.desktop{
+            display: initial;
+        }
+    }
+    .green{
+        color:$khula-green;
+    }
+    .app-points{
+        line-height: $thirty-two-px;
+        font-size: 1.2rem;
+        width:33rem;
+    }
+    .android-btn{
+        margin-right: $sixteen-px;
+    }
+    ol{
+        padding-inline-start: 24px !important;
+        li{
+            margin-bottom: $eight-px;
+        }
+    }
+    .app-example{
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 500px;
+        height: 625px;
+        .app-example-child{
+            position: absolute;
+            right: 0;
+            top: 0;
+            left: 0;
+            bottom: 0;
+        }
+        .triangle{
+            z-index: 1;
+            &.flipped{
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+            }
+        }
+        .app-img-container{
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .app-img-background{
+            width: 0;
+            height: 0;
+            border-bottom: 410px solid rgb(52,110,61);
+        }
+        .app-img{
+            z-index: 1;
+            height: 375px;
+        }
+    }
+}
+@media (max-width: $breakpoint-tablet) {
+    .app-container{
+        position: relative;
+        flex-direction: column;
+        .app-header{
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+        }
+        .app-info{
+            padding: $twenty-four-px;
+            text-align: center;
+        }
+        .app-links{
+            &.mobile{
+                display: initial;
+            }
+            &.desktop{
+                display: none;
+            }
+        }
+        .app-points{
+            width:$full-screen;
+            font-size: 1.05rem;
+            text-align: left;
+        }
+        .app-description{
+            width:$full-screen;
+            font-size: 0.8rem;
+        }
+        .app-example{
+            width: $full-screen;
+            height: calc(100vw / 200 * 250);
+            .app-example-child{
+                right: 0;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                display: flex;
+                flex-direction: column;
+            }
+            .app-img{
+                z-index: 1;
+                height: 375px;
+            }
+        }
+    }
+}

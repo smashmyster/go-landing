@@ -1,0 +1,31 @@
+.btn{
+    color:$white;
+    border-radius: $eight-px;
+    font-size: $sixteen-px;
+    text-align: center;
+    color: $white;
+    height: $btn-height;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    .btn-title{
+        cursor: pointer;
+    }
+    &.greybg{
+        background-color: $accent-grey;
+        cursor:not-allowed;
+        .btn-title{
+            cursor: not-allowed;
+        }
+    }
+    &.greenbg{
+        background-color: $khula-green;
+        cursor: pointer;
+        .btn-title{
+            cursor: pointer;
+        }
+    }
+}
