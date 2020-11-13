@@ -56,7 +56,6 @@ export default class Client extends React.Component {
     componentDidMount() {
         apiGETALLPRODUCEPERCATEGORY(10,true).then((categories) => {
             categories = categories.filter((category) => category.products.length > 0).map(category=>{
-                console.log("Products ", categories)
                 const len=category.products.length
                 if(len<=numberOfVisible){
                     for (let index = 0; index < numberOfVisible-len+1; index++) {

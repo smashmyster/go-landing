@@ -9,6 +9,13 @@ export interface CategoryLine{
     products:Array<Product|undefined>
 }
 
+export interface IGenericType {
+    id?: number|string
+    name?: string
+    type?: string
+    category?: string
+}
+
 export interface Product{
     id:number
     name:string
@@ -16,6 +23,7 @@ export interface Product{
     lowerPrice:number
     upperPrice:number
     packaging:Array<Packaging>
+    variety:Array<IGenericType>
 }
 
 export interface Packaging{
