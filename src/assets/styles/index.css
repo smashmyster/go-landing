@@ -316,7 +316,7 @@
     position: absolute;
     padding-top: 1.5rem;
     padding-left: 2.6rem;
-    top: 11rem; }
+    top: 12rem; }
     .banner-container .app-store-btns .android-btn {
       padding-left: 2px; }
 
@@ -744,6 +744,20 @@
 
 .client-container {
   padding: 1.5rem 0 0 2.5rem; }
+  .client-container .market-header {
+    color: #3E3E3E;
+    font-size: 1.6rem;
+    width: 30rem;
+    margin: auto;
+    text-align: center; }
+  .client-container .market-description {
+    font-size: 0.8rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 0.6rem 0;
+    margin-bottom: 20px;
+    color: #8F8F8F; }
   .client-container .category-container {
     width: 100%;
     position: relative;

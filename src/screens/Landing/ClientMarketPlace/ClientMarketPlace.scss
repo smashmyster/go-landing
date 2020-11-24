@@ -1,12 +1,28 @@
 .client-container{
     padding: $twenty-four-px 0 0 2.5rem;
+    .market-header{
+        color: $khula-charcoal;
+        font-size: 1.6rem;
+        width: 30rem;
+        margin:auto;
+        text-align: center;
+    }
+    .market-description{
+        font-size: 0.8rem;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        padding: 0.6rem 0;
+        margin-bottom: 20px;
+        color: $accent-grey;
+    }
     
     .category-container{
         width: $full-screen;
         position: relative;
         height: 16rem;
         margin: auto;
-
+        
         .container-child{
             position: absolute;
             top:0;
