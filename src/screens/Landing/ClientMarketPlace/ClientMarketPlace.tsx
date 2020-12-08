@@ -94,7 +94,7 @@ export default class Client extends React.Component {
             </Modal>,
             <RequestModal product={requestProduct} visible={requestModalVisible} onClose={() => this.setState({ requestModalVisible: false })} />,
             <div className="client-container">
-                <div className="market-header">Join our Trading Marketplace for Farmers and Buyers of Fresh Produce</div>
+                <div className="market-header">Join our trading marketplace for farmers and buyers of fresh produce</div>
                 <div className="market-description">A safe, efficient and cost effective way to trade daily</div>
                 {
                     loading &&

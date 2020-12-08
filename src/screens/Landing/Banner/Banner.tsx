@@ -12,7 +12,7 @@ export default class Banner extends React.Component {
                 <img className="banner-img" src={bannerImg} alt="banner-img"/>
                 <div className="banner-txt">
                     <p className="lrg-txt">
-                    Join the Khula E - commerce Ecosystem
+                    Join the Khula E-commerce Ecosystem
                     </p>
                     <p className="sml-txt">Order Agro-Chemicals, Fertilisers </p>
                     <p className="sml-txt">and Seeds in the Khula Input Market Place.</p>
