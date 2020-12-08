@@ -45,7 +45,7 @@ export default class ProductCard extends React.Component<ProductCardProps>{
                         <img className="product-img" alt={product.name} onError={(e) => this.onError()} src={src} />
                     </div>
                     {
-                        product.variety.length > 0 && <div className="product-price">{product.variety.length} varieties</div> 
+                        product.variety.length > 0 && <div className="product-price">{`${product.variety.length} ${product.variety.length === 1 ? "variety" : "varieties"} `}</div> 
                     }
                     <div className="product-qty">{product.variety.slice(0,3).map((item)=>item.name).join(", ")} </div>
                 </div>
