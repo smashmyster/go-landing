@@ -50,14 +50,7 @@ export default class ProductCard extends React.Component<ProductCardProps>{
                     <div className="product-qty">{product.variety.slice(0,3).map((item)=>item.name).join(", ")} </div>
                 </div>
                 <div className="product-btns pointer">
-                    {
-                        noFarmer ?
-                            <div className="product-btn request-btn" onClick={() => this.requestProduct(product)} >Request</div> :
-                            [
-                                <div key={1} className="bid-btn product-btn" onClick={(e) => this.openModal(e)} >Bid</div>,
-                                <div key={2} className="farmers-btn product-btn" onClick={(e) => this.openModal(e)}>Farmers</div>
-                            ]
-                    }
+                    <div className="product-btn request-btn" onClick={() => this.requestProduct(product)} >Request</div>
                 </div>
             </div>
         ]
