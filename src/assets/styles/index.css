@@ -316,7 +316,7 @@
     position: absolute;
     padding-top: 1.5rem;
     padding-left: 2.6rem;
-    top: 11rem; }
+    top: 12rem; }
     .banner-container .app-store-btns .android-btn {
       padding-left: 2px; }
 
@@ -354,7 +354,7 @@
     .product-card {
       margin: 0; } }
   .product-card .product-name {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #3E3E3E;
     padding: 0.3rem;
     font-weight: 400;
@@ -367,18 +367,20 @@
     .product-card .product-details .product-img-container {
       flex: 1; }
       .product-card .product-details .product-img-container .product-img {
-        height: 5rem;
+        height: 4.5rem;
         width: auto;
         object-fit: contain;
         display: unset; }
     .product-card .product-details .product-price {
       color: #387C3F;
       font-size: 0.88rem;
-      margin-top: 0.5rem; }
+      margin-top: 0.1rem; }
     .product-card .product-details .product-qty {
       color: #3E3E3E;
-      font-size: 0.88rem;
-      margin-bottom: 0.8rem; }
+      font-size: 0.8rem;
+      margin-bottom: 0.5rem;
+      text-transform: capitalize;
+      height: 27px; }
   .product-card .product-btns {
     display: flex;
     flex-direction: row;
@@ -742,6 +744,20 @@
 
 .client-container {
   padding: 1.5rem 0 0 2.5rem; }
+  .client-container .market-header {
+    color: #3E3E3E;
+    font-size: 1.6rem;
+    width: 30rem;
+    margin: auto;
+    text-align: center; }
+  .client-container .market-description {
+    font-size: 0.8rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 0.6rem 0;
+    margin-bottom: 20px;
+    color: #8F8F8F; }
   .client-container .category-container {
     width: 100%;
     position: relative;

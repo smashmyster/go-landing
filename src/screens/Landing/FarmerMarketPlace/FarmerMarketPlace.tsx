@@ -7,7 +7,7 @@ export default class Farmer extends React.Component {
     return (
       <div className="farmer-container">
         <ScrollAnimation animateOnce={true} delay={2} duration={3} animateIn="slideInUp">
-          <div className="farmer-header">We have launched our market place for farmers</div>
+          <div className="farmer-header">We have launched our inputs market place for farmers</div>
           <div className="farmer-description">Buy over 2000+ products from our app</div>
         </ScrollAnimation>
         <ScrollAnimation animateOnce={true} delay={2} duration={3} animateIn="slideInUp">

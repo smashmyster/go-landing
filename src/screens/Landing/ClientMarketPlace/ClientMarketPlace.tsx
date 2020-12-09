@@ -42,24 +42,23 @@ export default class Client extends React.Component {
     state: {
         categories: Array<CategoryLine>,
         loading?: boolean,
-        modalVisible:boolean,
-        requestProduct?:Product
-        requestModalVisible:boolean
+        modalVisible: boolean,
+        requestProduct?: Product
+        requestModalVisible: boolean
     } = {
             categories: [],
             loading: true,
-            modalVisible:false,
-            requestProduct:undefined,
-            requestModalVisible:false
+            modalVisible: false,
+            requestProduct: undefined,
+            requestModalVisible: false
         }
 
     componentDidMount() {
-        apiGETALLPRODUCEPERCATEGORY(10,true).then((categories) => {
-            categories = categories.filter((category) => category.products.length > 0).map(category=>{
-                console.log("Products ", categories)
-                const len=category.products.length
-                if(len<=numberOfVisible){
-                    for (let index = 0; index < numberOfVisible-len+1; index++) {
+        apiGETALLPRODUCEPERCATEGORY(10, true).then((categories) => {
+            categories = categories.filter((category) => category.products.length > 0).map(category => {
+                const len = category.products.length
+                if (len <= numberOfVisible) {
+                    for (let index = 0; index < numberOfVisible - len + 1; index++) {
                         category.products.push(undefined)
                     }
                 }
@@ -69,11 +68,11 @@ export default class Client extends React.Component {
         })
     }
 
-    openModal(){
-        this.setState({modalVisible:true})
+    openModal() {
+        this.setState({ modalVisible: true })
     }
     render() {
-        const { categories, loading,modalVisible,requestModalVisible,requestProduct } = this.state
+        const { categories, loading, modalVisible, requestModalVisible, requestProduct } = this.state
         const settings = {
             dots: false,
             infinite: false,
@@ -82,19 +81,21 @@ export default class Client extends React.Component {
         };
 
         return [
-            <Modal visible={modalVisible} onClose={()=>this.setState({modalVisible:false})}>
-                <div className="center-text"><img className="illus" src={modalImg} alt="lock"/></div>
+            <Modal visible={modalVisible} onClose={() => this.setState({ modalVisible: false })}>
+                <div className="center-text"><img className="illus" src={modalImg} alt="lock" /></div>
                 <div className="request-modal-title center-text">Log in or Sign up</div>
                 <div className="request-modal-content center-text">
                     Please sign up for a Khula! account to continue and explore more of our features. Already have an account? Log in to access our market.
                 </div>
                 <div className="btns row modal-btns">
-                    <Button title="Log in" onClick={()=>this.setState({modalVisible:false},()=>window.open(`${BUYER_ROOT}`,"_blank"))}/>
-                    <Button title="Sign up" onClick={()=>this.setState({modalVisible:false},()=>window.open(`${BUYER_ROOT}/sign-up`,"_blank"))}/>
+                    <Button title="Log in" onClick={() => this.setState({ modalVisible: false }, () => window.open(`${BUYER_ROOT}`, "_blank"))} />
+                    <Button title="Sign up" onClick={() => this.setState({ modalVisible: false }, () => window.open(`${BUYER_ROOT}/sign-up`, "_blank"))} />
                 </div>
             </Modal>,
-            <RequestModal product={requestProduct} visible={requestModalVisible} onClose={()=>this.setState({requestModalVisible:false})}/>,
+            <RequestModal product={requestProduct} visible={requestModalVisible} onClose={() => this.setState({ requestModalVisible: false })} />,
             <div className="client-container">
+                <div className="market-header">Join our trading marketplace for farmers and buyers of fresh produce</div>
+                <div className="market-description">A safe, efficient and cost effective way to trade daily</div>
                 {
                     loading &&
                     <ScrollAnimation animateOnce={true} delay={0} duration={3} animateIn="fadeIn" style={{ paddingBottom: 150 }}>
@@ -129,7 +130,7 @@ export default class Client extends React.Component {
                                                             <div className="test">
                                                                 {
                                                                     mapProduct ?
-                                                                        <ProductCard product={mapProduct} openModal={() => this.openModal()} onRequest={(requestProduct)=>this.setState({requestModalVisible:true,requestProduct})}/> : 
+                                                                        <ProductCard product={mapProduct} openModal={() => this.openModal()} onRequest={(requestProduct) => this.setState({ requestModalVisible: true, requestProduct })} /> :
                                                                         <div className="product-card-faux"></div>
                                                                 }
                                                             </div>

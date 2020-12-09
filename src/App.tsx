@@ -17,15 +17,15 @@ function App() {
     <div className="App roboto">
       <Header />
       <div className="section">
-      <CovidBanner/>
+        <CovidBanner />
         <Banner />
-        <Client />
-        <ScrollAnimation animateOnce={true} delay={2} duration={2} animateIn="slideInUp">
-          <ClientApp />
-        </ScrollAnimation>
         <Farmer />
         <ScrollAnimation animateOnce={true} delay={2} duration={2} animateIn="slideInUp">
           <FarmerApp />
+        </ScrollAnimation>
+        <Client />
+        <ScrollAnimation animateOnce={true} delay={2} duration={2} animateIn="slideInUp">
+          <ClientApp />
         </ScrollAnimation>
         <ScrollAnimation animateOnce={true} delay={2} duration={2} animateIn="slideInUp">
           <Footer />

@@ -17,9 +17,9 @@ export default class FarmerApp extends React.Component {
           <div className="app-description">The #1 agricultural solution as awarded at the MTN App of the Year Awards.</div>
           <div className="app-points">
             <ol>
-              <li>List and sell your products <span className="green">Direct </span>to pre-approved buyers</li>
-              <li>Buy over <span className="green">200+ </span> input products, from fertilizers to soil and water tests</li>
+              <li>Buy over <span className="green">2000+</span> input products, from agro-chemicals, fertilisers and seed.</li>
               <li>Get expert agronomical advice and spray programmes</li>
+              <li>List and sell your products direct to pre-approved buyers</li>
             </ol>
           </div>
           <div className="farmer-app-links app-links desktop">

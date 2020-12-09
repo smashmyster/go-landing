@@ -7,7 +7,7 @@ function graphqlRequestHandler(name: any, query: any, variables: any, headers = 
         (resolve, reject) => {
             let client = headers === null ? new GraphQLClient(GRAPH_API) : new GraphQLClient(GRAPH_API, { headers })
             client.request(query, variables)
-                .then(data => {
+                .then((data:any) => {
                     resolve(name ? data[name] : data)
                 })
                 .catch(error => {
@@ -90,24 +90,30 @@ export async function apiGETALLPRODUCEPERCATEGORY(_productLimit:number,_allProdu
         (resolve, reject) => {
             const query =
                 `
-            query variables($productLimit: Int, $allProduce:Boolean){
-                getAllProducePerCategories(productLimit:$productLimit,allProduce:$allProduce){
-                  id
-                  name
-                  products{
-                    id
-                    category
-                    name
-                    lowerPrice
-                    upperPrice
-                    quantity
-                    packaging{
-                      id
-                      packaging
+                query variables($productLimit: Int, $allProduce:Boolean){
+                    getAllProducePerCategories(productLimit:$productLimit,allProduce:$allProduce){
+                        id
+                        name
+                        products{
+                            id
+                            name
+                            pickoftheweek
+                            category
+                            upperPrice
+                            lowerPrice
+                            packaging{
+                                id
+                                packaging
+                                weight
+                            }
+                            variety{
+                                id
+                                name
+                            }
+                        }
                     }
-                  }
+                    
                 }
-              }
             `
             const variables = {
                 productLimit:_productLimit,
