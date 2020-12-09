@@ -75,7 +75,7 @@ export default class RequestModal extends React.Component<ModalProps> {
 
         return [
             <Modal visible={visible} onClose={() => this.closeModal()}>
-                {product && <div className="request-modal-image center-text"><img className="illus" src={_GetImagePath(product.name)} alt="lock" /></div>}
+                {product && <div className="request-modal-image center-text"><img className="illus" src={_GetImagePath(product.name)} alt={product.name}/></div>}
                 <div className="request-modal-title title center-text">Request</div>
                 <div className="request-modal-content content center-text">
                     {
