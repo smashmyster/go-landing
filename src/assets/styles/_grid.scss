@@ -1,0 +1,83 @@
+/* Screen sizes for different browsers */
+$grid-screen-size-sm: 576;
+$grid-screen-size-md: 768;
+$grid-screen-size-lg: 992;
+$grid-screen-size-xl: 1200;
+
+/* Each row will fill 100% width and will use display flex*/
+.k-row {
+    display: flex;
+    width: 100%;
+}
+
+/* Add flex to allow rows to wrap if content fills the column */
+.k-row-flex {
+    flex-wrap: wrap;
+}
+
+/* Applied on a row to center items horizontally and vertically */
+.k-row-center-items {
+    align-items: center;
+    justify-content: center;
+}
+
+/* If we want the column to have an auto width */
+.k-col-auto{
+    width: auto;
+}
+
+/* Allows the column to fill the available space */
+.k-col-grow{
+    flex:1;
+}
+
+/* Allow the column to not grow, similar to width:auto */
+.k-col-no-grow{
+    flex:0;
+}
+
+/* This creates a grid system with 12 columns */  
+/* I used k-col to prevent collusions with future CSS-Framework grid system */
+/* This is how it works 👇🏾 */
+/* For each element of (i)  I use the flex-basis to get the percentage of the size of the column hence, (100/(12/$1))*/
+/* A row will always have 12 columns and distributed accordingly for each column */
+@for $i from 1 through 12 {
+    .k-col-#{$i} {
+      flex-basis: (100 / (12 / $i) ) * 1%;
+    }
+}
+
+/* For a better responsive experience we have this for different screen sizes as created above */
+/* We repeat this by following the format k-col-{screen}-{size} , screen sizes are defined above*/
+/* small screen */
+@media screen and (min-width: $grid-screen-size-sm * 1px) {
+    @for $i from 1 through 12 {
+        .k-col-sm-#{$i} {
+          flex-basis: (100 / (12 / $i) ) * 1%;
+        }
+    }
+}
+/* medium screen */
+@media screen and (min-width: $grid-screen-size-md * 1px) {
+    @for $i from 1 through 12 {
+        .k-col-md-#{$i} {
+          flex-basis: (100 / (12 / $i) ) * 1%;
+        }
+    }
+}
+/* large screen */
+@media screen and (min-width: $grid-screen-size-lg * 1px) {
+    @for $i from 1 through 12 {
+        .k-col-lg-#{$i} {
+          flex-basis: (100 / (12 / $i) ) * 1%;
+        }
+    }
+}
+/* extra-large screen */
+@media screen and (min-width: $grid-screen-size-xl * 1px) {
+    @for $i from 1 through 12 {
+        .k-col-xl-#{$i} {
+          flex-basis: (100 / (12 / $i) ) * 1%;
+        }
+    }
+}
