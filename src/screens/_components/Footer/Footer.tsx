@@ -1,16 +1,16 @@
 import React from "react";
 import { IListItems } from "constants/interfaces";
 import ListItem from "components/ListItems/ListItems";
-import TitleLine from "./TitleLine";
-import team from "assets/images/team.png";
-import cheque from "assets/images/cheque.png";
-import karidas from "assets/images/karidas.png";
-import founders from "assets/images/founders.png";
-import matt from "assets/images/matt.png";
-import pres from "assets/images/pres.png";
-import android from "assets/images/android.svg";
-import ios from "assets/images/ios.svg";
 import { _GoToStore } from "constants/index";
+import TitleLine from "./TitleLine";
+const team = require("assets/images/team.png");
+const cheque = require("assets/images/cheque.png");
+const karidas = require("assets/images/karidas.png");
+const founders = require("assets/images/founders.png");
+const matt = require("assets/images/matt.png");
+const pres = require("assets/images/pres.png");
+const android = require("assets/images/android.svg");
+const ios = require("assets/images/ios.svg");
 
 /**
  * Footer component

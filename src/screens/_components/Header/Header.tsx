@@ -1,6 +1,6 @@
 import React from "react";
-import Logo from "assets/images/Logo.svg";
-import { BUYER_ROOT, _GoToStore } from "constants/index";
+import { BUYER_ROOT } from "constants/index";
+const Logo = require("assets/images/Logo.svg");
 
 /**
  * Header component
@@ -27,8 +27,8 @@ export default class Header extends React.Component {
             </div>
           </div>
           <div className="links">
-            <div className="navbar-container">
-              <div className="navbar-links">
+            <div className="navbar-container k-row">
+              <div className="navbar-links k-row">
                 <div
                   className="link"
                   onMouseEnter={() => this.setState({ loginOpen: true })}
@@ -69,9 +69,6 @@ export default class Header extends React.Component {
                     </a>
                   </div>
                 </div>
-              </div>
-              <div className="navbar-btn" onClick={() => _GoToStore()}>
-                <div className="btn-txt">Get the app</div>
               </div>
             </div>
           </div>

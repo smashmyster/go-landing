@@ -1,5 +1,5 @@
 import React from "react";
-import covid from "assets/images/covid-sa-logo-2.png";
+const covid = require("assets/images/covid-sa-logo-2.png");
 
 /**
  * Component of the covid banner

@@ -1,7 +1,7 @@
 $nav-btn-height:2.2rem;
 .header-container {
     background-color: $white;
-    height: 5rem;
+    height: $header-height;
     width: $full-screen;
     border-bottom: 0.5pt solid rgba(151,151,151,0.28 );
     display: flex;
