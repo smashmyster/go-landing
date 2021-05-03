@@ -14,6 +14,7 @@ import ProduceMarket from "screens/ProduceMarket/ProduceMarket";
 import FreshProduceBenefits from "screens/FreshProduceBenefits/FreshProduceBenefits";
 import Testimonies from "screens/Testimonies/Testimonies";
 import Contact from "screens/Contact/Contact";
+import SectionNavigation from "screens/SectionNavigation/SectionNavigation";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <div className="section">
         <CovidBanner />
         <Landing />
+        <SectionNavigation />
         <Stakeholders />
         <ProductDetails />
         <InputsMarket />

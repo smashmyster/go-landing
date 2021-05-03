@@ -1,15 +1,8 @@
 $nav-btn-height:2.2rem;
 .header-container {
     background-color: $white;
-    height: $header-height;
-    width: $full-screen;
-    border-bottom: 0.5pt solid rgba(151,151,151,0.28 );
-    display: flex;
-    flex-direction: row;
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.9rem;
-    align-items: center;
-    justify-content: space-between;
+    font-size: $header-links-fs;
+    color: $header-links-fc;
     position: sticky;
     top:0;
     z-index: 100;
@@ -22,102 +15,31 @@ $nav-btn-height:2.2rem;
     }
     .header-contents{
         display: flex;
-        flex-direction: row;
-        width: $full-screen;
-        font-family: 'Roboto', sans-serif;
-        font-size: 0.9rem;
-        align-items: center;
         justify-content: space-between;
         .header-left {
             display: flex;
             flex-direction: row;
             align-items: center;
     
-            .logo {    
-                margin-left: 3.5rem;
-                margin-right: 14rem;
-            }
-            .search {
-                height: $nav-btn-height;
-                border-radius: $border-radius-std;
-                border: solid 1px $accent-grey;
-                width: 24rem;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                font-size: 0.6rem;
-    
-                .search-categories{
-                    font-family: 'Roboto', sans-serif;
-                    font-size: 0.7rem;
-                    border: 0 !important;
-                    box-shadow: none !important;
-                    background-color: $bg-color;
-                    padding: 0 $sixteen-px 0 0;
-                    border-radius: $border-radius-std 0 0 $border-radius-std;
-                    
-                    .react-dropdown-select-dropdown{
-                        top: -0.1rem;
-                        border-radius: $border-radius-std 0 $border-radius-std $border-radius-std;
-                        background-color: $bg-color;
-                        color: $khula-charcoal;
-                    }
-                    .react-dropdown-select-content{
-                        margin-left: $twenty-four-px;
-                        width:4.5rem;
-                    }
-                    .react-dropdown-select-item{
-                        border-bottom: 1px solid rgb(223, 220, 220);
-                    }
-                    .react-dropdown-select-item:first-child{
-                        height: 1.2rem;
-                        margin-top: $eight-px;
-                    }
-                    .react-dropdown-select-item-selected{
-                        background:  $bg-color; 
-                        color: unset;
-                    }
-                }
-                .search-content {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-    
-                    .down-ic {
-                        margin-left: $sixteen-px;
-                    }
-                    .search-text {
-                        border: white;
-                        width: 10rem;
-                        margin-left: $twenty-four-px;
-                    }
-                    .search-text:focus{
-                        outline: unset;
-                    }
-                    .search-ic {
-                        font-size: 0.7rem;
-                        color:$khula-charcoal;
-                        margin-left: $thirty-two-px;
-                        cursor: pointer;
-                    } 
+            .logo {
+                margin: 16px;
+                img{
+                    width: 100px;
                 }
             }
+            
         }
         .links {
             display: inline-flex;
-            flex-direction: row;  
-            width: fit-content;
-            justify-content: space-between;
-            align-items: center;
-            margin-right: 2.6rem;
             .navbar-container{
-                cursor: unset;
+                
                 .navbar-links{
+                    display: flex;
+                    width: 350px;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-right: 100px;
                     .link{
-                        margin-right: $sixteen-px;
-                        width: 3.4rem;
-                        position: relative;
-                        height: $nav-btn-height;
                         .nav-dropdown-title{
                             height: $nav-btn-height;
                             display: flex;

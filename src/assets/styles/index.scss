@@ -87,3 +87,15 @@
 .uppercase{
     text-transform: uppercase;
 }
+.title{
+    font-size: 28px;
+    font-weight: 600;
+    width: 20%;
+    text-align: center;
+}
+.sub-title{
+    color: $header-links-fc;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 20px;
+}

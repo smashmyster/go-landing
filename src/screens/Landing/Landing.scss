@@ -1,3 +1,32 @@
 .landing-screen{
-    height: calc(100vh - #{$header-height});
+    height: calc(100vh - #{$header-height} - #{$section-navigation-height});
+    align-items: center;
+    display: flex;
+    width: 100%;
+    .left-section{
+        margin-left: 200px;
+        width: 500px;
+        img{
+            width: 300px;
+        }
+        .company-name{
+            color: $header-links-fc;
+            font-size: 12px;
+            margin: 10px 0;
+        }
+        .company-description{
+            font-size: 14px;
+            color: $khula-charcoal;
+            width: 300px;
+            line-height: 24px;
+        }
+    }
+    .right-section{
+        position: relative;
+        img{
+            width: 850px;
+            position: absolute;
+        }
+
+    }
 }
