@@ -1,10 +1,37 @@
 .inputs-market-screen{
     flex-direction: column;
     padding-top: 200px;
-    .section-graphic{
-        margin-left: 100px;
-        img{
-            width: 400px;
+    .section{
+        justify-content: center;
+        width: 65%;
+        margin: 50px 0;
+        .section-graphic{
+            margin-right: 100px;
+            img{
+                width: 500px;
+            }
+        }
+        .right-section{
+            .bullet-point{
+                margin: 20px 0 50px;
+
+            
+                .bullet-header{
+                    font-weight: 500;
+                    font-size: 20px;
+                    span{
+                        color: $khula-green;
+                        font-size: 24px;
+                        margin-right: 10px;
+                    }
+                }
+                .bullet-text{
+                    color: $accent-charcoal;
+                    font-size: 16px;
+                    line-height: 28px;
+                    margin: 20px 0;
+                }
+            }
         }
     }
 }

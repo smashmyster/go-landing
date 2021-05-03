@@ -2345,7 +2345,7 @@
       margin-bottom: 14px; }
     .section-navigation .nav-section .nav-btn {
       font-weight: 500;
-      border-bottom: solid green;
+      border-bottom: solid #387C3F;
       width: 60px;
       display: flex;
       justify-content: space-between; }
@@ -2424,10 +2424,28 @@
 .inputs-market-screen {
   flex-direction: column;
   padding-top: 200px; }
-  .inputs-market-screen .section-graphic {
-    margin-left: 100px; }
-    .inputs-market-screen .section-graphic img {
-      width: 400px; }
+  .inputs-market-screen .section {
+    justify-content: center;
+    width: 65%;
+    margin: 50px 0; }
+    .inputs-market-screen .section .section-graphic {
+      margin-right: 100px; }
+      .inputs-market-screen .section .section-graphic img {
+        width: 500px; }
+    .inputs-market-screen .section .right-section .bullet-point {
+      margin: 20px 0 50px; }
+      .inputs-market-screen .section .right-section .bullet-point .bullet-header {
+        font-weight: 500;
+        font-size: 20px; }
+        .inputs-market-screen .section .right-section .bullet-point .bullet-header span {
+          color: #387C3F;
+          font-size: 24px;
+          margin-right: 10px; }
+      .inputs-market-screen .section .right-section .bullet-point .bullet-text {
+        color: #646464;
+        font-size: 16px;
+        line-height: 28px;
+        margin: 20px 0; }
 
 .screen {
   min-height: 400px; }
