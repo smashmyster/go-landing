@@ -3,14 +3,6 @@ import { IListItems } from "constants/interfaces";
 import ListItem from "components/ListItems/ListItems";
 import { _GoToStore } from "constants/index";
 import TitleLine from "./TitleLine";
-const team = require("assets/images/team.png");
-const cheque = require("assets/images/cheque.png");
-const karidas = require("assets/images/karidas.png");
-const founders = require("assets/images/founders.png");
-const matt = require("assets/images/matt.png");
-const pres = require("assets/images/pres.png");
-const android = require("assets/images/android.svg");
-const ios = require("assets/images/ios.svg");
 
 /**
  * Footer component
@@ -59,14 +51,8 @@ export default class Footer extends React.Component {
               <TitleLine />
               <div className="media-imgs">
                 <div className="row">
-                  <img className="media-img" src={team} alt="khula-team" />
-                  <img className="media-img" src={matt} alt="khula-team" />
-                  <img className="media-img" src={cheque} alt="khula-team" />
                 </div>
                 <div className="row">
-                  <img className="media-img" src={karidas} alt="khula-team" />
-                  <img className="media-img" src={pres} alt="khula-team" />
-                  <img className="media-img" src={founders} alt="khula-team" />
                 </div>
               </div>
             </div>
@@ -78,17 +64,7 @@ export default class Footer extends React.Component {
                 Download Our App
                 <TitleLine />
               </div>
-              <img
-                src={android}
-                onClick={() => _GoToStore("android")}
-                alt="android-store"
-                className="android"
-              />
-              <img
-                src={ios}
-                onClick={() => _GoToStore("ios")}
-                alt="ios-store"
-              />
+             
             </div>
           </div>
         </div>

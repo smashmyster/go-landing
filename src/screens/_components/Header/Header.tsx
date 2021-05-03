@@ -1,41 +1,44 @@
 import React from "react";
 import { BUYER_ROOT } from "constants/index";
-const Logo = require("assets/images/Logo.svg");
+const logo = require("assets/images/khula-logo.png");
 
-/**
- * Header component
- */
-export default class Header extends React.Component {
-  state: {
-    filterItem: number;
-    loginOpen: boolean;
-    signUpOpen: boolean;
-  } = {
-    filterItem: 0,
-    loginOpen: false,
-    signUpOpen: false,
-  };
+const Header = () => {
+  // state: {
+  //   filterItem: number;
+  //   loginOpen: boolean;
+  //   signUpOpen: boolean;
+  // } = {
+  //   filterItem: 0,
+  //   loginOpen: false,
+  //   signUpOpen: false,
+  // };
 
-  render() {
-    const { loginOpen, signUpOpen } = this.state;
+    // const { loginOpen, signUpOpen } = this.state;
     return (
       <div className="header-container">
         <div className="header-contents">
           <div className="header-left">
             <div className="logo">
-              <img src={Logo} alt="logo" />
+              <img src={logo} alt="logo" />
             </div>
           </div>
           <div className="links">
             <div className="navbar-container k-row">
-              <div className="navbar-links k-row">
+              <div className="navbar-links">
+                <div className="link">
+                  <div className="nav-dropdown-title">About</div>
+                </div>
+                <div className="link">
+                  <div className="nav-dropdown-title">Contact Us</div>
+                </div>
                 <div
                   className="link"
-                  onMouseEnter={() => this.setState({ loginOpen: true })}
-                  onMouseLeave={() => this.setState({ loginOpen: false })}
+                  // onMouseEnter={() => this.setState({ loginOpen: true })}
+                  // onMouseLeave={() => this.setState({ loginOpen: false })}
                 >
-                  <div className="nav-dropdown-title">Log in</div>
-                  <div className={`nav-dropdown ${loginOpen ? "open" : ""}`}>
+                  <div className="nav-dropdown-title">Register</div>
+                  <div className={`nav-dropdown`}>
+                  {/* <div className={`nav-dropdown ${loginOpen ? "open" : ""}`}> */}
                     <a
                       className="nav-dropdown-item"
                       href={`${BUYER_ROOT}`}
@@ -49,14 +52,17 @@ export default class Header extends React.Component {
                 </div>
                 <div
                   className="link"
-                  onMouseEnter={() => this.setState({ signUpOpen: true })}
-                  onMouseLeave={() => this.setState({ signUpOpen: false })}
+                  // onMouseEnter={() => this.setState({ signUpOpen: true })}
+                  // onMouseLeave={() => this.setState({ signUpOpen: false })}
                 >
-                  <div className="nav-dropdown-title">Sign up</div>
-                  <div
+                  <div className="nav-dropdown-title">Sign In</div>
+                  {/* <div
                     className={`nav-dropdown ${
                       signUpOpen ? "open" : ""
                     } right-aligned`}
+                  > */}
+                  <div
+                    className={`nav-dropdown right-aligned`}
                   >
                     <a
                       className="nav-dropdown-item"
@@ -75,5 +81,6 @@ export default class Header extends React.Component {
         </div>
       </div>
     );
-  }
-}
+  };
+  
+  export default Header;
