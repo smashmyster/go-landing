@@ -1,3 +1,11 @@
 .stakeholders-screen{
-    
+    flex-direction: column;
+    .stakeholder-logos{
+        justify-content: space-around;
+        width: 50%;
+        margin: 50px;
+        img{
+            height: 60px;
+        }
+    }
 }
