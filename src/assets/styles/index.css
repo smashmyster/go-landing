@@ -1979,6 +1979,17 @@
     margin-left: 5px;
     font-size: 0.75rem; }
 
+.main-title-text {
+  font-size: 25px;
+  font-weight: 600;
+  color: #3E3E3E; }
+
+.main-subtitle-text {
+  color: #8F8F8F;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase; }
+
 .spinner-container {
   text-align: center; }
   .spinner-container .spinner {
@@ -2352,39 +2363,41 @@
 
 .products-screen {
   position: relative; }
-  .products-screen .left-section {
-    width: 55%; }
-    .products-screen .left-section .section-name {
+  .products-screen .details-container .section {
+    padding: 50px;
+    padding-bottom: 150px; }
+  .products-screen .details-container .left-section {
+    flex: 1; }
+    .products-screen .details-container .left-section .section-name {
       color: #C7C7C7;
       font-size: 14px;
       font-weight: 500;
       margin-bottom: 16px; }
-    .products-screen .left-section .header-txt {
+    .products-screen .details-container .left-section .header-txt {
       color: #FFF; }
-      .products-screen .left-section .header-txt.h1 {
+      .products-screen .details-container .left-section .header-txt.h1 {
         font-size: 52px;
         font-weight: 600; }
-      .products-screen .left-section .header-txt.h2 {
+      .products-screen .details-container .left-section .header-txt.h2 {
         font-size: 28px;
         font-weight: 500; }
-    .products-screen .left-section .left-section-txt {
+    .products-screen .details-container .left-section .left-section-txt {
       line-height: 20px;
       color: #85be87;
-      font-size: 12px;
-      width: 40%; }
-  .products-screen .input-app {
-    height: 600px;
-    position: absolute;
-    top: 0;
-    margin-top: 40px;
-    left: 550px; }
-  .products-screen .right-section {
-    width: 30%;
+      font-size: 12px; }
+  .products-screen .details-container .input-app-container {
+    flex: 1;
+    z-index: 1;
+    padding-top: 50px; }
+    .products-screen .details-container .input-app-container .input-app {
+      height: 600px; }
+  .products-screen .details-container .right-section {
+    flex: 1;
     margin-top: 50px; }
-    .products-screen .right-section .arrow-keys {
+    .products-screen .details-container .right-section .arrow-keys {
       color: #FFF;
       margin-bottom: 30px; }
-      .products-screen .right-section .arrow-keys .icon {
+      .products-screen .details-container .right-section .arrow-keys .icon {
         background-color: #ffffff52;
         border-radius: 50%;
         height: 40px;
@@ -2394,32 +2407,37 @@
         align-items: center;
         font-size: 20px;
         margin-right: 10px; }
-      .products-screen .right-section .arrow-keys .key-label {
+      .products-screen .details-container .right-section .arrow-keys .key-label {
         font-size: 14px; }
-    .products-screen .right-section .section-headers {
+    .products-screen .details-container .right-section .section-headers {
       justify-content: space-between;
       font-weight: 500;
       margin: 20px 0 30px; }
-    .products-screen .right-section .right-section-txt {
+    .products-screen .details-container .right-section .right-section-txt {
       line-height: 20px;
       color: #FFF;
       font-size: 12px;
       width: 65%; }
-    .products-screen .right-section .action-btns {
+    .products-screen .details-container .right-section .action-btns {
       margin: 40px 0; }
-      .products-screen .right-section .action-btns .white-btn {
+      .products-screen .details-container .right-section .action-btns .white-btn {
         background-color: white;
         padding: 10px 15px;
         border-radius: 8px;
         font-size: 10px;
         color: green;
         margin-right: 20px; }
-      .products-screen .right-section .action-btns .transparent-btn {
+      .products-screen .details-container .right-section .action-btns .transparent-btn {
         font-size: 10px;
         padding: 10px 15px;
         color: white; }
-        .products-screen .right-section .action-btns .transparent-btn span {
+        .products-screen .details-container .right-section .action-btns .transparent-btn span {
           margin-left: 10px; }
+  .products-screen .section-color {
+    height: 200px;
+    width: 100%;
+    margin-top: -150px;
+    background-color: #EBF2EB; }
 
 .inputs-market-screen {
   flex-direction: column;
@@ -2446,6 +2464,17 @@
         font-size: 16px;
         line-height: 28px;
         margin: 20px 0; }
+
+.fresh-produce-benefits-screen {
+  padding: 50px 10px; }
+  .fresh-produce-benefits-screen .detail-container .icon-container {
+    background-color: #A4C4A5;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%; }
+    .fresh-produce-benefits-screen .detail-container .icon-container .icon {
+      color: #387C3F;
+      font-size: 28px; }
 
 .screen {
   min-height: 400px; }

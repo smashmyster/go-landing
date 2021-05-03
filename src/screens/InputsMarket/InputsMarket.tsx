@@ -1,15 +1,17 @@
 import React from "react";
 const packhouse = require("assets/images/packhouse.jpeg");
 
-
 const InputsMarket = () => {
   return (
     <div className="screen inputs-market-screen k-row k-row-center-items green-alpha-bg">
-      <div className="uppercase sub-title">More than an app</div>
-      <div className="title">Key benefits of the <span className="uppercase">Khula</span> Inputs Market</div>
+      <div className="uppercase main-subtitle-text mb-5">More than an app</div>
+      <div className="main-title-text center-text mb-8">
+        Key benefits of the
+        <br /> <span className="uppercase">Khula</span> Inputs Market
+      </div>
       <div className="row section">
         <div className="section-graphic">
-          <img src={packhouse} alt="packhouse"/>
+          <img src={packhouse} alt="packhouse" />
         </div>
         <div className="right-section">
           <div className="bullet-point">
