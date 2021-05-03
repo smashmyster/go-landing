@@ -1,4 +1,5 @@
 import React from "react";
+import { ScrollingProvider, Section } from "react-scroll-section";
 import CovidBanner from "components/CovidBanner/CovidBanner";
 import Landing from "screens/Landing/Landing";
 import Stakeholders from "screens/Stakeholders/Stakeholders";
@@ -11,25 +12,34 @@ import Contact from "screens/Contact/Contact";
 import SectionNavigation from "screens/_components/SectionNavigation/SectionNavigation";
 import Header from "screens/_components/Header/Header";
 import Footer from "screens/_components/Footer/Footer";
+import { EScrollSectionIds } from "./constants";
 
 const MainSite = () => {
   return (
-    <div className="App roboto">
-      <Header />
-      <div className="section">
-        <CovidBanner />
-        <Landing />
-        <SectionNavigation />
-        <Stakeholders />
-        <ProductDetails />
-        <InputsMarket />
-        <ProduceMarket />
-        <FreshProduceBenefits />
-        <Testimonies />
-        <Contact />
-        <Footer />
+    <ScrollingProvider scrollBehavior="smooth" offset={-65}>
+      <div className="App roboto">
+        <Header />
+        <div className="section">
+          <CovidBanner />
+          <Landing />
+          <SectionNavigation />
+          <Stakeholders />
+          <Section id={EScrollSectionIds.INPUTSMARKET}>
+            <ProductDetails />
+          </Section>
+          <InputsMarket />
+          <Section id={EScrollSectionIds.FRESHPRODUCEMARKET}>
+            <ProduceMarket />
+          </Section>
+          <FreshProduceBenefits />
+          <Section id={EScrollSectionIds.TESTIMONIES}>
+            <Testimonies />
+          </Section>
+          <Contact />
+          <Footer />
+        </div>
       </div>
-    </div>
+    </ScrollingProvider>
   );
 };
 

@@ -29,33 +29,33 @@ const FreshProduceBenefits = () => {
             </div>
             <div className="charcoal detail-text">
               Trading directly with the farmer means less change in hands, less
-              handling, less time between farm and buyer
+              handling, less time between farm and buyer.
             </div>
           </div>
           <Arrow />
           <div className="detail-container column-center">
             <div className="icon-container k-row k-row-center-items">
-              <span className="icon fal-seedling" />
+              <span className="icon fal-money-bill-wave-alt" />
             </div>
             <div className="font-weight-600 f-20 grey m-5">
-              Fresher <span className="green">Product.</span>
+              Lower <span className="green">Costs.</span>
             </div>
             <div className="charcoal detail-text">
-              Trading directly with the farmer means less change in hands, less
-              handling, less time between farm and buyer
+              Trading on KHULA means lower costs, increased efficiency, and
+              direct delivery, Lower/No in transit storage, no agency fees.
             </div>
           </div>
           <Arrow />
           <div className="detail-container column-center">
             <div className="icon-container k-row k-row-center-items">
-              <span className="icon fal-seedling" />
+              <span className="icon fal-hand-holding-seedling" />
             </div>
             <div className="font-weight-600 f-20 grey m-5">
-              Fresher <span className="green">Product.</span>
+              More <span className="green">Value.</span>
             </div>
             <div className="charcoal detail-text">
-              Trading directly with the farmer means less change in hands, less
-              handling, less time between farm and buyer
+              KHULA Trading tools enable better decision making by buyers, and
+              companies, to increase profits, planning and pricing.
             </div>
           </div>
         </div>
