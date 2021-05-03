@@ -11,5 +11,7 @@ npm-debug.*
 .vscode
 # production
 /build
+src/assets/styles/index.css
 src/assets/styles/*.css
+/src/assets/styles/*.css
 node_modules
