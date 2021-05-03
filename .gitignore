@@ -6,4 +6,10 @@ npm-debug.*
 *.mobileprovision
 *.DS_Store
 /package-lock.json
+
+.idea
+.vscode
+# production
+/build
 src/assets/styles/*.css
+node_modules
