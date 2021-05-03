@@ -1,7 +1,4 @@
 import React from "react";
-import Header from "screens/_components/Header/Header";
-import Footer from "screens/_components/Footer/Footer";
-// import ScrollAnimation from "react-animate-on-scroll";
 import "App.css";
 import "assets/styles/index.css";
 import "assets/styles/style.css";
@@ -14,7 +11,9 @@ import ProduceMarket from "screens/ProduceMarket/ProduceMarket";
 import FreshProduceBenefits from "screens/FreshProduceBenefits/FreshProduceBenefits";
 import Testimonies from "screens/Testimonies/Testimonies";
 import Contact from "screens/Contact/Contact";
-import SectionNavigation from "screens/SectionNavigation/SectionNavigation";
+import SectionNavigation from "screens/_components/SectionNavigation/SectionNavigation";
+import Header from "screens/_components/Header/Header";
+import Footer from "screens/_components/Footer/Footer";
 
 const App = () => {
   return (
