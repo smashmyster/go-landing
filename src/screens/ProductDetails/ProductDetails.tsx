@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// import ProduceDetailsItem from "";
 import ProduceDetailsItem from "./utils/ProductDetailsItem";
 const inputsApp = require("assets/images/inputs-app.png");
 const traderApp = require("assets/images/trader-app.png");
