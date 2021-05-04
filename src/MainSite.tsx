@@ -1,6 +1,5 @@
 import React from "react";
 import { ScrollingProvider, Section } from "react-scroll-section";
-import CovidBanner from "components/CovidBanner/CovidBanner";
 import Landing from "screens/Landing/Landing";
 import Stakeholders from "screens/Stakeholders/Stakeholders";
 import ProductDetails from "screens/ProductDetails/ProductDetails";
@@ -20,7 +19,7 @@ const MainSite = () => {
       <div className="App roboto">
         <Header />
         <div className="section">
-          <CovidBanner />
+          {/* <CovidBanner /> */}
           <Landing />
           <SectionNavigation />
           <Stakeholders />
