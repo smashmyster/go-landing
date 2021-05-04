@@ -1,40 +1,36 @@
-import React from "react";
-import Header from "screens/_components/Header/Header";
-import Footer from "screens/_components/Footer/Footer";
-// import ScrollAnimation from "react-animate-on-scroll";
+import React, { useEffect, useState } from "react";
 import "App.css";
 import "assets/styles/index.css";
 import "assets/styles/style.css";
-import CovidBanner from "components/CovidBanner/CovidBanner";
-import Landing from "screens/Landing/Landing";
-import Stakeholders from "screens/Stakeholders/Stakeholders";
-import ProductDetails from "screens/ProductDetails/ProductDetails";
-import InputsMarket from "screens/InputsMarket/InputsMarket";
-import ProduceMarket from "screens/ProduceMarket/ProduceMarket";
-import FreshProduceBenefits from "screens/FreshProduceBenefits/FreshProduceBenefits";
-import Testimonies from "screens/Testimonies/Testimonies";
-import Contact from "screens/Contact/Contact";
-import SectionNavigation from "screens/SectionNavigation/SectionNavigation";
+import MainSite from "MainSite";
+import AppLoading from "components/AppLoading/AppLoading";
+const logo = require("assets/images/khula-logo.png");
+const truck = require("assets/images/truck.png");
+const packhouse = require("assets/images/packhouse.jpeg");
+const inputsApp = require("assets/images/inputs-app.png");
+const aeci = require("assets/images/aeci.png");
+const e2 = require("assets/images/e2.png");
+const sakata = require("assets/images/sakata.png");
+const absa = require("assets/images/absa.png");
 
+const images = [logo, truck, packhouse, inputsApp, aeci, e2, sakata, absa];
 const App = () => {
-  return (
-    <div className="App roboto">
-      <Header />
-      <div className="section">
-        <CovidBanner />
-        <Landing />
-        <SectionNavigation />
-        <Stakeholders />
-        <ProductDetails />
-        <InputsMarket />
-        <ProduceMarket />
-        <FreshProduceBenefits />
-        <Testimonies />
-        <Contact />
-        <Footer />
-      </div>
-    </div>
-  );
+  const [appLoading, setAppLoading] = useState<boolean>(true);
+  const checkImage = (path: any) => {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => resolve(path);
+      img.onerror = () => reject(new Error("Image not loaded"));
+
+      img.src = path;
+    });
+  };
+  useEffect(() => {
+    Promise.all(images.map((img) => checkImage(img))).then(() =>
+      setAppLoading(false)
+    );
+  }, []);
+  return appLoading ? <AppLoading /> : <MainSite />;
 };
 
 export default App;

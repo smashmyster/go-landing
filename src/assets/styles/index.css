@@ -2276,7 +2276,8 @@
   height: calc(100vh - 5rem - 15rem);
   align-items: center;
   display: flex;
-  width: 100%; }
+  width: 100%;
+  overflow: hidden; }
   .landing-screen .left-section {
     margin-left: 200px;
     width: 500px; }
@@ -2301,7 +2302,8 @@
   height: calc(100vh - 5rem - 15rem);
   align-items: center;
   display: flex;
-  width: 100%; }
+  width: 100%;
+  overflow: hidden; }
   .landing-screen .left-section {
     margin-left: 200px;
     width: 500px; }
@@ -2447,15 +2449,30 @@
       width: 400px; }
 
 .fresh-produce-benefits-screen {
-  padding: 50px 10px; }
-  .fresh-produce-benefits-screen .detail-container .icon-container {
-    background-color: #A4C4A5;
-    width: 80px;
-    height: 80px;
-    border-radius: 100%; }
-    .fresh-produce-benefits-screen .detail-container .icon-container .icon {
-      color: #387C3F;
-      font-size: 28px; }
+  padding: 50px 150px; }
+  .fresh-produce-benefits-screen .detail-container {
+    flex: 1; }
+    .fresh-produce-benefits-screen .detail-container .icon-container {
+      background-color: #A4C4A5;
+      width: 80px;
+      height: 80px;
+      border-radius: 100%; }
+      .fresh-produce-benefits-screen .detail-container .icon-container .icon {
+        color: #387C3F;
+        font-size: 28px; }
+    .fresh-produce-benefits-screen .detail-container .detail-text {
+      font-size: 13px; }
+  .fresh-produce-benefits-screen .arrow {
+    width: 40px;
+    margin: 0 20px; }
+    .fresh-produce-benefits-screen .arrow div {
+      width: 1px;
+      background-color: #C7C7C7;
+      height: 80px; }
+    .fresh-produce-benefits-screen .arrow .arrow-top {
+      transform: rotate(-8deg) translate(20px, 4px); }
+    .fresh-produce-benefits-screen .arrow .arrow-bottom {
+      transform: rotate(8deg) translate(20px, -4px); }
 
 .screen {
   min-height: 400px; }
@@ -2480,6 +2497,9 @@
 
 .charcoal {
   color: #646464; }
+
+.grey {
+  color: #3E3E3E; }
 
 .col {
   display: flex;
