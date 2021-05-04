@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+import ProduceDetailsItem from "./utils/ProductDetailsItem";
 const inputsApp = require("assets/images/inputs-app.png");
+const traderApp = require("assets/images/trader-app.png");
+
+const PRODUCT_DETAILS = {
+  inputsMarket: {
+    name: "Inputs Market",
+    description:
+      "Buy your inputs the smart way. More intelligence, better prices, from many suppliers at your fingertips.",
+  },
+  produceTrader: {
+    name: "Fresh Produce Trader",
+    description:
+      "Buy your inputs the smart way. More intelligence, better prices, from many suppliers at your fingertips.",
+  },
+};
 
 const ProductDetails = () => {
+  const [carouselCurrentSldie, updateCarouselCurrentSlide] = useState("L");
+
   return (
     <div className="screen products-screen col" style={{ minHeight: 500 }}>
       <div className="k-row k-row-center-items details-container green-bg">
@@ -16,28 +33,68 @@ const ProductDetails = () => {
           </p>
         </div>
         <div className="input-app-container column-center">
-          <img className="input-app" src={inputsApp} alt="inputs market app" />
+          <img
+            className="input-app"
+            style={{
+              left: carouselCurrentSldie === "R" ? "100%" : "10%",
+              opacity: carouselCurrentSldie === "L" ? "1" : "0",
+            }}
+            src={inputsApp}
+            alt="inputs market app"
+          />
+          <img
+            className="input-app"
+            style={{
+              right: carouselCurrentSldie === "L" ? "100%" : "10%",
+              opacity: carouselCurrentSldie === "R" ? "1" : "0",
+            }}
+            src={traderApp}
+            alt="inputs market app"
+          />
         </div>
         <div className="right-section section">
+          <div className="slides-container">
+            <ProduceDetailsItem
+              productName={PRODUCT_DETAILS.inputsMarket.name}
+              productDescription={PRODUCT_DETAILS.inputsMarket.description}
+              displayStyle={{
+                left: carouselCurrentSldie === "R" ? "400px" : "0px",
+                opacity: carouselCurrentSldie === "L" ? "1" : "0",
+              }}
+            />
+            <ProduceDetailsItem
+              productName={PRODUCT_DETAILS.produceTrader.name}
+              productDescription={PRODUCT_DETAILS.produceTrader.description}
+              displayStyle={{
+                right: carouselCurrentSldie === "L" ? "400px" : "0",
+                opacity: carouselCurrentSldie === "R" ? "1" : "0",
+              }}
+            />
+          </div>
           <div className="arrow-keys row">
-            <span className="icon fas-caret-left"></span>
-            <span className="icon fas-caret-right"></span>
-            <span className="key-label">Click Me!</span>
+            <div
+              className="carousel-button-container"
+              onClick={() => {
+                updateCarouselCurrentSlide("L");
+              }}
+            >
+              <span className="icon fas-caret-left"></span>
+            </div>
+            <div
+              className="carousel-button-container"
+              onClick={() => {
+                updateCarouselCurrentSlide("R");
+              }}
+            >
+              <span className="icon fas-caret-right"></span>
+            </div>
           </div>
-          <div className="row section-headers">
-            <div style={{ color: "white" }}>Inputs Market</div>
-            <div style={{ color: "#85be87" }}>Fresh Produce Trader</div>
-          </div>
-          <p className="right-section-txt">
-            Buy your inputs the smart way. More intelligence, better prices,
-            from many suppliers at your fingertips.
-          </p>
-          <div className="row action-btns">
+          {/* <div className="row action-btns">
             <div className="uppercase white-btn">Contact us</div>
             <div className="uppercase transparent-btn">
               Read More <span className="fal-long-arrow-right"></span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="section-color"></div>
