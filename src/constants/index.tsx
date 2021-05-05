@@ -41,3 +41,9 @@ export const _GoToStore = (
   }
   window.open(link, "_blank");
 };
+
+export enum EScrollSectionIds {
+  INPUTSMARKET = "inputs-market",
+  FRESHPRODUCEMARKET = "fresh-produce-market",
+  TESTIMONIES = "testimonies",
+}
