@@ -12,8 +12,25 @@ const aeci = require("assets/images/aeci.png");
 const e2 = require("assets/images/e2.png");
 const sakata = require("assets/images/sakata.png");
 const absa = require("assets/images/absa.png");
+const farmer = require("assets/images/farmer.jpg");
+const testimony1 = require("assets/images/nkanyiso.jpg");
+const app = require("assets/images/trader-app.png");
+const web = require("assets/images/web.png");
 
-const images = [logo, truck, packhouse, inputsApp, aeci, e2, sakata, absa];
+const images = [
+  logo,
+  truck,
+  packhouse,
+  inputsApp,
+  aeci,
+  e2,
+  sakata,
+  absa,
+  farmer,
+  testimony1,
+  app,
+  web,
+];
 const App = () => {
   const [appLoading, setAppLoading] = useState<boolean>(true);
   const checkImage = (path: any) => {

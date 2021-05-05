@@ -1,3 +1,41 @@
 .testimonies-screen{
-
+    flex-direction:column;
+    background-color: #001d01;
+    padding: 60px 0;
+    .title{
+        color: white;
+        line-height: 40px;
+    }
+    .section{
+        justify-content: center;
+        width: 65%;
+        margin: 80px 0;
+        align-items: center;
+        .left-section{
+            .testimony{
+                color: #c6cfd0;
+                font-size: 26px;
+                width: 70%;
+                line-height: 50px;
+                margin-left: 100px;
+            }
+            .name{
+                font-size: 22px;
+                color: #f1f9f0;
+                width: 70%;
+                margin-left: 120px;
+                margin-top: 50px;
+            }
+            .company{
+                color: #79827c;
+                width: 70%;
+                margin-left: 120px;
+            }
+        }
+        .right-section{
+            img{
+                width: 400px;
+            }
+        }
+    }
 }

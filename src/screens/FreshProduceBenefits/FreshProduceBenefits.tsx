@@ -12,7 +12,7 @@ const FreshProduceBenefits = () => {
     >
       <div className="screen fresh-produce-benefits-screen green-alpha-bg">
         <div className="f-12 main-subtitle-text center-text mb-6">
-          Khula app
+          Khula! app
         </div>
         <div className="f-12 main-title-text center-text mb-18">
           Using the KHULA Fresh Produce
