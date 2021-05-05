@@ -1,8 +1,16 @@
+$truck-size:1000px;
+$left-section-width: 500px;
+$left-section-total-width: 700px;
+$side-off:calc(100vh - #{$truck-size}) / 2;
+$ratio: 318.25/1000;
+
+$duration: 1.8s;
 .landing-screen{
     height: calc(100vh - #{$header-height} - #{$section-navigation-height});
     align-items: center;
     display: flex;
     width: 100%;
+    overflow: hidden;
     .left-section{
         margin-left: 200px;
         width: 500px;
@@ -23,10 +31,29 @@
     }
     .right-section{
         position: relative;
+        height: calc(#{$truck-size} * #{$ratio});
         img{
-            width: 850px;
+            width: $truck-size;
+            left: calc(#{$side-off} - #{$left-section-total-width});
             position: absolute;
+            -webkit-transition: all $duration ease-in-out;
+            -moz-transition: all $duration ease-in-out;
+            -ms-transition: all $duration ease-in-out;
+            -o-transition: all $duration ease-in-out;
+            transition: all $duration ease-in-out;
+            &.animate{
+                left: 0;
+            }
         }
 
+    }
+}
+
+@media only screen and (min-width: 1441px){
+    .landing-screen{
+        margin: 0;
+        max-width: 1440px;
+        margin: auto;
+        overflow: unset;
     }
 }

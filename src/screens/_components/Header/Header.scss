@@ -6,16 +6,12 @@ $nav-btn-height:2.2rem;
     position: sticky;
     top:0;
     z-index: 100;
+    height: $header-height;
 
-    @media only screen and (min-width: 1441px){
-        .header-contents{
-            max-width: 1440px;
-            margin: auto;
-        }
-    }
     .header-contents{
         display: flex;
         justify-content: space-between;
+        margin:0 100px;
         .header-left {
             display: flex;
             flex-direction: row;
@@ -29,94 +25,75 @@ $nav-btn-height:2.2rem;
             }
             
         }
-        .links {
-            display: inline-flex;
-            .navbar-container{
-                
-                .navbar-links{
+        .navbar-links{
+            display: flex;
+            width: 350px;
+            justify-content: space-around;
+            align-items: center;
+            .link{
+                height: $header-height / 3;
+                .nav-dropdown-title{
+                    height: $nav-btn-height;
                     display: flex;
-                    width: 350px;
-                    justify-content: space-around;
+                    justify-content: center;
                     align-items: center;
-                    margin-right: 100px;
-                    .link{
-                        .nav-dropdown-title{
-                            height: $nav-btn-height;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            position: absolute;
-                            cursor: pointer;
+                    position: absolute;
+                    cursor: pointer;
+                }
+                .nav-dropdown{
+                    position: absolute;
+                    top: $nav-btn-height;
+                    width: 8rem;
+                    height: 0rem;
+                    border-radius: 0px 5px 5px 5px;
+                    background-color: $bg-color;
+                    color: $khula-charcoal;
+                    overflow: hidden;
+                    -webkit-transition: all 0.3s ease-in-out;
+                    -moz-transition: all 0.3s ease-in-out;
+                    -ms-transition: all 0.3s ease-in-out;
+                    -o-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
+                    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.5);
+                    &.right-aligned{
+                        right:0;
+                        border-radius: 5px 0px 5px 5px;
+                        left: 0rem;
+                    }
+                    &.open{
+                        height: 3rem;
+                    }
+                    .nav-dropdown-item{
+                        display: flex;
+                        flex-direction: row;
+                        height: 3rem;
+                        align-items: center;
+                        cursor: pointer;
+                        color: $khula-charcoal;
+                        text-decoration: none;
+                        &:hover{
+                            color: $khula-green;
+                            background-color: rgba(172, 231, 204, 0.28);
                         }
-                        .nav-dropdown{
-                            position: absolute;
-                            top: $nav-btn-height;
-                            width: 8rem;
-                            height: 0rem;
-                            border-radius: 0px 5px 5px 5px;
-                            background-color: $bg-color;
-                            color: $khula-charcoal;
-                            overflow: hidden;
-                            -webkit-transition: all 0.3s ease-in-out;
-                            -moz-transition: all 0.3s ease-in-out;
-                            -ms-transition: all 0.3s ease-in-out;
-                            -o-transition: all 0.3s ease-in-out;
-                            transition: all 0.3s ease-in-out;
-                            box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.5);
-                            &.right-aligned{
-                                right:0;
-                                border-radius: 5px 0px 5px 5px;
-                                left: 0rem;
-                            }
-                            &.open{
-                                height: 3rem;
-                            }
-                            .nav-dropdown-item{
-                                display: flex;
-                                flex-direction: row;
-                                height: 3rem;
-                                align-items: center;
-                                cursor: pointer;
-                                color: $khula-charcoal;
-                                text-decoration: none;
-                                &:hover{
-                                    color: $khula-green;
-                                    background-color: rgba(172, 231, 204, 0.28);
-                                }
-                                .item-name{
-                                    flex: 1;
-                                    padding-left: 0.35rem;
-                                    padding-right: 0.35rem;
-                                }
-                                .item-icon{
-                                    font-size: $sixteen-px;
-                                    padding-left: 0.35rem;
-                                    padding-right: 0.35rem;
-                                }
-                            }
+                        .item-name{
+                            flex: 1;
+                            padding-left: 0.35rem;
+                            padding-right: 0.35rem;
+                        }
+                        .item-icon{
+                            font-size: $sixteen-px;
+                            padding-left: 0.35rem;
+                            padding-right: 0.35rem;
                         }
                     }
                 }
-                .navbar-btn{
-                    margin-right: 0;
-                    height: $nav-btn-height;
-                }
             }
-    
-            .links-ic {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-    
-                .cart-ic {
-                    font-size: 1.4rem !important; 
-                    margin-left: $sixteen-px;
-                }
-                .truck-ic {
-                    font-size: 1.2rem !important;  
-                    margin-left: $sixteen-px;    
-                }
-            }
+        }
+    }
+    @media only screen and (min-width: 1441px){
+        .header-contents{
+            max-width: 1440px;
+            margin: auto;
         }
     }
 

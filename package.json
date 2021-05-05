@@ -19,6 +19,7 @@
     "react-dom": "^16.12.0",
     "react-dropdown-select": "^3.11.0",
     "react-scripts": "^3.4.1",
+    "react-scroll-section": "^3.0.2",
     "react-slick": "^0.25.2",
     "slick-carousel": "^1.8.1",
     "typescript": "^3.7.5"
