@@ -1,13 +1,22 @@
 $overlap:150px;
 .products-screen{
+    *t {
+        border: 1px solid black;
+    }
     position: relative;
     .details-container{
         .section{
-            padding: 50px;
             padding-bottom: $overlap;
         }
         .left-section{
-            flex: 1;
+            flex: 2;
+            margin-right: 35px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            .left-section-text{
+                width: 66%;
+            }
             .section-name{
                 color: $accent-grey-light;
                 font-size: 14px;
@@ -16,45 +25,69 @@ $overlap:150px;
             }
             .header-txt{
                 color: $white;
+                opacity: .9;
                 &.h1{
-                    font-size: 52px;
+                    font-size: 55px;
                     font-weight: 600;
+                    margin-bottom: 35px;
                 }
                 &.h2{
-                    font-size: 28px;
-                    font-weight: 500;
+                    font-size: 30px;
+                    font-weight: 600;
+                }
+                &.h3{
+                    opacity: .8;
+                    margin-bottom: 10px;
+                    font-size: 18px;
+                    color:#e8ffe8;
                 }
             }
             .left-section-txt{
-                line-height: 20px;
-                color:#85be87;
-                font-size: 12px;
+                font-weight: 300;
+                line-height: 21px;
+                color:#a7d4a8;
+                font-size: 15px;
+                .farmer-product-name{
+                    font-weight: 600;
+                    color: white;
+                    opacity: .9;
+                }
             }
         }
         .input-app-container{
             height: 600px;
             position: relative;
             flex: 1;
-            z-index: 1;
             padding-top: 50px;
             .input-app{
                 position: absolute;
                 height: 600px;
-                transition: all 1.8s, opacity 0s;
+                transition: all 1.8s, opacity .3s;
+                z-index: 10;
+            }
+            .input-app-visible-center{
+                right: 50%;
+                transform: translate(50%, 0%);
+            }
+            .input-app-hidden-left{
+                right: 100%;
+            }
+            .trader-app-vissible-center{
+                left: 50%;
+                transform: translate(-50%, 0%);
+            }
+            .trader-app-hidden-right{
+                left: 100%;
             }
         }
         .right-section{
-            //border: 1px solid black;
-            *t {
-                border: 1px solid black;
-            }
-            flex: 1;
-            //margin-top: 50px;
+            flex: 2;
+            margin-left: 35px;
             .arrow-keys{
-                //border: 1px solid black;
+                width: 400px;
                 color: $white;
                 display: flex;
-                justify-content: flex-end;
+                justify-content: space-between;
                 .carousel-button-container {
                     position: relative;
                     cursor: pointer;
@@ -107,7 +140,6 @@ $overlap:150px;
                 position: relative;
                 display: flex;
                 flex-direction: row;
-                //overflow-x: scroll;
                 width: 400px;
                 height: 125px;
                 margin-bottom: 20px;
@@ -117,33 +149,34 @@ $overlap:150px;
                     display: block;
                     min-width: 100%;
                     margin-bottom: 10;
-                    //background-color: yellowgreen;
                     transition: all 1.3s, opacity .2s;
-                    //transition: right 1.5s;
                     .heading-container{
-                        //justify-content: space-between;
                         color: $white;
-                        font-weight: 500;
-                        margin: 0 0 30px 0px;
+                        font-weight: 600;
+                        font-size: 23px;
+                        opacity: .9;
+                        margin: 0 0 25px 0px;
                     }
                     .description-container{
-                        color: $white;
-                        line-height: 20px;
-                        font-size: 13px;
                         font-weight: 300;
-                        width: 65%;
+                        line-height: 23px;
+                        color:#cfe4cf;
+                        font-size: 16.5px;
+                        width: 80%;
                     }
                 }
             }
             .action-btns{
-                margin: 40px 0;
+                cursor: pointer;
                 .white-btn{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     background-color: white;
-                    padding: 10px 15px;
+                    padding: 8px 15px;
                     border-radius: 8px;
                     font-size: 10px;
                     color: green;
-                    margin-right: 20px;
                 }
                 .transparent-btn{
                     font-size: 10px;

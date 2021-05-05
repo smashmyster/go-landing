@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import ProduceDetailsItem from "";
 import ProduceDetailsItem from "./utils/ProductDetailsItem";
 const inputsApp = require("assets/images/inputs-app.png");
 const traderApp = require("assets/images/trader-app.png");
@@ -24,30 +23,48 @@ const ProductDetails = () => {
     <div className="screen products-screen col" style={{ minHeight: 500 }}>
       <div className="k-row k-row-center-items details-container green-bg">
         <div className="left-section section">
-          <div className="section-name uppercase"> Our products</div>
-          <div className="header-txt h2">Are you a</div>
-          <div className="header-txt h1">Farmer?</div>
-          <p className="left-section-txt">
-            Toggle our products on the right we offer an inputs app to buy over
-            2000 products, and a Fresh Produce Trader app to market your
-            produce.
-          </p>
+          {/* <div className="section-name uppercase left-section-text"> Our products</div> */}
+          <div className="header-txt h2 left-section-text">Are you a</div>
+          <div className="header-txt h1 left-section-text">Farmer?</div>
+          <div className="header-txt h3 left-section-text">
+            Toggle our products on the right!
+          </div>
+          <div className="left-section-txt left-section-text">
+            We offer an{" "}
+            <text className="farmer-product-name">Inputs Mobile App</text> to
+            buy over 2000 products,
+          </div>
+          <div className="left-section-txt left-section-text">
+            and a{" "}
+            <text className="farmer-product-name">
+              Fresh Produce Trader Mobile App
+            </text>{" "}
+            to market your produce.
+          </div>
         </div>
         <div className="input-app-container column-center">
           <img
-            className="input-app"
+            className={`input-app ${
+              carouselCurrentSlide === "L"
+                ? "input-app-visible-center"
+                : "input-app-hidden-left"
+            }`}
             style={{
-              right: carouselCurrentSlide === "R" ? "100%" : "10%",
               opacity: carouselCurrentSlide === "L" ? "1" : "0",
+              visibility: carouselCurrentSlide === "L" ? "visible" : "hidden",
             }}
             src={inputsApp}
             alt="inputs market app"
           />
           <img
-            className="input-app"
+            className={`input-app ${
+              carouselCurrentSlide === "R"
+                ? "trader-app-vissible-center"
+                : "trader-app-hidden-right"
+            }`}
             style={{
-              left: carouselCurrentSlide === "L" ? "100%" : "10%",
               opacity: carouselCurrentSlide === "R" ? "1" : "0",
+              visibility: carouselCurrentSlide === "R" ? "visible" : "hidden",
             }}
             src={traderApp}
             alt="inputs market app"
@@ -72,52 +89,54 @@ const ProductDetails = () => {
               }}
             />
           </div>
-          <div className="arrow-keys row">
-            <div
-              className="carousel-button-container"
-              style={{
-                transform:
-                  carouselCurrentSlide === "L" ? "scale(.8)" : "scale(1)",
-                opacity: carouselCurrentSlide === "L" ? 0.7 : 1,
-              }}
-              onClick={() => {
-                updateCarouselCurrentSlide("L");
-              }}
-            >
-              <div className="toggle-icon-container">
-                <span className="icon fas-chevron-left"></span>
+          <div className="arrow-keys">
+            <div style={{ display: "flex", flexDirection: "row" }}>
+              <div
+                className="carousel-button-container"
+                style={{
+                  transform:
+                    carouselCurrentSlide === "L" ? "scale(.8)" : "scale(1)",
+                  opacity: carouselCurrentSlide === "L" ? 0.7 : 1,
+                }}
+                onClick={() => {
+                  updateCarouselCurrentSlide("L");
+                }}
+              >
+                <div className="toggle-icon-container">
+                  <span className="icon fas-chevron-left"></span>
+                </div>
+                {carouselCurrentSlide === "R" && [
+                  <div key={0} className="pulse-animation pulse-one" />,
+                  <div key={1} className="pulse-animation pulse-two" />,
+                ]}
               </div>
-              {carouselCurrentSlide === "R" && [
-                <div key={0} className="pulse-animation pulse-one" />,
-                <div key={1} className="pulse-animation pulse-two" />,
-              ]}
+              <div
+                className="carousel-button-container"
+                style={{
+                  transform:
+                    carouselCurrentSlide === "R" ? "scale(.8)" : "scale(1)",
+                  opacity: carouselCurrentSlide === "R" ? 0.7 : 1,
+                }}
+                onClick={() => {
+                  updateCarouselCurrentSlide("R");
+                }}
+              >
+                <div className="toggle-icon-container">
+                  <span className="icon fas-chevron-right"></span>
+                </div>
+                {carouselCurrentSlide === "L" && [
+                  <div key={0} className="pulse-animation pulse-one" />,
+                  <div key={1} className="pulse-animation pulse-two" />,
+                ]}
+              </div>
             </div>
-            <div
-              className="carousel-button-container"
-              style={{
-                transform:
-                  carouselCurrentSlide === "R" ? "scale(.8)" : "scale(1)",
-                opacity: carouselCurrentSlide === "R" ? 0.7 : 1,
-              }}
-              onClick={() => {
-                updateCarouselCurrentSlide("R");
-              }}
-            >
-              <div className="toggle-icon-container">
-                <span className="icon fas-chevron-right"></span>
-              </div>
-              {carouselCurrentSlide === "L" && [
-                <div key={0} className="pulse-animation pulse-one" />,
-                <div key={1} className="pulse-animation pulse-two" />,
-              ]}
+            <div className="row action-btns">
+              <div className="uppercase white-btn">Contact us</div>
+              {/* <div className="uppercase transparent-btn">
+                Read More <span className="fal-long-arrow-right"></span>
+              </div>*/}
             </div>
           </div>
-          {/* <div className="row action-btns">
-            <div className="uppercase white-btn">Contact us</div>
-            <div className="uppercase transparent-btn">
-              Read More <span className="fal-long-arrow-right"></span>
-            </div>
-          </div> */}
         </div>
       </div>
       <div className="section-color"></div>

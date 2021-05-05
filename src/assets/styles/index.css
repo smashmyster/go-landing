@@ -2125,20 +2125,22 @@
     height: 25px;
     font-size: 0.6rem; } }
 
+.loading-screen {
+  height: 100vh;
+  width: 100%; }
+
 .header-container {
   background-color: #FFF;
   font-size: 12px;
   color: #8F8F8F;
   position: sticky;
   top: 0;
-  z-index: 100; }
-  @media only screen and (min-width: 1441px) {
-    .header-container .header-contents {
-      max-width: 1440px;
-      margin: auto; } }
+  z-index: 100;
+  height: 5rem; }
   .header-container .header-contents {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    margin: 0 100px; }
     .header-container .header-contents .header-left {
       display: flex;
       flex-direction: row;
@@ -2147,22 +2149,21 @@
         margin: 16px; }
         .header-container .header-contents .header-left .logo img {
           width: 100px; }
-    .header-container .header-contents .links {
-      display: inline-flex; }
-      .header-container .header-contents .links .navbar-container .navbar-links {
-        display: flex;
-        width: 350px;
-        justify-content: space-around;
-        align-items: center;
-        margin-right: 100px; }
-        .header-container .header-contents .links .navbar-container .navbar-links .link .nav-dropdown-title {
+    .header-container .header-contents .navbar-links {
+      display: flex;
+      width: 350px;
+      justify-content: space-around;
+      align-items: center; }
+      .header-container .header-contents .navbar-links .link {
+        height: 1.66667rem; }
+        .header-container .header-contents .navbar-links .link .nav-dropdown-title {
           height: 2.2rem;
           display: flex;
           justify-content: center;
           align-items: center;
           position: absolute;
           cursor: pointer; }
-        .header-container .header-contents .links .navbar-container .navbar-links .link .nav-dropdown {
+        .header-container .header-contents .navbar-links .link .nav-dropdown {
           position: absolute;
           top: 2.2rem;
           width: 8rem;
@@ -2177,13 +2178,13 @@
           -o-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out;
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5); }
-          .header-container .header-contents .links .navbar-container .navbar-links .link .nav-dropdown.right-aligned {
+          .header-container .header-contents .navbar-links .link .nav-dropdown.right-aligned {
             right: 0;
             border-radius: 5px 0px 5px 5px;
             left: 0rem; }
-          .header-container .header-contents .links .navbar-container .navbar-links .link .nav-dropdown.open {
+          .header-container .header-contents .navbar-links .link .nav-dropdown.open {
             height: 3rem; }
-          .header-container .header-contents .links .navbar-container .navbar-links .link .nav-dropdown .nav-dropdown-item {
+          .header-container .header-contents .navbar-links .link .nav-dropdown .nav-dropdown-item {
             display: flex;
             flex-direction: row;
             height: 3rem;
@@ -2191,30 +2192,21 @@
             cursor: pointer;
             color: #3E3E3E;
             text-decoration: none; }
-            .header-container .header-contents .links .navbar-container .navbar-links .link .nav-dropdown .nav-dropdown-item:hover {
+            .header-container .header-contents .navbar-links .link .nav-dropdown .nav-dropdown-item:hover {
               color: #387C3F;
               background-color: rgba(172, 231, 204, 0.28); }
-            .header-container .header-contents .links .navbar-container .navbar-links .link .nav-dropdown .nav-dropdown-item .item-name {
+            .header-container .header-contents .navbar-links .link .nav-dropdown .nav-dropdown-item .item-name {
               flex: 1;
               padding-left: 0.35rem;
               padding-right: 0.35rem; }
-            .header-container .header-contents .links .navbar-container .navbar-links .link .nav-dropdown .nav-dropdown-item .item-icon {
+            .header-container .header-contents .navbar-links .link .nav-dropdown .nav-dropdown-item .item-icon {
               font-size: 1rem;
               padding-left: 0.35rem;
               padding-right: 0.35rem; }
-      .header-container .header-contents .links .navbar-container .navbar-btn {
-        margin-right: 0;
-        height: 2.2rem; }
-      .header-container .header-contents .links .links-ic {
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-        .header-container .header-contents .links .links-ic .cart-ic {
-          font-size: 1.4rem !important;
-          margin-left: 1rem; }
-        .header-container .header-contents .links .links-ic .truck-ic {
-          font-size: 1.2rem !important;
-          margin-left: 1rem; }
+  @media only screen and (min-width: 1441px) {
+    .header-container .header-contents {
+      max-width: 1440px;
+      margin: auto; } }
 
 @media (max-width: 768px) {
   .header-container .header-contents {
@@ -2272,72 +2264,12 @@
   .footer-container .footer-container-content {
     padding: 1.5rem 0.8rem; } }
 
-.landing-screen {
-  height: calc(100vh - 5rem - 15rem);
-  align-items: center;
-  display: flex;
-  width: 100%;
-  overflow: hidden; }
-  .landing-screen .left-section {
-    margin-left: 200px;
-    width: 500px; }
-    .landing-screen .left-section img {
-      width: 300px; }
-    .landing-screen .left-section .company-name {
-      color: #8F8F8F;
-      font-size: 12px;
-      margin: 10px 0; }
-    .landing-screen .left-section .company-description {
-      font-size: 14px;
-      color: #3E3E3E;
-      width: 300px;
-      line-height: 24px; }
-  .landing-screen .right-section {
-    position: relative; }
-    .landing-screen .right-section img {
-      width: 850px;
-      position: absolute; }
-
-.landing-screen {
-  height: calc(100vh - 5rem - 15rem);
-  align-items: center;
-  display: flex;
-  width: 100%;
-  overflow: hidden; }
-  .landing-screen .left-section {
-    margin-left: 200px;
-    width: 500px; }
-    .landing-screen .left-section img {
-      width: 300px; }
-    .landing-screen .left-section .company-name {
-      color: #8F8F8F;
-      font-size: 12px;
-      margin: 10px 0; }
-    .landing-screen .left-section .company-description {
-      font-size: 14px;
-      color: #3E3E3E;
-      width: 300px;
-      line-height: 24px; }
-  .landing-screen .right-section {
-    position: relative; }
-    .landing-screen .right-section img {
-      width: 850px;
-      position: absolute; }
-
-.stakeholders-screen {
-  flex-direction: column; }
-  .stakeholders-screen .stakeholder-logos {
-    justify-content: space-around;
-    width: 50%;
-    margin: 50px; }
-    .stakeholders-screen .stakeholder-logos img {
-      height: 60px; }
-
 .section-navigation {
   height: 15rem; }
   .section-navigation .nav-section {
     width: 20%;
-    margin: 0 20px 20px; }
+    margin: 0 20px 20px;
+    color: #5c5c5c; }
     .section-navigation .nav-section .primary-txt {
       font-size: 28px;
       font-weight: 600;
@@ -2349,62 +2281,146 @@
       font-weight: 500;
       margin-bottom: 12px; }
     .section-navigation .nav-section .nav-section-header {
-      font-weight: 500;
+      font-weight: 600;
+      font-size: 15px;
       margin-bottom: 10px; }
     .section-navigation .nav-section .nav-section-txt {
       font-size: 12px;
       color: #3e3e3e;
       width: 50%;
+      font-weight: 300;
       margin-bottom: 14px; }
     .section-navigation .nav-section .nav-btn {
-      font-weight: 500;
+      font-weight: 600;
       border-bottom: solid green;
+      padding-bottom: 5px;
       width: 60px;
       display: flex;
-      justify-content: space-between; }
+      justify-content: space-between;
+      cursor: pointer; }
+
+.landing-screen {
+  height: calc(100vh - 5rem - 15rem);
+  align-items: center;
+  display: flex;
+  width: 100%;
+  overflow: hidden; }
+  .landing-screen .left-section {
+    margin-left: 200px;
+    width: 500px; }
+    .landing-screen .left-section img {
+      width: 300px; }
+    .landing-screen .left-section .company-name {
+      color: #8F8F8F;
+      font-size: 12px;
+      margin: 10px 0; }
+    .landing-screen .left-section .company-description {
+      font-size: 14px;
+      color: #3E3E3E;
+      width: 300px;
+      line-height: 24px; }
+  .landing-screen .right-section {
+    position: relative;
+    height: calc(1000px * 0.31825); }
+    .landing-screen .right-section img {
+      width: 1000px;
+      left: calc(calc(100vh - 1000px)/2 - 700px);
+      position: absolute;
+      -webkit-transition: all 1.8s ease-in-out;
+      -moz-transition: all 1.8s ease-in-out;
+      -ms-transition: all 1.8s ease-in-out;
+      -o-transition: all 1.8s ease-in-out;
+      transition: all 1.8s ease-in-out; }
+      .landing-screen .right-section img.animate {
+        left: 0; }
+
+@media only screen and (min-width: 1441px) {
+  .landing-screen {
+    margin: 0;
+    max-width: 1440px;
+    margin: auto;
+    overflow: unset; } }
+
+.stakeholders-screen {
+  flex-direction: column; }
+  .stakeholders-screen .stakeholder-logos {
+    justify-content: space-around;
+    width: 50%;
+    margin: 50px; }
+    .stakeholders-screen .stakeholder-logos img {
+      height: 60px; }
 
 .products-screen {
   position: relative; }
+  .products-screen *t {
+    border: 1px solid black; }
   .products-screen .details-container .section {
-    padding: 50px;
     padding-bottom: 150px; }
   .products-screen .details-container .left-section {
-    flex: 1; }
+    flex: 2;
+    margin-right: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; }
+    .products-screen .details-container .left-section .left-section-text {
+      width: 66%; }
     .products-screen .details-container .left-section .section-name {
       color: #C7C7C7;
       font-size: 14px;
       font-weight: 500;
       margin-bottom: 16px; }
     .products-screen .details-container .left-section .header-txt {
-      color: #FFF; }
+      color: #FFF;
+      opacity: .9; }
       .products-screen .details-container .left-section .header-txt.h1 {
-        font-size: 52px;
-        font-weight: 600; }
+        font-size: 55px;
+        font-weight: 600;
+        margin-bottom: 35px; }
       .products-screen .details-container .left-section .header-txt.h2 {
-        font-size: 28px;
-        font-weight: 500; }
+        font-size: 30px;
+        font-weight: 600; }
+      .products-screen .details-container .left-section .header-txt.h3 {
+        opacity: .8;
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #e8ffe8; }
     .products-screen .details-container .left-section .left-section-txt {
-      line-height: 20px;
-      color: #85be87;
-      font-size: 12px; }
+      font-weight: 300;
+      line-height: 21px;
+      color: #a7d4a8;
+      font-size: 15px; }
+      .products-screen .details-container .left-section .left-section-txt .farmer-product-name {
+        font-weight: 600;
+        color: white;
+        opacity: .9; }
   .products-screen .details-container .input-app-container {
     height: 600px;
     position: relative;
     flex: 1;
-    z-index: 1;
     padding-top: 50px; }
     .products-screen .details-container .input-app-container .input-app {
       position: absolute;
       height: 600px;
-      transition: all 1.8s, opacity 0s; }
+      transition: all 1.8s, opacity .3s;
+      z-index: 10; }
+    .products-screen .details-container .input-app-container .input-app-visible-center {
+      right: 50%;
+      transform: translate(50%, 0%); }
+    .products-screen .details-container .input-app-container .input-app-hidden-left {
+      right: 100%; }
+    .products-screen .details-container .input-app-container .trader-app-vissible-center {
+      left: 50%;
+      transform: translate(-50%, 0%); }
+    .products-screen .details-container .input-app-container .trader-app-hidden-right {
+      left: 100%; }
   .products-screen .details-container .right-section {
-    flex: 1; }
-    .products-screen .details-container .right-section *t {
-      border: 1px solid black; }
+    flex: 2;
+    margin-left: 35px; }
     .products-screen .details-container .right-section .arrow-keys {
+      width: 400px;
       color: #FFF;
       display: flex;
-      justify-content: flex-end; }
+      justify-content: space-between; }
       .products-screen .details-container .right-section .arrow-keys .carousel-button-container {
         position: relative;
         cursor: pointer;
@@ -2459,23 +2475,27 @@
         transition: all 1.3s, opacity .2s; }
         .products-screen .details-container .right-section .slides-container .slide-container .heading-container {
           color: #FFF;
-          font-weight: 500;
-          margin: 0 0 30px 0px; }
+          font-weight: 600;
+          font-size: 23px;
+          opacity: .9;
+          margin: 0 0 25px 0px; }
         .products-screen .details-container .right-section .slides-container .slide-container .description-container {
-          color: #FFF;
-          line-height: 20px;
-          font-size: 13px;
           font-weight: 300;
-          width: 65%; }
+          line-height: 23px;
+          color: #cfe4cf;
+          font-size: 16.5px;
+          width: 80%; }
     .products-screen .details-container .right-section .action-btns {
-      margin: 40px 0; }
+      cursor: pointer; }
       .products-screen .details-container .right-section .action-btns .white-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: white;
-        padding: 10px 15px;
+        padding: 8px 15px;
         border-radius: 8px;
         font-size: 10px;
-        color: green;
-        margin-right: 20px; }
+        color: green; }
       .products-screen .details-container .right-section .action-btns .transparent-btn {
         font-size: 10px;
         padding: 10px 15px;
@@ -2528,7 +2548,9 @@
         color: #387C3F;
         font-size: 28px; }
     .fresh-produce-benefits-screen .detail-container .detail-text {
-      font-size: 13px; }
+      font-size: 13px;
+      text-align: center;
+      line-height: 1.8; }
   .fresh-produce-benefits-screen .arrow {
     width: 40px;
     margin: 0 20px; }
@@ -2564,6 +2586,9 @@
 
 .charcoal {
   color: #646464; }
+
+.k-charcoal {
+  color: #3E3E3E; }
 
 .grey {
   color: #3E3E3E; }
