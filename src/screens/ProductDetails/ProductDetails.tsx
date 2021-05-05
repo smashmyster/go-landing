@@ -18,7 +18,7 @@ const PRODUCT_DETAILS = {
 };
 
 const ProductDetails = () => {
-  const [carouselCurrentSldie, updateCarouselCurrentSlide] = useState("L");
+  const [carouselCurrentSlide, updateCarouselCurrentSlide] = useState("L");
 
   return (
     <div className="screen products-screen col" style={{ minHeight: 500 }}>
@@ -37,8 +37,8 @@ const ProductDetails = () => {
           <img
             className="input-app"
             style={{
-              left: carouselCurrentSldie === "R" ? "100%" : "10%",
-              opacity: carouselCurrentSldie === "L" ? "1" : "0",
+              right: carouselCurrentSlide === "R" ? "100%" : "10%",
+              opacity: carouselCurrentSlide === "L" ? "1" : "0",
             }}
             src={inputsApp}
             alt="inputs market app"
@@ -46,8 +46,8 @@ const ProductDetails = () => {
           <img
             className="input-app"
             style={{
-              right: carouselCurrentSldie === "L" ? "100%" : "10%",
-              opacity: carouselCurrentSldie === "R" ? "1" : "0",
+              left: carouselCurrentSlide === "L" ? "100%" : "10%",
+              opacity: carouselCurrentSlide === "R" ? "1" : "0",
             }}
             src={traderApp}
             alt="inputs market app"
@@ -59,35 +59,57 @@ const ProductDetails = () => {
               productName={PRODUCT_DETAILS.inputsMarket.name}
               productDescription={PRODUCT_DETAILS.inputsMarket.description}
               displayStyle={{
-                left: carouselCurrentSldie === "R" ? "400px" : "0px",
-                opacity: carouselCurrentSldie === "L" ? "1" : "0",
+                right: carouselCurrentSlide === "R" ? "400px" : "0",
+                opacity: carouselCurrentSlide === "L" ? "1" : "0",
               }}
             />
             <ProduceDetailsItem
               productName={PRODUCT_DETAILS.produceTrader.name}
               productDescription={PRODUCT_DETAILS.produceTrader.description}
               displayStyle={{
-                right: carouselCurrentSldie === "L" ? "400px" : "0",
-                opacity: carouselCurrentSldie === "R" ? "1" : "0",
+                left: carouselCurrentSlide === "L" ? "400px" : "0px",
+                opacity: carouselCurrentSlide === "R" ? "1" : "0",
               }}
             />
           </div>
           <div className="arrow-keys row">
             <div
               className="carousel-button-container"
+              style={{
+                transform:
+                  carouselCurrentSlide === "L" ? "scale(.8)" : "scale(1)",
+                opacity: carouselCurrentSlide === "L" ? 0.7 : 1,
+              }}
               onClick={() => {
                 updateCarouselCurrentSlide("L");
               }}
             >
-              <span className="icon fas-caret-left"></span>
+              <div className="toggle-icon-container">
+                <span className="icon fas-chevron-left"></span>
+              </div>
+              {carouselCurrentSlide === "R" && [
+                <div key={0} className="pulse-animation pulse-one" />,
+                <div key={1} className="pulse-animation pulse-two" />,
+              ]}
             </div>
             <div
               className="carousel-button-container"
+              style={{
+                transform:
+                  carouselCurrentSlide === "R" ? "scale(.8)" : "scale(1)",
+                opacity: carouselCurrentSlide === "R" ? 0.7 : 1,
+              }}
               onClick={() => {
                 updateCarouselCurrentSlide("R");
               }}
             >
-              <span className="icon fas-caret-right"></span>
+              <div className="toggle-icon-container">
+                <span className="icon fas-chevron-right"></span>
+              </div>
+              {carouselCurrentSlide === "L" && [
+                <div key={0} className="pulse-animation pulse-one" />,
+                <div key={1} className="pulse-animation pulse-two" />,
+              ]}
             </div>
           </div>
           {/* <div className="row action-btns">
