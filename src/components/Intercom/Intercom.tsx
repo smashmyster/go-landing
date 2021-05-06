@@ -35,7 +35,7 @@ const Intercom = (props: { user?: any }) => {
         .getElementsByClassName("intercom-lightweight-app")
         .item(0);
       result = intercom?.parentNode?.removeChild(intercom);
-      console.log(result); // dummy code to resolve eslint rules.
+      console.log(result); // temp resolution for eslint rule.
     };
   }, [user]);
 

@@ -1,41 +1,80 @@
 .testimonies-screen{
+    display: flex;
     flex-direction:column;
+    align-items: center;
     background-color: #001d01;
-    padding: 60px 0;
-    .title{
+    padding: 45px 0px;
+    .header-text{
         color: white;
-        line-height: 40px;
+        font-weight: 600;
     }
-    .section{
+    .first-line-text {
+        opacity: .6;
+        font-size: 12.5px;
+        margin-bottom: 1%;
+    }
+    .title-line-text {
+        margin-bottom: 3%;
+        text-align: center;
+        width: 30%;
+        font-size: 24px;
+        //opacity: .9;
+
+    }
+    .tesimonies-container{
+        position: relative;
+        width: 55%;
+        height: 500px;
+        overflow: hidden;
+    }
+}
+
+
+.testimonial-item-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    .testimonial-left-panel {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
-        width: 65%;
-        margin: 80px 0;
-        align-items: center;
-        .left-section{
-            .testimony{
-                color: #c6cfd0;
-                font-size: 24px;
-                width: 70%;
-                line-height: 40px;
-                margin-left: 100px;
-            }
-            .name{
-                font-size: 22px;
-                color: #f1f9f0;
-                width: 70%;
-                margin-left: 120px;
-                margin-top: 40px;
-            }
-            .company{
-                color: #79827c;
-                width: 70%;
-                margin-left: 120px;
-            }
+
+        .quoatation-marks{
+            font-size: 28px;
+            font-style: italic;
+            color: rgb(124, 238, 58);
+            opacity: .8;
         }
-        .right-section{
-            img{
-                width: 350px;
-            }
+        .testimonial-details{
+            width: 80%;
+            color: white;
+            font-weight: 600;
+            opacity: .9;
+        }
+        .testimonial-message{
+            font-size: 19px;
+            line-height: 32px;
+            margin-bottom: 12%;
+        }
+        .testimonial-name{
+            font-size: 14px;
+            margin-bottom: 2%;
+            color: rgb(124, 238, 58);
+        }
+        .testimonial-position{
+            font-size: 12px;
+            opacity: .8;
+        }
+    }
+    .testimonial-right-panel {
+        width: 50%;
+        .testimonial-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
         }
     }
 }
