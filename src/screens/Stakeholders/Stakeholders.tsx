@@ -7,7 +7,7 @@ const absa = require("assets/images/absa.png");
 const Stakeholders = () => {
   return (
     <div className="screen stakeholders-screen k-row k-row-center-items">
-      <div className="main-title-text">Our Partners &amp; Stakeholders.</div>
+      <div className="title">Our Partners &amp; Stakeholders.</div>
       <div className="sub-title">
         The power of our network means gaining value from all members of the
         ecosystem.

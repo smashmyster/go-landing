@@ -29,11 +29,13 @@ const Intercom = (props: { user?: any }) => {
       window.intercomSettings = undefined;
       document.body.removeChild(script);
       const frame = document.getElementById("intercom-frame");
-      frame?.parentNode?.removeChild(frame);
+      let result;
+      result = frame?.parentNode?.removeChild(frame);
       const intercom = document
         .getElementsByClassName("intercom-lightweight-app")
         .item(0);
-      intercom?.parentNode?.removeChild(intercom);
+      result = intercom?.parentNode?.removeChild(intercom);
+      console.log(result); // dummy code to resolve eslint rules.
     };
   }, [user]);
 
