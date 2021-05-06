@@ -2331,8 +2331,8 @@
         font-weight: 500; }
     .products-screen .details-container .left-section .left-section-txt {
       line-height: 20px;
-      color: #85be87;
-      font-size: 12px; }
+      color: #cddfcd;
+      font-size: 14px; }
   .products-screen .details-container .input-app-container {
     flex: 1;
     z-index: 1;
@@ -2454,7 +2454,7 @@
         color: #387C3F;
         font-size: 28px; }
     .fresh-produce-benefits-screen .detail-container .detail-text {
-      font-size: 13px;
+      font-size: 14px;
       text-align: center;
       line-height: 1.8; }
   .fresh-produce-benefits-screen .arrow {
