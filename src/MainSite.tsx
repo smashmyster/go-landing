@@ -12,33 +12,37 @@ import SectionNavigation from "screens/_components/SectionNavigation/SectionNavi
 import Header from "screens/_components/Header/Header";
 import Footer from "screens/_components/Footer/Footer";
 import { EScrollSectionIds } from "./constants";
+import Intercom from "components/Intercom/Intercom";
 
 const MainSite = () => {
   return (
-    <ScrollingProvider scrollBehavior="smooth" offset={-65}>
-      <div className="App roboto">
-        <Header />
-        <div className="section">
-          {/* <CovidBanner /> */}
-          <Landing />
-          <SectionNavigation />
-          <Stakeholders />
-          <Section id={EScrollSectionIds.INPUTSMARKET}>
-            <ProductDetails />
-          </Section>
-          <InputsMarket />
-          <Section id={EScrollSectionIds.FRESHPRODUCEMARKET}>
-            <ProduceMarket />
-          </Section>
-          <FreshProduceBenefits />
-          <Section id={EScrollSectionIds.TESTIMONIES}>
-            <Testimonies />
-          </Section>
-          <Contact />
-          <Footer />
+    <>
+      <Intercom />
+      <ScrollingProvider scrollBehavior="smooth" offset={-65}>
+        <div className="App roboto">
+          <Header />
+          <div className="section">
+            {/* <CovidBanner /> */}
+            <Landing />
+            <SectionNavigation />
+            <Stakeholders />
+            <Section id={EScrollSectionIds.INPUTSMARKET}>
+              <ProductDetails />
+            </Section>
+            <InputsMarket />
+            <Section id={EScrollSectionIds.FRESHPRODUCEMARKET}>
+              <ProduceMarket />
+            </Section>
+            <FreshProduceBenefits />
+            <Section id={EScrollSectionIds.TESTIMONIES}>
+              <Testimonies />
+            </Section>
+            <Contact />
+            <Footer />
+          </div>
         </div>
-      </div>
-    </ScrollingProvider>
+      </ScrollingProvider>
+    </>
   );
 };
 
