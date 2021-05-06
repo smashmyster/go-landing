@@ -2470,35 +2470,69 @@
       transform: rotate(8deg) translate(20px, -4px); }
 
 .testimonies-screen {
+  display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: #001d01;
-  padding: 60px 0; }
-  .testimonies-screen .title {
+  padding: 80px 0px; }
+  .testimonies-screen *t {
+    border: 1px solid white; }
+  .testimonies-screen .header-text {
     color: white;
-    line-height: 40px; }
-  .testimonies-screen .section {
-    justify-content: center;
-    width: 65%;
-    margin: 80px 0;
-    align-items: center; }
-    .testimonies-screen .section .left-section .testimony {
-      color: #c6cfd0;
-      font-size: 26px;
-      width: 70%;
-      line-height: 50px;
-      margin-left: 100px; }
-    .testimonies-screen .section .left-section .name {
-      font-size: 22px;
-      color: #f1f9f0;
-      width: 70%;
-      margin-left: 120px;
-      margin-top: 50px; }
-    .testimonies-screen .section .left-section .company {
-      color: #79827c;
-      width: 70%;
-      margin-left: 120px; }
-    .testimonies-screen .section .right-section img {
-      width: 400px; }
+    font-weight: 600; }
+  .testimonies-screen .first-line-text {
+    opacity: .6;
+    font-size: 12.5px;
+    margin-bottom: 1%; }
+  .testimonies-screen .title-line-text {
+    margin-bottom: 3%;
+    text-align: center;
+    width: 30%;
+    font-size: 24px; }
+  .testimonies-screen .tesimonies-container {
+    position: relative;
+    width: 55%;
+    height: 500px;
+    overflow: hidden; }
+
+.testimonial-item-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row; }
+  .testimonial-item-container .testimonial-left-panel {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .testimonial-item-container .testimonial-left-panel .quoatation-marks {
+      font-size: 28px;
+      font-style: italic;
+      color: #7cee3a;
+      opacity: .8; }
+    .testimonial-item-container .testimonial-left-panel .testimonial-details {
+      width: 80%;
+      color: white;
+      font-weight: 600;
+      opacity: .9; }
+    .testimonial-item-container .testimonial-left-panel .testimonial-message {
+      font-size: 19px;
+      line-height: 32px;
+      margin-bottom: 12%; }
+    .testimonial-item-container .testimonial-left-panel .testimonial-name {
+      font-size: 14px;
+      margin-bottom: 2%;
+      color: #7cee3a; }
+    .testimonial-item-container .testimonial-left-panel .testimonial-position {
+      font-size: 12px;
+      opacity: .8; }
+  .testimonial-item-container .testimonial-right-panel {
+    width: 50%; }
+    .testimonial-item-container .testimonial-right-panel .testimonial-image {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: cover; }
 
 .contact-screen {
   background-image: url(/farmer.png);

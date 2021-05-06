@@ -5,6 +5,7 @@ interface ITestimonialItemProps {
   position: string;
   image: string;
   message: string;
+  // styleSettings: any
 }
 
 const TestimonialItem: React.FC<ITestimonialItemProps> = ({
@@ -12,8 +13,35 @@ const TestimonialItem: React.FC<ITestimonialItemProps> = ({
   position,
   image,
   message,
-}: ITestimonialItemProps) => {
-  return <div className="testimonial-item-container"></div>;
+}: // styleSettings,
+ITestimonialItemProps) => {
+  return (
+    <div
+      className="testimonial-item-container"
+      // style={styleSettings}
+    >
+      <div className="testimonial-left-panel">
+        <div className="testimonial-details testimonial-message">
+          <text className="quoatation-marks">{'" '}</text>
+          {message}
+          <text className="quoatation-marks">{' "'}</text>
+        </div>
+        <div className="testimonial-details testimonial-name">
+          {name.toUpperCase()}
+        </div>
+        <div className="testimonial-details testimonial-position">
+          {position}
+        </div>
+      </div>
+      <div className="testimonial-right-panel">
+        <img
+          className="testimonial-image"
+          src={image}
+          alt={`Profile poicture of ${name}, ${position}`}
+        />
+      </div>
+    </div>
+  );
 };
 
 export default TestimonialItem;
