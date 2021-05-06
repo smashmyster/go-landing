@@ -8,14 +8,12 @@
         .section-graphic{
             margin-right: 100px;
             img{
-                width: 500px;
+                width: 400px;
             }
         }
         .right-section{
             .bullet-point{
-                margin: 20px 0 50px;
-
-            
+                margin: 15px 0 30px;
                 .bullet-header{
                     font-weight: 500;
                     font-size: 20px;
@@ -29,7 +27,7 @@
                     color: $accent-charcoal;
                     font-size: 16px;
                     line-height: 28px;
-                    margin: 20px 0;
+                    margin: 15px 0;
                 }
             }
         }

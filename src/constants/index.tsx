@@ -1,5 +1,5 @@
 export const IMAGE_API_ROOT = `https://khula.co.za/ProducePic/`;
-export const BUYER_ROOT = "http://buyer.motoglo.co.za";
+export const BUYER_ROOT = "https://buyer.khuladev.co.za";
 export const FARMER_ROOT = "http://farmer.motoglo.co.za";
 export const GRAPH_API = "http://graph.motoglo.co.za/graphql";
 export const _GetImagePath = (name: string) =>
