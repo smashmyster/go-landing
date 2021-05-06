@@ -2352,46 +2352,75 @@
 
 .products-screen {
   position: relative; }
+  .products-screen *t {
+    border: 1px solid black; }
   .products-screen .details-container .section {
-    padding: 50px;
     padding-bottom: 150px; }
   .products-screen .details-container .left-section {
-    flex: 1; }
+    flex: 2;
+    margin-right: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; }
+    .products-screen .details-container .left-section .left-section-text {
+      width: 66%; }
     .products-screen .details-container .left-section .section-name {
       color: #C7C7C7;
       font-size: 14px;
       font-weight: 500;
       margin-bottom: 16px; }
     .products-screen .details-container .left-section .header-txt {
-      color: #FFF; }
+      color: #FFF;
+      opacity: .9; }
       .products-screen .details-container .left-section .header-txt.h1 {
-        font-size: 52px;
-        font-weight: 600; }
+        font-size: 55px;
+        font-weight: 600;
+        margin-bottom: 35px; }
       .products-screen .details-container .left-section .header-txt.h2 {
-        font-size: 28px;
-        font-weight: 500; }
+        font-size: 30px;
+        font-weight: 600; }
+      .products-screen .details-container .left-section .header-txt.h3 {
+        opacity: .8;
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #e8ffe8; }
     .products-screen .details-container .left-section .left-section-txt {
-      line-height: 20px;
-      color: #85be87;
-      font-size: 12px; }
+      font-weight: 300;
+      line-height: 21px;
+      color: #a7d4a8;
+      font-size: 15px; }
+      .products-screen .details-container .left-section .left-section-txt .farmer-product-name {
+        font-weight: 600;
+        color: white;
+        opacity: .9; }
   .products-screen .details-container .input-app-container {
     height: 600px;
     position: relative;
     flex: 1;
-    z-index: 1;
     padding-top: 50px; }
     .products-screen .details-container .input-app-container .input-app {
       position: absolute;
       height: 600px;
-      transition: all 1.8s, opacity 0s; }
+      transition: all 1.8s, opacity .3s;
+      z-index: 10; }
+    .products-screen .details-container .input-app-container .input-app-visible-center {
+      right: 50%;
+      transform: translate(50%, 0%); }
+    .products-screen .details-container .input-app-container .input-app-hidden-left {
+      right: 100%; }
+    .products-screen .details-container .input-app-container .trader-app-vissible-center {
+      left: 50%;
+      transform: translate(-50%, 0%); }
+    .products-screen .details-container .input-app-container .trader-app-hidden-right {
+      left: 100%; }
   .products-screen .details-container .right-section {
-    flex: 1; }
-    .products-screen .details-container .right-section *t {
-      border: 1px solid black; }
+    flex: 2;
+    margin-left: 35px; }
     .products-screen .details-container .right-section .arrow-keys {
+      width: 400px;
       color: #FFF;
       display: flex;
-      justify-content: flex-end; }
+      justify-content: space-between; }
       .products-screen .details-container .right-section .arrow-keys .carousel-button-container {
         position: relative;
         cursor: pointer;
@@ -2446,23 +2475,27 @@
         transition: all 1.3s, opacity .2s; }
         .products-screen .details-container .right-section .slides-container .slide-container .heading-container {
           color: #FFF;
-          font-weight: 500;
-          margin: 0 0 30px 0px; }
+          font-weight: 600;
+          font-size: 23px;
+          opacity: .9;
+          margin: 0 0 25px 0px; }
         .products-screen .details-container .right-section .slides-container .slide-container .description-container {
-          color: #FFF;
-          line-height: 20px;
-          font-size: 13px;
           font-weight: 300;
-          width: 65%; }
+          line-height: 23px;
+          color: #cfe4cf;
+          font-size: 16.5px;
+          width: 80%; }
     .products-screen .details-container .right-section .action-btns {
-      margin: 40px 0; }
+      cursor: pointer; }
       .products-screen .details-container .right-section .action-btns .white-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: white;
-        padding: 10px 15px;
+        padding: 8px 15px;
         border-radius: 8px;
         font-size: 10px;
-        color: green;
-        margin-right: 20px; }
+        color: green; }
       .products-screen .details-container .right-section .action-btns .transparent-btn {
         font-size: 10px;
         padding: 10px 15px;
