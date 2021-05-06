@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import TestimonialItem from "./utils/TestimonialItem";
+import PulsatingToggleButtons from "../utils/PulsatingToggleButtons";
 const testimony1 = require("assets/images/nkanyiso.jpg");
 
 const TESTIMONIES = [
@@ -47,9 +48,22 @@ const Testimonies = () => {
     direction: null,
     counter: 0,
   });
-  useEffect(() => {
-    console.log(slideToggler);
-  }, [slideToggler]);
+
+  const slideTogglerHndlr = (direction: string) => {
+    const newStateValue: SlideToggleType = {
+      direction,
+      counter:
+        direction === "L"
+          ? slideToggler.counter !== 0
+            ? slideToggler.counter - 1
+            : slideToggler.counter
+          : slideToggler.counter !== 3
+          ? slideToggler.counter + 1
+          : slideToggler.counter,
+    };
+
+    updateSlideToggler({ ...newStateValue });
+  };
   return (
     <div className="screen testimonies-screen">
       <div className="header-text first-line-text">
@@ -60,7 +74,6 @@ const Testimonies = () => {
       </div>
       <div className="tesimonies-container">
         {TESTIMONIES.map((testimony: any, index: number) => {
-          // console.log('index', index);
           return (
             <div
               key={index}
@@ -88,46 +101,30 @@ const Testimonies = () => {
         style={{
           color: "white",
           marginTop: "2%",
-          width: "30%",
+          width: "55%",
           display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
+          flexDirection: "row-reverse",
         }}
       >
         <div
           style={{
-            marginBottom: "2%",
-            cursor: "pointer",
-          }}
-          onClick={() => {
-            const newStateValue: SlideToggleType = {
-              direction: "L",
-              counter:
-                slideToggler.counter !== 0
-                  ? slideToggler.counter - 1
-                  : slideToggler.counter,
-            };
-            updateSlideToggler({ ...newStateValue });
+            width: "50%",
+            display: "flex",
+            justifyContent: "center",
           }}
         >
-          left
-        </div>
-        <div
-          style={{
-            cursor: "pointer",
-          }}
-          onClick={() => {
-            const newStateValue: SlideToggleType = {
-              direction: "R",
-              counter:
-                slideToggler.counter !== 3
-                  ? slideToggler.counter + 1
-                  : slideToggler.counter,
-            };
-            updateSlideToggler({ ...newStateValue });
-          }}
-        >
-          right
+          <div>
+            <PulsatingToggleButtons
+              showLeftButton={slideToggler.counter > 0}
+              showRightButton={slideToggler.counter < 3}
+              leftButtonFunc={() => {
+                slideTogglerHndlr("L");
+              }}
+              rightButtonFunc={() => {
+                slideTogglerHndlr("R");
+              }}
+            />
+          </div>
         </div>
       </div>
     </div>

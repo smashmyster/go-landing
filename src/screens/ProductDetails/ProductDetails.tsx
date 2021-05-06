@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ProduceDetailsItem from "./utils/ProductDetailsItem";
+import PulsatingToggleButtons from "../utils/PulsatingToggleButtons";
 const inputsApp = require("assets/images/inputs-app.png");
 const traderApp = require("assets/images/trader-app-two.png");
 
@@ -90,46 +91,16 @@ const ProductDetails = () => {
             />
           </div>
           <div className="arrow-keys">
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              <div
-                className="carousel-button-container"
-                style={{
-                  transform:
-                    carouselCurrentSlide === "L" ? "scale(.8)" : "scale(1)",
-                  opacity: carouselCurrentSlide === "L" ? 0.7 : 1,
-                }}
-                onClick={() => {
-                  updateCarouselCurrentSlide("L");
-                }}
-              >
-                <div className="toggle-icon-container">
-                  <span className="icon fas-chevron-left"></span>
-                </div>
-                {carouselCurrentSlide === "R" && [
-                  <div key={0} className="pulse-animation pulse-one" />,
-                  <div key={1} className="pulse-animation pulse-two" />,
-                ]}
-              </div>
-              <div
-                className="carousel-button-container"
-                style={{
-                  transform:
-                    carouselCurrentSlide === "R" ? "scale(.8)" : "scale(1)",
-                  opacity: carouselCurrentSlide === "R" ? 0.7 : 1,
-                }}
-                onClick={() => {
-                  updateCarouselCurrentSlide("R");
-                }}
-              >
-                <div className="toggle-icon-container">
-                  <span className="icon fas-chevron-right"></span>
-                </div>
-                {carouselCurrentSlide === "L" && [
-                  <div key={0} className="pulse-animation pulse-one" />,
-                  <div key={1} className="pulse-animation pulse-two" />,
-                ]}
-              </div>
-            </div>
+            <PulsatingToggleButtons
+              showLeftButton={carouselCurrentSlide === "R"}
+              showRightButton={carouselCurrentSlide === "L"}
+              leftButtonFunc={() => {
+                updateCarouselCurrentSlide("L");
+              }}
+              rightButtonFunc={() => {
+                updateCarouselCurrentSlide("R");
+              }}
+            />
           </div>
           <div className="row action-btns">
             <div className="uppercase white-btn">Contact us</div>
