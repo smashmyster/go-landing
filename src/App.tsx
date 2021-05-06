@@ -5,6 +5,7 @@ import "assets/styles/style.css";
 import MainSite from "MainSite";
 import AppLoading from "components/AppLoading/AppLoading";
 const logo = require("assets/images/khula-logo.png");
+const logoSlogan = require("assets/images/khula-logo-slogan.png");
 const truck = require("assets/images/truck.png");
 const packhouse = require("assets/images/packhouse.jpeg");
 const inputsApp = require("assets/images/inputs-app.png");
@@ -19,6 +20,7 @@ const web = require("assets/images/web.png");
 
 const images = [
   logo,
+  logoSlogan,
   truck,
   packhouse,
   inputsApp,
