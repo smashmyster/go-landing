@@ -2544,11 +2544,15 @@
       transform: rotate(8deg) translate(20px, -4px); }
 
 .testimonies-screen {
+  height: calc(100vh - 5rem);
+  max-height: calc(100vh - 5rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #001d01;
-  padding: 45px 0px; }
+  padding-top: calc(100vh * .08); }
+  .testimonies-screen *t {
+    border: 1px solid white; }
   .testimonies-screen .header-text {
     color: white;
     font-weight: 600; }
@@ -2564,7 +2568,7 @@
   .testimonies-screen .tesimonies-container {
     position: relative;
     width: 55%;
-    height: 500px;
+    height: calc(100vh * .55);
     overflow: hidden; }
 
 .testimonial-item-container {
@@ -2588,8 +2592,8 @@
       font-weight: 600;
       opacity: .9; }
     .testimonial-item-container .testimonial-left-panel .testimonial-message {
-      font-size: 19px;
-      line-height: 32px;
+      font-size: 18px;
+      line-height: 30px;
       margin-bottom: 12%; }
     .testimonial-item-container .testimonial-left-panel .testimonial-name {
       font-size: 14px;
