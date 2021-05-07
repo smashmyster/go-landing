@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TestimonialItem from "./utils/TestimonialItem";
 import PulsatingToggleButtons from "../utils/PulsatingToggleButtons";
 const testimony1 = require("assets/images/nkanyiso.jpg");
+const testimony4 = require("assets/images/farmer.jpg");
 
 const TESTIMONIES = [
   {
@@ -31,7 +32,7 @@ const TESTIMONIES = [
   {
     name: "Lungi Robela",
     position: "Director of Operations of Robela Farming",
-    image: testimony1,
+    image: testimony4,
     message: `The voucher system was essentially easy to use. I had the pleasure of 
     making use of it through the intervention of SAB since they made the investment 
     on the farm, and some of the other orders were on my behalf and others I would 
