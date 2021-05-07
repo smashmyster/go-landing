@@ -31,7 +31,7 @@ const PulsatingToggleButtons: React.FC<IToggleButtonsProps> = ({
         </div>
         {showLeftButton && [
           <div key={0} className="pulse-animation pulse-one" />,
-          <div key={1} className="pulse-animation pulse-two" />,
+          // <div key={1} className="pulse-animation pulse-two" />,
         ]}
       </div>
       <div
@@ -49,7 +49,7 @@ const PulsatingToggleButtons: React.FC<IToggleButtonsProps> = ({
         </div>
         {showRightButton && [
           <div key={0} className="pulse-animation pulse-one" />,
-          <div key={1} className="pulse-animation pulse-two" />,
+          // <div key={1} className="pulse-animation pulse-two" />,
         ]}
       </div>
     </div>
