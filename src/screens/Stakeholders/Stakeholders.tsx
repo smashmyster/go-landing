@@ -13,10 +13,10 @@ const Stakeholders = () => {
         ecosystem.
       </div>
       <div className="stakeholder-logos row">
-        <img src={aeci} alt="AECI logo" />
-        <img src={absa} alt="Absa logo" />
-        <img src={e2} alt="E-Squared logo" />
-        <img src={sakata} alt="Sakata logo" />
+        <img src={aeci} alt="AECI logo" className="logo-img" />
+        <img src={absa} alt="Absa logo" className="logo-img" />
+        <img src={e2} alt="E-Squared logo" className="logo-img" />
+        <img src={sakata} alt="Sakata logo" className="logo-img" />
       </div>
     </div>
   );

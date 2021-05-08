@@ -3,9 +3,19 @@
     .stakeholder-logos{
         justify-content: space-around;
         width: 50%;
-        margin: 50px;
+        margin: 50px 0;
         img{
             height: 60px;
+        }
+    }
+}
+@media (max-width: $breakpoint-tablet) {
+    .stakeholders-screen{
+        .stakeholder-logos{
+            width: 100%;
+            img{
+                height: 30px;
+            }
         }
     }
 }
