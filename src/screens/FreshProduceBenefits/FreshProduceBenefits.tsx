@@ -3,14 +3,14 @@ import Arrow from "./components/Arrow";
 
 const FreshProduceBenefits = () => {
   return (
-    <div className="screen fresh-produce-benefits-screen green-alpha-bg">
-      <div className="f-12 main-subtitle-text center-text mb-6">Khula! app</div>
-      <div className="f-12 main-title-text center-text mb-18">
+    <div className="screen fresh-produce-benefits-screen k-row-center-items k-row green-alpha-bg">
+      <div className="f-12 sub-title">Khula! app</div>
+      <div className="f-12 title">
         Using the KHULA Fresh Produce
         <br />
         Trader means
       </div>
-      <div className="k-row k-row-center-items">
+      <div className="k-row k-row-center-items main-section">
         <div className="detail-container column-center">
           <div className="icon-container k-row k-row-center-items">
             <span className="icon fal-seedling" />

@@ -33,3 +33,20 @@
         }
     }
 }
+@media (max-width: $breakpoint-tablet) {
+   .inputs-market-screen{
+       .section{
+           display: block;
+           margin: 20px 0;
+       }
+       .section-graphic{
+           float: left;
+           img{
+               width: 300px !important;
+           }
+       }
+       .right-section{
+           float: left;
+       }
+   }
+}

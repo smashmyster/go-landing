@@ -35,3 +35,21 @@
     }
     
 }
+@media (max-width: $breakpoint-tablet) {
+    .contact-screen{
+        .section{
+            margin-left: 10px;
+            width: 90%;
+            display: block;
+            .right-section{
+                width: 100%;
+                margin-top: 20px;
+                margin-left: 0;
+                .section-header{
+                    font-size: 26px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

@@ -4,8 +4,8 @@ const packhouse = require("assets/images/packhouse.jpeg");
 const InputsMarket = () => {
   return (
     <div className="screen inputs-market-screen k-row k-row-center-items green-alpha-bg">
-      <div className="uppercase main-subtitle-text mb-5">More than an app</div>
-      <div className="main-title-text center-text mb-8">
+      <div className="uppercase sub-title mb-5">More than an app</div>
+      <div className="title center-text">
         Key benefits of the
         <br /> <span className="uppercase">Khula</span> Inputs Market
       </div>
