@@ -103,7 +103,9 @@ const ProductDetails = () => {
             />
           </div>
           <div className="row action-btns">
-            <div className="uppercase white-btn">Contact us</div>
+            <div className="uppercase white-btn intercom-ic-launch">
+              Contact us
+            </div>
             {/* <div className="uppercase transparent-btn">
               Read More <span className="fal-long-arrow-right"></span>
             </div>*/}

@@ -24,7 +24,9 @@ const ProduceMarket = () => {
             Flexible terms and safe payment options.
           </div>
           <div className="row action-btns">
-            <div className="uppercase green-btn pointer">Contact us</div>
+            <div className="uppercase green-btn pointer intercom-ic-launch">
+              Contact us
+            </div>
             {/* TODO: Create a page with more in-depth detail on the BW
             <div className="transparent-btn pointer">
               Find out more <span className="fal-long-arrow-right"></span>
@@ -48,7 +50,9 @@ const ProduceMarket = () => {
             <span className="uppercase">Khula</span> suppliers on the go.
           </div>
           <div className="row action-btns">
-            <div className="uppercase green-btn pointer">Contact us</div>
+            <div className="uppercase green-btn pointer intercom-ic-launch">
+              Contact us
+            </div>
             {/* TODO: Create a page with more in-depth detail on the TA
             <div className="transparent-btn pointer">
               Find out more <span className="fal-long-arrow-right"></span>

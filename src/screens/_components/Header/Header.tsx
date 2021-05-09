@@ -19,7 +19,9 @@ const Header = () => {
             <div className="nav-dropdown-title">About</div>
           </div> */}
           <div className="link">
-            <div className="nav-dropdown-title">Contact Us</div>
+            <div className="nav-dropdown-title intercom-ic-launch">
+              Contact Us
+            </div>
           </div>
           <div
             className="link"

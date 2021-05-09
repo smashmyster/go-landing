@@ -1,8 +1,6 @@
 import { useEffect } from "react";
 
-const Intercom = (props: { user?: any }) => {
-  const { user } = props;
-
+const Intercom = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.type = "text/javascript";
@@ -12,17 +10,17 @@ const Intercom = (props: { user?: any }) => {
     );
     script.appendChild(inlineScript);
 
-    if (user) {
-      // @ts-ignore
-      window.intercomSettings = {
-        // eslint-disable-next-line @typescript-eslint/naming-convention
-        app_id: "ftyak6d0",
-        name: user,
-        email: "",
-      };
+    // @ts-ignore
+    window.intercomSettings = {
+      // eslint-disable-next-line @typescript-eslint/naming-convention
+      app_id: "ftyak6d0",
+      name: "",
+      email: "info@khula.co.za",
+      // eslint-disable-next-line @typescript-eslint/naming-convention
+      custom_launcher_selector: ".intercom-ic-launch",
+    };
 
-      document.body.appendChild(script);
-    }
+    document.body.appendChild(script);
 
     return () => {
       // @ts-ignore
@@ -37,7 +35,7 @@ const Intercom = (props: { user?: any }) => {
       result = intercom?.parentNode?.removeChild(intercom);
       console.log(result); // temp resolution for eslint rule.
     };
-  }, [user]);
+  }, []);
 
   return null;
 };
