@@ -17,6 +17,8 @@ const farmer = require("assets/images/farmer.jpg");
 const testimony1 = require("assets/images/nkanyiso.jpg");
 const app = require("assets/images/trader-app.png");
 const web = require("assets/images/web.png");
+const phoneBezel = require("assets/images/phone-bezel.png");
+const phoneBackground = require("assets/images/phone-background.png");
 
 const images = [
   logo,
@@ -32,6 +34,8 @@ const images = [
   testimony1,
   app,
   web,
+  phoneBezel,
+  phoneBackground,
 ];
 const App = () => {
   const [appLoading, setAppLoading] = useState<boolean>(true);

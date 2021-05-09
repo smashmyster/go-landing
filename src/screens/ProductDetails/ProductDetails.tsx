@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import ProduceDetailsItem from "./utils/ProductDetailsItem";
 import PulsatingToggleButtons from "../utils/PulsatingToggleButtons";
+const phoneBezel = require("assets/images/phone-bezel.png");
+const phoneBackground = require("assets/images/phone-background.png");
 const inputsApp = require("assets/images/inputs-app.png");
 const traderApp = require("assets/images/trader-app-two.png");
 
@@ -44,32 +46,40 @@ const ProductDetails = () => {
           </div>
         </div>
         <div className="input-app-container column-center">
-          <img
-            className={`input-app ${
-              carouselCurrentSlide === "L"
-                ? "input-app-visible-center"
-                : "input-app-hidden-left"
-            }`}
-            style={{
-              opacity: carouselCurrentSlide === "L" ? "1" : "0",
-              visibility: carouselCurrentSlide === "L" ? "visible" : "hidden",
-            }}
-            src={inputsApp}
-            alt="inputs market app"
-          />
-          <img
-            className={`input-app ${
-              carouselCurrentSlide === "R"
-                ? "trader-app-vissible-center"
-                : "trader-app-hidden-right"
-            }`}
-            style={{
-              opacity: carouselCurrentSlide === "R" ? "1" : "0",
-              visibility: carouselCurrentSlide === "R" ? "visible" : "hidden",
-            }}
-            src={traderApp}
-            alt="inputs market app"
-          />
+          <div className="app-container">
+            <img className="app-bezel" src={phoneBezel} />
+            <img
+              className={`input-app ${
+                carouselCurrentSlide === "L"
+                  ? "input-app-visible-center"
+                  : "input-app-hidden-left"
+              }`}
+              style={{
+                opacity: carouselCurrentSlide === "L" ? "1" : "0",
+                visibility: carouselCurrentSlide === "L" ? "visible" : "hidden",
+              }}
+              src={inputsApp}
+              alt="inputs market app"
+            />
+            <img
+              className={`input-app ${
+                carouselCurrentSlide === "R"
+                  ? "trader-app-vissible-center"
+                  : "trader-app-hidden-right"
+              }`}
+              style={{
+                opacity: carouselCurrentSlide === "R" ? "1" : "0",
+                visibility: carouselCurrentSlide === "R" ? "visible" : "hidden",
+              }}
+              src={traderApp}
+              alt="inputs market app"
+            />
+            <img
+              className="app-bezel"
+              src={phoneBackground}
+              style={{ zIndex: 7 }}
+            />
+          </div>
         </div>
         <div className="right-section section">
           <div className="slides-container">
@@ -77,7 +87,7 @@ const ProductDetails = () => {
               productName={PRODUCT_DETAILS.inputsMarket.name}
               productDescription={PRODUCT_DETAILS.inputsMarket.description}
               displayStyle={{
-                right: carouselCurrentSlide === "R" ? "400px" : "0",
+                right: carouselCurrentSlide === "R" ? "290px" : "0",
                 opacity: carouselCurrentSlide === "L" ? "1" : "0",
               }}
             />
