@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "App.css";
 import "assets/styles/index.css";
-import "assets/styles/style.css";
+import "assets/styles/fonts/icomoon/style.css";
 import MainSite from "MainSite";
 import AppLoading from "components/AppLoading/AppLoading";
 const logo = require("assets/images/khula-logo.png");
