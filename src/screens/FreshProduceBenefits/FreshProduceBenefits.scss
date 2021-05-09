@@ -2,38 +2,58 @@ $x:20px;
 $y:4px;
 $deg:8deg;
 .fresh-produce-benefits-screen{
-    padding: 50px 150px;
-    .detail-container{
-        flex: 1;
-        .icon-container{
-            background-color: $accent-green;
-            width: 80px;
-            height: 80px;
-            border-radius: 100%;
-            .icon{
-                color: $khula-green;
-                font-size: 28px;
+    flex-direction: column;
+    padding: 30px 0;
+    .main-section{
+        margin: 50px 0;
+        .detail-container{
+            flex: 1;
+            .icon-container{
+                background-color: $accent-green;
+                width: 80px;
+                height: 80px;
+                border-radius: 100%;
+                .icon{
+                    color: $khula-green;
+                    font-size: 28px;
+                }
+            }
+            .detail-text{
+                font-size: 14px;
+                text-align: center;
+                line-height: 1.8;
+                width: 80%;
             }
         }
-        .detail-text{
-            font-size: 14px;
-            text-align: center;
-            line-height: 1.8;
+        .arrow{
+            width: 40px;
+            margin: 0 20px;
+            div{
+                width: 1px;
+                background-color: $accent-grey;
+                height: 80px;
+            }
+            .arrow-top{
+                transform: rotate(-$deg) translate($x,$y);
+            }
+            .arrow-bottom{
+                transform: rotate($deg) translate($x,-$y);
+            }
         }
     }
-    .arrow{
-        width: 40px;
-        margin: 0 20px;
-        div{
-            width: 1px;
-            background-color: $accent-grey;
-            height: 80px;
-        }
-        .arrow-top{
-            transform: rotate(-$deg) translate($x,$y);
-        }
-        .arrow-bottom{
-            transform: rotate($deg) translate($x,-$y);
+    
+}
+@media (max-width: $breakpoint-tablet) {
+    .fresh-produce-benefits-screen{
+        padding: 20px 80px;
+        .main-section{
+            display: block;
+            .detail-container{
+                float: left;
+            }
+            .arrow{
+                display: none;
+            }
         }
     }
 }

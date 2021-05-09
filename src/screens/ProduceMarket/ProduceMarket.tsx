@@ -8,7 +8,7 @@ const ProduceMarket = () => {
       <div className="title">
         Are you a Buyer, Retailer, Wholesaler, Packhouse or Export agent?
       </div>
-      <div className="sub-title">
+      <div className="sub-title" style={{ marginBottom: 50 }}>
         Trade effeciently and safely with the best emerging and commercial
         farmers.
       </div>
@@ -25,7 +25,8 @@ const ProduceMarket = () => {
           </div>
           <div className="row action-btns">
             <div className="uppercase green-btn pointer">Contact us</div>
-            {/* <div className="transparent-btn pointer">
+            {/* TODO: Create a page with more in-depth detail on the BW
+            <div className="transparent-btn pointer">
               Find out more <span className="fal-long-arrow-right"></span>
             </div> */}
           </div>
@@ -36,7 +37,7 @@ const ProduceMarket = () => {
       </div>
       <div className="row" style={{ alignItems: "center" }}>
         <div className="left-section" style={{ width: "80%" }}>
-          <img src={app} alt="app platform" />
+          <img src={app} alt="app platform" style={{ width: 500 }} />
         </div>
         <div className="right-section">
           <div className="sub-title uppercase">In Beta</div>
@@ -48,7 +49,8 @@ const ProduceMarket = () => {
           </div>
           <div className="row action-btns">
             <div className="uppercase green-btn pointer">Contact us</div>
-            {/* <div className="transparent-btn pointer">
+            {/* TODO: Create a page with more in-depth detail on the TA
+            <div className="transparent-btn pointer">
               Find out more <span className="fal-long-arrow-right"></span>
             </div> */}
           </div>
