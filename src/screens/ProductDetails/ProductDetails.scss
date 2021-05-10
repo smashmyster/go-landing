@@ -1,6 +1,7 @@
 $overlap:150px;
 .products-screen{
     position: relative;
+    overflow: hidden;
     .details-container{
         .section{
             padding-bottom: $overlap;
