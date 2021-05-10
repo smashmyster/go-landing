@@ -1,5 +1,4 @@
 .testimonies-screen{
-    //border: 1px solid white;
     *t {
         border: 1px solid white;
     }
@@ -25,8 +24,6 @@
         text-align: center;
         width: 30%;
         font-size: 24px;
-        //opacity: .9;
-
     }
     .tesimonies-container{
         position: relative;
@@ -84,4 +81,16 @@
             object-fit: cover;
         }
     }
+}
+@media (max-width: $breakpoint-tablet) {
+    .testimonies-screen{
+        .title-line-text {
+            width: 90%;
+        }
+        .first-line-text {
+            margin-bottom: 20px;
+        }
+
+    }
+    
 }
