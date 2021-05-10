@@ -1,7 +1,7 @@
 export const IMAGE_API_ROOT = `https://khula.co.za/ProducePic/`;
-export const BUYER_ROOT = "https://buyer.khuladev.co.za";
-export const FARMER_ROOT = "http://farmer.motoglo.co.za";
-export const GRAPH_API = "http://graph.motoglo.co.za/graphql";
+export const BUYER_ROOT = "https://buyer.khulademo.co.za";
+export const FARMER_ROOT = "https://farmer.khulademo.co.za";
+export const GRAPH_API = "https://graph.khulademo.co.za/graphql";
 export const _GetImagePath = (name: string) =>
   name ? `${IMAGE_API_ROOT}${name.replace(/ /g, "").toLowerCase()}.png` : "";
 export const isMobile = window.innerWidth < 768;
