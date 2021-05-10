@@ -1,7 +1,4 @@
 import React from "react";
-import "App.css";
-import "assets/styles/index.css";
-import "assets/styles/style.css";
 
 const AppLoading = () => {
   return (
