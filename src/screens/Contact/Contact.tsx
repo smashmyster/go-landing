@@ -17,7 +17,9 @@ const Contact = () => {
             Reach out, and join us in building the future of agriculture. Want a
             Demo? Need more information to make a decision?
           </div>
-          <div className="white-btn uppercase pointer">Contact us</div>
+          <div className="white-btn uppercase pointer intercom-ic-launch">
+            Contact us
+          </div>
         </div>
       </div>
     </div>
