@@ -56,15 +56,28 @@ $overlap:150px;
             position: relative;
             flex: 1;
             padding-top: 50px;
-            .input-app{
+            .app-container{
                 position: absolute;
                 height: 600px;
-                transition: all 1.8s, opacity .3s;
                 z-index: 10;
+                width: 270px;
+                overflow: hidden;
+            }
+            .app-bezel{
+                position: absolute;
+                height: 600px;
+                z-index: 10;
+                width: 270px;
+            }
+            .input-app{
+                height: 600px;
+                position: absolute;
+                z-index: 8;
+                transition: all 1.8s, opacity .3s;
             }
             .input-app-visible-center{
                 right: 50%;
-                transform: translate(50%, 0%);
+                transform: translate(50%,0%);
             }
             .input-app-hidden-left{
                 right: 100%;
@@ -111,7 +124,7 @@ $overlap:150px;
                         font-weight: 300;
                         line-height: 23px;
                         color:#cfe4cf;
-                        font-size: 16.5px;
+                        font-size: 14px;
                         width: 80%;
                     }
                 }

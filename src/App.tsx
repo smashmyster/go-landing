@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "App.css";
 import "assets/styles/index.css";
-import "assets/styles/style.css";
+import "assets/styles/fonts/icomoon/style.css";
 import MainSite from "MainSite";
 import AppLoading from "components/AppLoading/AppLoading";
 const logo = require("assets/images/khula-logo.png");
@@ -17,6 +17,8 @@ const farmer = require("assets/images/farmer.jpg");
 const testimony1 = require("assets/images/nkanyiso.jpg");
 const app = require("assets/images/trader-app.png");
 const web = require("assets/images/web.png");
+const phoneBezel = require("assets/images/phone-bezel.png");
+const phoneBackground = require("assets/images/phone-background.png");
 
 const images = [
   logo,
@@ -32,6 +34,8 @@ const images = [
   testimony1,
   app,
   web,
+  phoneBezel,
+  phoneBackground,
 ];
 const App = () => {
   const [appLoading, setAppLoading] = useState<boolean>(true);
