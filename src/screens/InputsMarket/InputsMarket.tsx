@@ -1,3 +1,4 @@
+import { isMobile } from "constants/index";
 import React from "react";
 const packhouse = require("assets/images/packhouse.jpeg");
 
@@ -10,9 +11,11 @@ const InputsMarket = () => {
         <br /> <span className="uppercase">Khula</span> Inputs Market
       </div>
       <div className="row section">
-        <div className="section-graphic">
-          <img src={packhouse} alt="packhouse" />
-        </div>
+        {!isMobile && (
+          <div className="section-graphic">
+            <img src={packhouse} alt="packhouse" />
+          </div>
+        )}
         <div className="right-section">
           <div className="bullet-point">
             <div className="bullet-header">

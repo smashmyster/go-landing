@@ -53,15 +53,20 @@
 }
 @media (max-width: $breakpoint-tablet) {
   .footer-screen{
+    .logo{
+      img{
+        width: 120px;  
+      }
+    }
     .media-links{
-      width: 100%;
-      justify-content: center;
+      width: 70%;
+      justify-content: space-around;
       a{
         margin: 0 5px;
       }
     }
     .document-links{
-      width: 100%;
+      width: 70%;
     }
   }
 }

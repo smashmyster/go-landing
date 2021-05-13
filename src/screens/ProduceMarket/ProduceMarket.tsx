@@ -1,3 +1,4 @@
+import { isMobile } from "constants/index";
 import React from "react";
 const web = require("assets/images/web.png");
 const app = require("assets/images/trader-app.png");
@@ -16,7 +17,11 @@ const ProduceMarket = () => {
         <div className="left-section">
           <div className="sub-title uppercase">All New</div>
           <div className="title">
-            Web (Trading tools available from your Desktop)
+            {`${
+              isMobile
+                ? "Web"
+                : " Web (Trading tools available from your Desktop)"
+            }`}
           </div>
           <div className="section-text">
             Trade fresh produce with our various trading tools. Buy on the go
@@ -34,7 +39,7 @@ const ProduceMarket = () => {
           </div>
         </div>
         <div className="right-section">
-          <img src={web} alt="web platform" />
+          <img src={web} alt="web platform" className="web" />
         </div>
       </div>
       <div className="row" style={{ alignItems: "center" }}>
@@ -43,7 +48,9 @@ const ProduceMarket = () => {
         </div>
         <div className="right-section">
           <div className="sub-title uppercase">In Beta</div>
-          <div className="title">Fresh Produce Trader App</div>
+          <div className="title">
+            {`${isMobile ? "App" : " Fresh Produce Trader App"}`}
+          </div>
           <div className="section-text">
             Access the market on the go with our frsh produce trader app. Browse
             farmer availability and chat with your{" "}

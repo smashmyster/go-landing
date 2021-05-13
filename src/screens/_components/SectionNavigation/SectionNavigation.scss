@@ -42,20 +42,27 @@
 @media (max-width: $breakpoint-tablet) {
     .section-navigation{
         display: block;
-        text-align: center;
+        height: 11rem;
         .nav-section{
             float: left;
             width: 100%;
             margin-bottom: 40px;
             .primary-txt{
                 width: 100%;
+                font-size: 22px;
             }
-            .nav-section-txt{
-                width: 100%;
+            .secondary-txt{
+                margin-top: 20px;
             }
             .nav-btn{
                 margin: auto;
+                width: 80px;
             }
+        }
+        .nav-section-mobile{
+            float: left;
+            width: 20%;
+            margin: 0 10px 10px 20px;
         }
 
     }
