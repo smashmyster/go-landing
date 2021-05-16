@@ -12,9 +12,13 @@
 @media (max-width: $breakpoint-tablet) {
     .stakeholders-screen{
         .stakeholder-logos{
-            width: 100%;
+            width: 82%;
+            display: block;
+            margin: 0 auto;
             img{
-                height: 30px;
+                float: left;
+                margin: 10px;
+                height: 40px;
             }
         }
     }

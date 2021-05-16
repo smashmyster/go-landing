@@ -3,7 +3,6 @@
     .nav-section{
         width: 20%;
         margin: 0 20px 20px;
-        // color: $khula-charcoal;
         color: #5c5c5c;
         .primary-txt{
             font-size: 28px;
@@ -39,4 +38,33 @@
             cursor: pointer;
         }
     }
+}
+@media (max-width: $breakpoint-tablet) {
+    .section-navigation{
+        display: block;
+        height: 11rem;
+        .nav-section{
+            float: left;
+            width: 100%;
+            margin-bottom: 40px;
+            .primary-txt{
+                width: 100%;
+                font-size: 22px;
+            }
+            .secondary-txt{
+                margin-top: 20px;
+            }
+            .nav-btn{
+                margin: auto;
+                width: 80px;
+            }
+        }
+        .nav-section-mobile{
+            float: left;
+            width: 20%;
+            margin: 0 10px 10px 20px;
+        }
+
+    }
+    
 }

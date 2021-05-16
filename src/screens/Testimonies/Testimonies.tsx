@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import TestimonialItem from "./utils/TestimonialItem";
 import PulsatingToggleButtons from "../utils/PulsatingToggleButtons";
 const testimony1 = require("assets/images/nkanyiso.jpg");
-const testimony4 = require("assets/images/farmer.jpg");
+const testimony2 = require("assets/images/quinton.png");
+const testimony3 = require("assets/images/jannie.jpg");
+const testimony4 = require("assets/images/lungi.jpg");
 
 const TESTIMONIES = [
   {
     name: "Nonkanyiso Ngubane",
-    position: "Director of Dukathole FArm",
+    position: "Director of Dukathole Farm",
     image: testimony1,
     message: `I give the spraying program for cucumbers a thumbs up. The crop
     advisor (Johan Smith) looked after us, he was hands on and showed a
@@ -16,7 +18,7 @@ const TESTIMONIES = [
   {
     name: "QUINTIN CROSS",
     position: "AECI Plant Health, Managing Director",
-    image: testimony1,
+    image: testimony2,
     message: `By identifying emerging farmers' pain points we can use 
     technology to strengthen relationship with suppliers 
     and enhance product stewardship.`,
@@ -24,7 +26,7 @@ const TESTIMONIES = [
   {
     name: "JANNIE WILLEMSE",
     position: "AECI Plant Health, Business Development Manager",
-    image: testimony1,
+    image: testimony3,
     message: `When farmers order on the KHULA! Inputs app, it gives the depots more 
     lead time to get the order together instead of turning farmers away when 
     the product is out of stock at their depot`,

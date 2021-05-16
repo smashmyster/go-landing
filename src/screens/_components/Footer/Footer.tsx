@@ -1,5 +1,7 @@
+import { isMobile } from "constants/index";
 import React from "react";
-const logo = require("assets/images/khula-logo-slogan.png");
+const logoSlogan = require("assets/images/khula-logo-slogan.png");
+const logo = require("assets/images/khula-logo.png");
 
 const Footer = () => {
   return (
@@ -19,7 +21,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="logo">
-        <img src={logo} alt="logo" />
+        <img src={isMobile ? logo : logoSlogan} alt="logo" />
       </div>
       <div className="document-links">
         <a

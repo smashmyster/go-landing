@@ -4,7 +4,7 @@ import Arrow from "./components/Arrow";
 const FreshProduceBenefits = () => {
   return (
     <div className="screen fresh-produce-benefits-screen k-row-center-items k-row green-alpha-bg">
-      <div className="f-12 sub-title">Khula! app</div>
+      <div className="f-12 sub-title uppercase">Khula! app</div>
       <div className="f-12 title">
         Using the KHULA Fresh Produce
         <br />
@@ -15,7 +15,7 @@ const FreshProduceBenefits = () => {
           <div className="icon-container k-row k-row-center-items">
             <span className="icon fal-seedling" />
           </div>
-          <div className="font-weight-600 f-20 grey m-5">
+          <div className="font-weight-600 f-20 grey m-5 header">
             Fresher <span className="green">Product.</span>
           </div>
           <div className="charcoal detail-text">
@@ -28,7 +28,7 @@ const FreshProduceBenefits = () => {
           <div className="icon-container k-row k-row-center-items">
             <span className="icon fal-money-bill-wave-alt" />
           </div>
-          <div className="font-weight-600 f-20 grey m-5">
+          <div className="font-weight-600 f-20 grey m-5 header">
             Lower <span className="green">Costs.</span>
           </div>
           <div className="charcoal detail-text">
@@ -41,7 +41,7 @@ const FreshProduceBenefits = () => {
           <div className="icon-container k-row k-row-center-items">
             <span className="icon fal-hand-holding-seedling" />
           </div>
-          <div className="font-weight-600 f-20 grey m-5">
+          <div className="font-weight-600 f-20 grey m-5 header">
             More <span className="green">Value.</span>
           </div>
           <div className="charcoal detail-text">

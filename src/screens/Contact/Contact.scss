@@ -37,6 +37,7 @@
 }
 @media (max-width: $breakpoint-tablet) {
     .contact-screen{
+        background-size: 260px;
         .section{
             margin-left: 10px;
             width: 90%;
@@ -48,6 +49,9 @@
                 .section-header{
                     font-size: 26px;
                     text-align: center;
+                }
+                .white-btn{
+                    margin: auto;
                 }
             }
         }

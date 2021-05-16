@@ -42,11 +42,20 @@
        .section-graphic{
            float: left;
            img{
-               width: 300px !important;
+               width: 250px !important;
            }
        }
        .right-section{
            float: left;
+           .bullet-point{
+               text-align: center;
+               .bullet-header{
+                font-size: 18px !important;
+               }
+           }
+           .bullet-text{
+               font-size: 13px !important;
+           }
        }
    }
 }
