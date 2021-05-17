@@ -47,7 +47,7 @@ const ProductDetails = () => {
         </div>
         <div className="input-app-container column-center">
           <div className="app-container">
-            <img className="app-bezel" src={phoneBezel} />
+            <img className="app-bezel" alt="phone-bezel" src={phoneBezel} />
             <img
               className={`input-app ${
                 carouselCurrentSlide === "L"
@@ -78,6 +78,7 @@ const ProductDetails = () => {
               className="app-bezel"
               src={phoneBackground}
               style={{ zIndex: 7 }}
+              alt="phone-bg"
             />
           </div>
         </div>
