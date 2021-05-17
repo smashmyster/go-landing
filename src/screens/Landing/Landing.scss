@@ -48,6 +48,22 @@ $duration: 1.8s;
 
     }
 }
+@media (max-width: $breakpoint-tablet) {
+    .landing-screen{
+        .left-section{
+            margin-left: 0;
+            width: 100%;
+            text-align: center;
+            .company-description{
+                margin: auto;
+            }
+        }
+        .right-section{
+            display: none;
+        }
+    }
+    
+}
 
 @media only screen and (min-width: 1441px){
     .landing-screen{
