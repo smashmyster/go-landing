@@ -94,7 +94,10 @@ $overlap:150px;
         .right-section{
             flex: 2;
             margin-left: 35px;
-            position: relative;
+            position: relative;    
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
             .arrow-keys{
                 width: 400px;
                 color: $white;
@@ -112,7 +115,6 @@ $overlap:150px;
                     position: absolute;
                     display: block;
                     min-width: 100%;
-                    margin-bottom: 10;
                     transition: all 1.3s, opacity .2s;
                     .heading-container{
                         color: $white;
@@ -162,5 +164,69 @@ $overlap:150px;
         width:100%;
         margin-top: -$overlap;
         background-color: #EBF2EB;
+    }
+}
+@media (max-width: $breakpoint-tablet) {
+    .products-screen{
+        height: 600px;
+        .section-color{
+            display: none;
+        }
+        .header-txt{
+            color: $white;
+            opacity: .9;
+            &.h1{
+                font-size: 30px;
+                font-weight: 600;
+                margin: 20px 0 10px 30px;
+            }
+            &.h3{
+                opacity: .8;
+                margin-bottom: 12px;
+                font-size: 14px;
+                color:#e8ffe8;
+                margin-left: 30px;
+            }
+        }
+        .details-container{
+            .right-section{
+                margin-left: 40px;
+                .slides-container{
+                    width: unset;
+                }
+                .arrow-keys{
+                    width: unset;
+                }
+            }
+            .input-app-container{
+                padding-top: 20px;
+                .app-container{
+                    z-index: 0;
+                    margin-left: 40px;
+                }
+                .input-app{
+                    height: 75%;
+                    width:  75%;
+                }
+                .trader-app-vissible-center{
+                    left: 39%;
+                }
+                .app-bezel{
+                    width: 75%;
+                    height: 75%;
+                }
+                .input-app-visible-center{
+                    width: 75%;
+                    height: 75%;
+                    right: 61%;
+                }
+                .trader-app-hidden-right{
+                    width: 75%;
+                    height: 75%;
+                    right: 61%;
+                }
+            }
+        }
+        
     }
 }
