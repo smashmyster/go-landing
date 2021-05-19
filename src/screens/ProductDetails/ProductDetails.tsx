@@ -34,7 +34,7 @@ const ProductDetails = () => {
             Are you a farmer?
           </div>
           <div className="header-txt h3 left-section-text">
-            Toggle something below
+            Toggle our solution below
           </div>
         </div>
       )}
