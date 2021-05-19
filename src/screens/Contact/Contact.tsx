@@ -4,7 +4,7 @@ const farmer = require("assets/images/farmer.jpg");
 
 const Contact = () => {
   return (
-    <div className="screen contact-screen k-row k-row-center-items green-bg">
+    <div className="screen contact-screen k-row k-row-center-items green-alpha-bg">
       <div className="row section">
         {!isMobile && (
           <div className="section-graphic">

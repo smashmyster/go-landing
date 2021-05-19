@@ -19,6 +19,16 @@ const InputsMarket = () => {
         <div className="right-section">
           <div className="bullet-point">
             <div className="bullet-header">
+              <span className="fal-store-alt"></span> One-Stop-Shop, 86+
+              Suppliers.
+            </div>
+            <div className="bullet-text">
+              Our marketplace includes seed,fertilizer, agro-chemicals, animal
+              health products and more. Buy everything you need, in one place.
+            </div>
+          </div>
+          <div className="bullet-point">
+            <div className="bullet-header">
               <span className="fal-chart-line"></span> 2000+ Products.
             </div>
             <div className="bullet-text">
@@ -28,20 +38,12 @@ const InputsMarket = () => {
           </div>
           <div className="bullet-point">
             <div className="bullet-header">
-              <span className="fal-chart-pie"></span> 130+ Depots Nationwide.
+              <span className="fal-chart-pie"></span> 130+ Depots &amp; 190+
+              Crop Advisors Nationwide.
             </div>
             <div className="bullet-text">
               With over 130 depots nationwide on KHULA, we can deliver in every
               province, in every major agriculture region in SA.
-            </div>
-          </div>
-          <div className="bullet-point">
-            <div className="bullet-header">
-              <span className="fal-store-alt"></span> One-Stop-Shop.
-            </div>
-            <div className="bullet-text">
-              Our marketplace includes seed,fertilizer, agro-chemicals, animal
-              health products and more. Buy everything you need, in one place.
             </div>
           </div>
         </div>
