@@ -1,0 +1,46 @@
+image: node:12.4.0
+definitions:
+  caches:
+    yarn: ~/.yarn
+
+pipelines:
+
+  default:
+    - step:
+        name: unit-test
+        caches:
+          - yarn
+        script:
+          - yarn
+          - echo "Unit tests should run here..."
+
+  branches:
+
+    develop:
+      - step:
+          name: validate code for staging
+          caches:
+            - yarn
+          script:
+            - echo "Unit tests should run here..."
+      - step:
+          name: deploy to dev server
+          deployment: staging
+          caches:
+            - yarn
+          script:
+            - unset CI 
+            - yarn
+            - yarn build
+            - HTTP_CODE=$(curl -I  -X POST "https://builder.khuladev.co.za/landing" -H "Content-Type:application/x-www-form-urlencoded" -H "cache-control:no-cache"  -s | head -n 1 | cut -d$' ' -f2)
+            - if [[ $HTTP_CODE -ge 400 ]]; then echo "Failed building on server" && exit 1; else echo "Server build successful" && exit 0 ; fi
+            - echo "built and deployed"
+
+    master:
+      - step:
+          name: unit-test
+          caches:
+            - yarn
+          script:
+            - yarn
+            - echo "Unit tests should run here..."
