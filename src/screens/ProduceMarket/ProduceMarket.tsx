@@ -18,13 +18,12 @@ const ProduceMarket = () => {
       <div className="row">
         <div className="left-section">
           <div className="sub-title uppercase">All New</div>
-          <div className="title">
-            {`${
-              isMobile
-                ? "Web"
-                : " Web (Trading tools available from your Desktop)"
-            }`}
-          </div>
+          <div className="title">Web</div>
+          {!isMobile && (
+            <div className="title">
+              (Trading tools available from your Desktop)
+            </div>
+          )}
           <div className="section-text">
             Trade fresh produce with our various trading tools. Buy on the go
             with our Spot Market, manage direct orders or program trading.
@@ -76,8 +75,8 @@ const ProduceMarket = () => {
             className="section-text"
             style={{ width: isMobile ? "80%" : "" }}
           >
-            Access the market on the go with our frsh produce trader app. Browse
-            farmer availability and chat with your{" "}
+            Access the market on the go with our fresh produce trader app.
+            Browse farmer availability and chat with your{" "}
             <span className="uppercase">Khula</span> suppliers on the go.
           </div>
           {!isMobile && (
