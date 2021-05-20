@@ -1,7 +1,9 @@
 $truck-size:1000px;
+$truck-mobile-size:550px;
 $left-section-width: 500px;
 $left-section-total-width: 700px;
 $side-off:calc(100vh - #{$truck-size}) / 2;
+$mobile-side-off: 60px;
 $ratio: 318.25/1000;
 
 $duration: 1.8s;
@@ -50,16 +52,45 @@ $duration: 1.8s;
 }
 @media (max-width: $breakpoint-tablet) {
     .landing-screen{
+        height: calc(100vh - #{$header-mobile-height} - #{$section-navigation-mobile-height});
+        padding-top: $header-mobile-height;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: flex-start;
         .left-section{
-            margin-left: 0;
-            width: 100%;
-            text-align: center;
+            margin-left: $mobile-side-off;
+            width: unset;
+            text-align: left;
+            img{
+                width: 200px;
+            }
+            .company-name{
+                color: $header-links-fc;
+                font-size: 14px;
+                margin: 10px 0;
+            }
             .company-description{
-                margin: auto;
+                font-size: 16px;
+                color: $khula-charcoal;
+                width: 300px;
+                line-height: 24px;
+                letter-spacing: 1px;
             }
         }
         .right-section{
-            display: none;
+            height: calc(#{$truck-mobile-size} * #{$ratio});
+            width: 100%;
+            padding-top: 100px;
+            padding-bottom: 60px;
+            img{
+                width: $truck-mobile-size;
+                left: calc(-2 * #{$truck-mobile-size} / 3);
+                position: absolute;
+                &.animate{
+                    left: $mobile-side-off;
+                }
+            }
         }
     }
     

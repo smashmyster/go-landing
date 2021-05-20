@@ -1,7 +1,4 @@
 .contact-screen{
-    background-image: url(/farmer.png);
-    background-size: 400px;
-    background-repeat: no-repeat;
     .section{
         align-items: center;
         padding: 30px;
@@ -37,7 +34,6 @@
 }
 @media (max-width: $breakpoint-tablet) {
     .contact-screen{
-        background-size: 260px;
         .section{
             margin-left: 10px;
             width: 90%;
