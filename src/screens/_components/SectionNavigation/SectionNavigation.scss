@@ -42,7 +42,7 @@
 @media (max-width: $breakpoint-tablet) {
     .section-navigation{
         display: block;
-        height: 11rem;
+        height: $section-navigation-mobile-height;
         .nav-section{
             float: left;
             width: 100%;

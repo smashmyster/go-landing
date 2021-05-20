@@ -11,7 +11,7 @@ import Contact from "screens/Contact/Contact";
 import SectionNavigation from "screens/_components/SectionNavigation/SectionNavigation";
 import Header from "screens/_components/Header/Header";
 import Footer from "screens/_components/Footer/Footer";
-import { EScrollSectionIds } from "./constants";
+import { EScrollSectionIds, isMobile } from "./constants";
 import Intercom from "components/Intercom/Intercom";
 
 const MainSite = () => {
@@ -19,7 +19,10 @@ const MainSite = () => {
     <>
       <Intercom />
       <ScrollingProvider scrollBehavior="smooth" offset={-65}>
-        <div className="App roboto">
+        <div
+          className="App roboto"
+          style={{ ...(isMobile && { overflow: "hidden" }) }}
+        >
           <Header />
           <div className="section">
             {/* <CovidBanner /> */}

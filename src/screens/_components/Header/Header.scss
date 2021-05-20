@@ -133,6 +133,8 @@ $nav-btn-height:2.2rem;
 
 @media (max-width: $breakpoint-tablet) {
     .header-container{
+        height: $header-mobile-height;
+        position: fixed;
         .header-contents{
             margin: 0 5%;
             .header-left{
@@ -141,6 +143,11 @@ $nav-btn-height:2.2rem;
                     img{
                       width: 40%;  
                     }
+                }
+            }
+            .navbar-links{
+                .link{
+                    height: $header-mobile-height / 3;
                 }
             }
         }
