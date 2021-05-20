@@ -1,4 +1,9 @@
 $overlap:150px;
+$phone-height:600px;
+$phone-width:270px;
+$ratio: 600/270;
+$mobile-phone-height:400px;
+$mobile-phone-width:calc(#{$mobile-phone-height} * (1 / #{$ratio}));
 .products-screen{
     position: relative;
     overflow: hidden;
@@ -53,25 +58,25 @@ $overlap:150px;
             }
         }
         .input-app-container{
-            height: 600px;
+            height: $phone-height;
             position: relative;
             flex: 1;
             padding-top: 50px;
             .app-container{
                 position: absolute;
-                height: 600px;
+                height: $phone-height;
                 z-index: 10;
-                width: 270px;
+                width: $phone-width;
                 overflow: hidden;
             }
             .app-bezel{
                 position: absolute;
-                height: 600px;
+                height: $phone-height;
                 z-index: 10;
-                width: 270px;
+                width: $phone-width;
             }
             .input-app{
-                height: 600px;
+                height: $phone-height;
                 position: absolute;
                 z-index: 8;
                 transition: all 1.8s, opacity .3s;
@@ -190,8 +195,10 @@ $overlap:150px;
         }
         .details-container{
             .right-section{
-                margin-left: 40px;
+                margin-left: 0;
+                margin-right: 10px;
                 height: 240px;
+                flex: 1;
                 .slides-container{
                     width: unset;
                 }
@@ -201,30 +208,33 @@ $overlap:150px;
             }
             .input-app-container{
                 padding-top: 20px;
+                width: $mobile-phone-width;
+                margin-left: -70px;
                 .app-container{
-                    z-index: 0;
-                    margin-left: 40px;
+                    margin-left: 0px;
+                    height: $mobile-phone-height;
+                    width: $mobile-phone-width;
                 }
                 .input-app{
-                    height: 75%;
-                    width:  75%;
+                    height: 100%;
+                    width:  100%;
                 }
                 .trader-app-vissible-center{
-                    left: 39%;
+                    // left: 39%;
                 }
                 .app-bezel{
-                    width: 75%;
-                    height: 75%;
+                    width: 100%;
+                    height: 100%;
                 }
                 .input-app-visible-center{
-                    width: 75%;
-                    height: 75%;
-                    right: 61%;
+                    width: 100%;
+                    height: 100%;
+                    // right: 61%;
                 }
                 .trader-app-hidden-right{
-                    width: 75%;
-                    height: 75%;
-                    right: 61%;
+                    width: 100%;
+                    height: 100%;
+                    // right: 61%;
                 }
             }
         }
