@@ -1,7 +1,7 @@
 import { isMobile } from "constants/index";
 import React from "react";
-const logoSlogan = require("assets/images/khula-logo-slogan.png");
-const logo = require("assets/images/khula-logo.png");
+const logoSlogan = require("assets/images/khula-logo-slogan.svg");
+const logo = require("assets/images/khula-logo.svg");
 
 const Footer = () => {
   return (

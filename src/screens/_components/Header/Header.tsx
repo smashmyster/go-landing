@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BUYER_ROOT, isMobile } from "constants/index";
-const logoSlogan = require("assets/images/khula-logo-slogan.png");
-const logo = require("assets/images/khula-logo.png");
+const logoSlogan = require("assets/images/khula-logo-slogan.svg");
+const logo = require("assets/images/khula-logo.svg");
 
 const Header = () => {
   const [loginOpen, setLoginOpen] = useState<boolean>(false);
