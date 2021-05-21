@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-const logo = require("assets/images/khula-logo.png");
+const logo = require("assets/images/khula-logo.svg");
 const truck = require("assets/images/truck.png");
 
 const Landing = () => {

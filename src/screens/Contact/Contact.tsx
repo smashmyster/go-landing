@@ -1,6 +1,6 @@
 import { isMobile } from "constants/index";
 import React from "react";
-const farmer = require("assets/images/farmer.jpg");
+const farmer = require("assets/images/farmer.png");
 
 const Contact = () => {
   return (
