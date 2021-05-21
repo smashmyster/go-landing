@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState } from "react";
 import ProduceDetailsItem from "./utils/ProductDetailsItem";
 import PulsatingToggleButtons from "../utils/PulsatingToggleButtons";
@@ -16,7 +17,7 @@ const PRODUCT_DETAILS = {
   produceTrader: {
     name: "Fresh Produce Trader",
     description:
-      "Buy your inputs the smart way. More intelligence, better prices, from many suppliers at your fingertips.",
+      "Access the market on the go with our fresh produce trader app. Post your products to market and chat with your KHULA buyers on the go.",
   },
 };
 
