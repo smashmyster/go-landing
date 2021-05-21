@@ -78,6 +78,7 @@ $nav-btn-height:2.2rem;
             display: flex;
             justify-content: flex-end;
             align-items: center;
+            padding-right: 50px;
             .link{
                 height: $header-height / 3;
                 margin: 0 20px;
@@ -98,6 +99,7 @@ $nav-btn-height:2.2rem;
                     -o-transition: all 0.3s ease-in-out;
                     transition: all 0.3s ease-in-out;
                     overflow: hidden;
+                    position: absolute;
                     .nav-dropdown-item{
                         color: $khula-charcoal;
                         text-decoration: none;
@@ -135,6 +137,8 @@ $nav-btn-height:2.2rem;
     .header-container{
         height: $header-mobile-height;
         position: fixed;
+        right: 0;
+        left: 0;
         .header-contents{
             margin: 0 5%;
             .header-left{
