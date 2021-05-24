@@ -1,31 +1,69 @@
-@import "./_colors.scss";
+@import "./_utilities.scss";
+@import "./_grid.scss";
 @import "./_dimensions.scss";
+@import "./_colors.scss";
 @import "./_material.scss";
-@import "../../screens/Landing/Header/Header.scss";
-@import "../../screens/Landing/Navbars/Navbar.scss";
-@import "../../screens/Landing/Navbars/SecondaryNavbar.scss";
-@import "../../screens/Landing/Banner/Banner.scss";
-@import "../../components/ProductCard/ProductCard.scss";
-@import "../../components/Loader/Loader.scss";
-@import "../../screens/Landing/FarmerApp/FarmerApp.scss";
-@import "../../screens/Landing/FarmerMarketPlace/FarmerMarketPlace.scss";
-@import "../../screens/Landing/ClientApp/ClientApp.scss";
-@import "../../screens/Landing/ClientApp/AppAd.scss";
-@import "../../screens/Landing/ClientMarketPlace/ClientMarketPlace.scss";
-@import "../../screens/Landing/Footer/Footer.scss";
-@import "../../components/ListItems/ListItems.scss";
+@import "./_texts.scss";
+@import "../../components/index.scss";
+@import "../../screens/index.scss";
 @import "~slick-carousel/slick/slick.css";
+@import './fonts/icomoon/style.css';
+@import './fonts/fontawesome/style.css';
+@import './fonts/fontawesome-pro/index.css';
 @import "~slick-carousel/slick/slick-theme.css";
-@import "../../components/Button/Button.scss";
-@import "../../components/Modal/Modal.scss";
-
 
 .green{
     color: $khula-green;
 }
+.green-alpha{
+    color: $khula-green-alpha;
+}
+.green-bg{
+    background-color: $khula-green;
+}
+.white-bg{
+    background-color: $white;
+}
+.green-alpha-bg{
+    background-color: $khula-green-alpha;
+}
+.red{
+    color: $error-txt-red;
+}
+.charcoal{
+    color: $charcoal;
+}
+.k-charcoal{
+    color: $khula-charcoal;
+}
+.grey{
+    color: $grey;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+}
 .row{
     display: flex;
     flex-direction: row;
+}
+.row-center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.column-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flex-center-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block{
+    display: block;
 }
 .roboto{
     font-family: 'Roboto', sans-serif;
@@ -40,6 +78,50 @@
     display: flex;
     justify-content: center;
 }
+.justify-content-space-between{
+    display: flex;
+    justify-content: space-between;
+}
 .center-text{
     text-align: center;
+}
+.no-bullet{
+    list-style-type: none;
+}
+.capitalize{
+    text-transform: capitalize;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.title{
+    font-size: 28px;
+    font-weight: 600;
+    width: 35%;
+    text-align: center;
+    color: $khula-charcoal;
+    @media (max-width: $breakpoint-tablet) {
+        width: 100%;
+        font-size: 22px;
+    }
+}
+.sub-title{
+    color: $header-links-fc;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 20px 0;
+    text-align: center;
+    @media (max-width: $breakpoint-tablet) {
+        margin: 20px 10px;
+        line-height: 25px;
+    }
+}
+.white-btn{
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 10px;
+    color: $khula-green;
+    margin-right: 20px;
+    width: fit-content;
 }

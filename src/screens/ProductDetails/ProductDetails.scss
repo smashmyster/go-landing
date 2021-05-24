@@ -1,0 +1,240 @@
+$overlap:150px;
+$phone-height:600px;
+$phone-width:270px;
+$ratio: 600/270;
+$mobile-phone-height:400px;
+$mobile-phone-width:calc(#{$mobile-phone-height} * (1 / #{$ratio}));
+.products-screen{
+    position: relative;
+    overflow: hidden;
+    .details-container{
+        .section{
+            padding-bottom: $overlap;
+        }
+        .left-section{
+            flex: 2;
+            margin-right: 35px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            .left-section-text{
+                width: 66%;
+            }
+            .section-name{
+                color: $accent-grey-light;
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 16px;
+            }
+            .header-txt{
+                color: $white;
+                opacity: .9;
+                &.h1{
+                    font-size: 55px;
+                    font-weight: 600;
+                    margin-bottom: 35px;
+                }
+                &.h2{
+                    font-size: 30px;
+                    font-weight: 600;
+                }
+                &.h3{
+                    opacity: .8;
+                    margin-bottom: 10px;
+                    font-size: 18px;
+                    color:#e8ffe8;
+                }
+            }
+            .left-section-txt{
+                font-weight: 300;
+                line-height: 21px;
+                color:#a7d4a8;
+                font-size: 15px;
+                .farmer-product-name{
+                    font-weight: 600;
+                    color: white;
+                    opacity: .9;
+                }
+            }
+        }
+        .input-app-container{
+            height: $phone-height;
+            position: relative;
+            flex: 1;
+            padding-top: 50px;
+            .app-container{
+                position: absolute;
+                height: $phone-height;
+                z-index: 10;
+                width: $phone-width;
+                overflow: hidden;
+            }
+            .app-bezel{
+                position: absolute;
+                height: $phone-height;
+                z-index: 10;
+                width: $phone-width;
+            }
+            .input-app{
+                height: $phone-height;
+                position: absolute;
+                z-index: 8;
+                transition: all 1.8s, opacity .3s;
+            }
+            .input-app-visible-center{
+                right: 50%;
+                transform: translate(50%,0%);
+            }
+            .input-app-hidden-left{
+                right: 100%;
+            }
+            .trader-app-vissible-center{
+                left: 50%;
+                transform: translate(-50%, 0%);
+            }
+            .trader-app-hidden-right{
+                left: 100%;
+            }
+        }
+        .right-section{
+            flex: 2;
+            margin-left: 35px;
+            position: relative;    
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            .arrow-keys{
+                width: 400px;
+                color: $white;
+                display: flex;
+                justify-content: space-between;
+            }
+            .slides-container{
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                width: 400px;
+                height: 125px;
+                margin-bottom: 20px;
+                .slide-container{
+                    position: absolute;
+                    display: block;
+                    min-width: 100%;
+                    transition: all 1.3s, opacity .2s;
+                    .heading-container{
+                        color: $white;
+                        font-weight: 600;
+                        font-size: 23px;
+                        opacity: .9;
+                        margin: 0 0 25px 0px;
+                    }
+                    .description-container{
+                        font-weight: 300;
+                        line-height: 23px;
+                        color:#cfe4cf;
+                        font-size: 14px;
+                        width: 80%;
+                    }
+                }
+            }
+            .action-btns{
+                cursor: pointer;
+                bottom: 25%;
+                transform: translate(0%, 50%);
+                position: absolute;
+                .white-btn{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: white;
+                    padding: 10px 15px;
+                    border-radius: 8px;
+                    font-size: 12px;
+                    color: green;
+                    font-weight: 500;
+                }
+                .transparent-btn{
+                    font-size: 10px;
+                    padding: 10px 15px;
+                    color: white;
+                    span{
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .section-color{
+        height:200px;
+        width:100%;
+        margin-top: -$overlap;
+        background-color: #EBF2EB;
+    }
+}
+@media (max-width: $breakpoint-tablet) {
+    .products-screen{
+        height: 600px;
+        .section-color{
+            display: none;
+        }
+        .header-txt{
+            color: $white;
+            opacity: .9;
+            &.h1{
+                font-size: 30px;
+                font-weight: 600;
+                margin: 20px 0 10px 30px;
+            }
+            &.h3{
+                opacity: .8;
+                margin-bottom: 12px;
+                font-size: 14px;
+                color:#e8ffe8;
+                margin-left: 30px;
+            }
+        }
+        .details-container{
+            .right-section{
+                margin-left: 0;
+                margin-right: 10px;
+                height: 240px;
+                flex: 1;
+                .slides-container{
+                    width: unset;
+                }
+                .arrow-keys{
+                    width: unset;
+                }
+            }
+            .input-app-container{
+                padding-top: 20px;
+                width: $mobile-phone-width;
+                margin-left: -70px;
+                .app-container{
+                    margin-left: 0px;
+                    height: $mobile-phone-height;
+                    width: $mobile-phone-width;
+                }
+                .input-app{
+                    height: 100%;
+                    width:  100%;
+                }
+                .app-bezel{
+                    width: 100%;
+                    height: 100%;
+                }
+                .input-app-visible-center{
+                    width: 100%;
+                    height: 100%;
+                    // right: 61%;
+                }
+                .trader-app-hidden-right{
+                    width: 100%;
+                    height: 100%;
+                    // right: 61%;
+                }
+            }
+        }
+        
+    }
+}
