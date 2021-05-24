@@ -1,38 +1,43 @@
-import React from 'react'
-import Header from 'screens/Landing/Header/Header'
-import Banner from 'screens/Landing/Banner/Banner'
-import FarmerApp from 'screens/Landing/FarmerApp/FarmerApp'
-import Farmer from 'screens/Landing/FarmerMarketPlace/FarmerMarketPlace'
-import ClientApp from 'screens/Landing/ClientApp/ClientApp'
-import Client from 'screens/Landing/ClientMarketPlace/ClientMarketPlace'
-import Footer from 'screens/Landing/Footer/Footer'
-import ScrollAnimation from 'react-animate-on-scroll'
-import 'App.css'
-import 'assets/styles/index.css'
-import 'assets/styles/style.css'
-import CovidBanner from 'components/CovidBanner/CovidBanner'
+import React, { useEffect, useState } from "react";
+import "App.css";
+import "assets/styles/index.css";
+import "assets/styles/fonts/icomoon/style.css";
+import MainSite from "MainSite";
+import AppLoading from "components/AppLoading/AppLoading";
+import { FIREBASE_CONFIG } from "constants/index";
+import firebase from "firebase";
+import { FirebaseAppProvider } from "reactfire";
+const logo = require("assets/images/khula-logo.svg");
+const logoSlogan = require("assets/images/khula-logo-slogan.svg");
+const truck = require("assets/images/truck.png");
+const phoneBezel = require("assets/images/phone-bezel.png");
+const phoneBackground = require("assets/images/phone-background.png");
 
-function App() {
+firebase.initializeApp(FIREBASE_CONFIG);
+firebase.analytics();
+
+const images = [logo, logoSlogan, truck, phoneBezel, phoneBackground];
+const App = () => {
+  const [appLoading, setAppLoading] = useState<boolean>(true);
+  const checkImage = (path: any) => {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => resolve(path);
+      img.onerror = () => reject(new Error("Image not loaded"));
+
+      img.src = path;
+    });
+  };
+  useEffect(() => {
+    Promise.all(images.map((img) => checkImage(img))).then(() =>
+      setAppLoading(false)
+    );
+  }, []);
   return (
-    <div className="App roboto">
-      <Header />
-      <div className="section">
-        <CovidBanner />
-        <Banner />
-        <Farmer />
-        <ScrollAnimation animateOnce={true} delay={2} duration={2} animateIn="slideInUp">
-          <FarmerApp />
-        </ScrollAnimation>
-        <Client />
-        <ScrollAnimation animateOnce={true} delay={2} duration={2} animateIn="slideInUp">
-          <ClientApp />
-        </ScrollAnimation>
-        <ScrollAnimation animateOnce={true} delay={2} duration={2} animateIn="slideInUp">
-          <Footer />
-        </ScrollAnimation>
-      </div>
-    </div>
+    <FirebaseAppProvider firebaseConfig={FIREBASE_CONFIG}>
+      {appLoading ? <AppLoading /> : <MainSite />}
+    </FirebaseAppProvider>
   );
-}
+};
 
 export default App;

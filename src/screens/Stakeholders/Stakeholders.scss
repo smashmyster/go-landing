@@ -1,0 +1,25 @@
+.stakeholders-screen{
+    flex-direction: column;
+    .stakeholder-logos{
+        justify-content: space-around;
+        width: 65%;
+        margin: 50px 0;
+        img{
+            height: 60px;
+        }
+    }
+}
+@media (max-width: $breakpoint-tablet) {
+    .stakeholders-screen{
+        .stakeholder-logos{
+            width: 95%;
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            img{
+                margin: 10px;
+                height: 40px;
+            }
+        }
+    }
+}

@@ -1,0 +1,146 @@
+/* This files helps with quick spacing of elements  and helper classes*/
+ 
+/**
+ Below i have a loop that goes from 1 to 30 and create spacing helper functions
+  p-{NUMBER} -> Generates padding for top,bottom,left,right
+  m-{NUMBER} -> Generates margin for top,bottom,left,right
+  m{side}-{NUMBER} -> Generates margin for sides i.e (mx-20 , is 20 on the x-axis, mb-20 is 20 at the bottom
+
+  f-{NUMBER} -> Generates fonts in rem (rem is better than px since it is up to the browser to convert the rem to px)
+  font-weight-{NUMBER} -> Generates fonts weights multiplied by 100 to include bolds as well
+  w-{NUMBER} -> Generates width values
+  h-{NUMBER} -> Generates height values
+*/
+@for $i from 1 through 30 {
+    .p-#{$i} {
+      padding-top:  #{$i/4}rem;
+      padding-bottom:  #{$i/4}rem;
+      padding-left:  #{$i/4}rem;
+      padding-right:  #{$i/4}rem;
+    }
+    .py-#{$i} {
+      padding-top:  #{$i/4}rem;
+      padding-bottom:  #{$i/4}rem;
+    }
+    .px-#{$i} {
+      padding-left:  #{$i/4}rem;
+      padding-right:  #{$i/4}rem;
+    }
+    .mx-#{$i} {
+      margin-left:  #{$i/4}rem;
+      margin-right:  #{$i/4}rem;
+    }
+    .my-#{$i} {
+      margin-top:  #{$i/4}rem;
+      margin-bottom:  #{$i/4}rem;
+    }
+  
+    .-mb-#{$i} {
+      margin-bottom: #{-$i/4}rem;
+    }
+
+    .mb-#{$i} {
+      margin-bottom: #{$i/4}rem;
+    }
+  
+    .-mt-#{$i} {
+      margin-top: #{-$i/4}rem;
+    }
+
+    .mt-#{$i} {
+      margin-top: #{$i/4}rem;
+    }
+
+    .ml-#{$i} {
+      margin-left: #{$i/4}rem;
+    }
+
+    .mr-#{$i} {
+      margin-right: #{$i/4}rem;
+    }
+
+    .m-#{$i} {
+      margin-top:  #{$i/4}rem;
+      margin-bottom:  #{$i/4}rem;
+      margin-left:  #{$i/4}rem;
+      margin-right:  #{$i/4}rem;
+    }
+    @if $i % 2 == 0 {
+      @if $i >= 8 {
+        .f-#{$i} {
+          font-size: #{$i}px;
+        }
+      }
+    }
+    
+    .font-weight-#{$i*100}{
+      font-weight: #{$i*100}
+    }
+    .w-#{$i*2} {
+      width:  #{$i/4}rem;
+    }
+    .h-#{$i*2} {
+      height:  #{$i/4}rem;
+    }
+  }
+  
+  /* Quick class to convert cursor to be a pointer */
+  .k-cursor-pointer{
+    cursor: pointer;
+  }
+  
+  .k-content-center{
+    align-content: center;
+  }
+  
+  /* removes the border of an element */
+  .k-no-border {
+    border:0 !important;
+  }
+  
+  /* Applies 100% border-radius */
+  .k-rounded{
+    border-radius: 100%
+  }
+  
+  /* Applies 0.5rem border-radius */
+  .k-rounded-lg{
+    border-radius: 0.5rem
+  }
+  
+  /* A basic card with a shadow */
+  .k-card {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+  }
+  
+  /* A larger card with a shadow */
+  .k-card-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* An outlined card */
+  .k-card-outline {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+    border-radius: 8px;
+  }
+  
+  /* A card with no shadow */
+  .k-card-none {
+    box-shadow: none;
+    border-radius: 8px;
+  }
+  
+  /* Floats elements to the right */
+  .float-right{
+    float:right;
+  }
+  
+  /* Floats elements to the left */
+  .float-left{
+    float:left;
+  }
+  /* underline text*/
+  .underline{
+    text-decoration: underline;
+  }

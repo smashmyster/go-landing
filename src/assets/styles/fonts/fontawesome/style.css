@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'fontawesome';
+  src:  url('fonts/fontawesome.eot?8harka');
+  src:  url('fonts/fontawesome.eot?8harka#iefix') format('embedded-opentype'),
+    url('fonts/fontawesome.ttf?8harka') format('truetype'),
+    url('fonts/fontawesome.woff?8harka') format('woff'),
+    url('fonts/fontawesome.svg?8harka#fontawesome') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="fa-"], [class*=" fa-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'fontawesome' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-chat:before {
+  content: "\e900";
+}
+.fa-send:before {
+  content: "\e901";
+}
+.fa-accept:before {
+  content: "\e902";
+}
+.fa-reject:before {
+  content: "\e903";
+}
+.fa-flag:before {
+  content: "\e904";
+}
+.fa-cloudy:before {
+  content: "\e905";
+}
+.fa-cloud-rain:before {
+  content: "\e906";
+}
+.fa-cloud-shower:before {
+  content: "\e907";
+}
+.fa-sunny:before {
+  content: "\e908";
+}
+.fa-thunder-shower:before {
+  content: "\e909";
+}
+.fa-attachment:before {
+  content: "\e90a";
+}
+.fa-ellipses:before {
+  content: "\e90b";
+}
+.fa-lnr-checkmark:before {
+  content: "\e90c";
+}
+.fa-checkmark:before {
+  content: "\e90d";
+}
+.fa-chevron-right:before {
+  content: "\e90e";
+}
+.fa-download:before {
+  content: "\e90f";
+}
+.fa-stopwatch:before {
+  content: "\e910";
+}
+.fa-chevron-down:before {
+  content: "\e911";
+}
+.fa-search:before {
+  content: "\e912";
+}
+.fa-bell:before {
+  content: "\e913";
+}
+.fa-cart:before {
+  content: "\e914";
+}
+.fa-lnr-home:before {
+  content: "\e915";
+}
+.fa-signout:before {
+  content: "\e916";
+}
+.fa-clock:before {
+  content: "\e917";
+}
+.fa-lnr-clock:before {
+  content: "\e918";
+}
+.fa-home:before {
+  content: "\e919";
+}
+.fa-market:before {
+  content: "\e91a";
+}
+.fa-lnr-market:before {
+  content: "\e91b";
+}
+.fa-truck:before {
+  content: "\e91c";
+}
+.fa-lnr-truck:before {
+  content: "\e91d";
+}
+.fa-profile:before {
+  content: "\e91e";
+}
+.fa-lnr-profile:before {
+  content: "\e91f";
+}
+.fa-settings:before {
+  content: "\e920";
+}
+.fa-lnr-settings:before {
+  content: "\e921";
+}
