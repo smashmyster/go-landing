@@ -14,10 +14,6 @@ const Intercom = () => {
     window.intercomSettings = {
       // eslint-disable-next-line @typescript-eslint/naming-convention
       app_id: "ftyak6d0",
-      name: "",
-      email: null,
-      // eslint-disable-next-line @typescript-eslint/naming-convention
-      user_id: null,
       // eslint-disable-next-line @typescript-eslint/naming-convention
       custom_launcher_selector: ".intercom-ic-launch",
     };

@@ -38,23 +38,31 @@
        .section{
            display: block;
            margin: 20px 0;
+           .right-section{
+               float: left;
+               .bullet-point{
+                   text-align: center;
+                   .bullet-header{
+                        font-size: 18px !important;
+                        display: flex;
+                        flex-direction: column;
+                        width: 75%;
+                        margin: auto;
+                        span{
+                            margin-right: 0px;
+                            margin-bottom: 10px;
+                        }
+                    }
+               }
+               .bullet-text{
+                   font-size: 13px !important;
+               }
+           }
        }
        .section-graphic{
            float: left;
            img{
                width: 250px !important;
-           }
-       }
-       .right-section{
-           float: left;
-           .bullet-point{
-               text-align: center;
-               .bullet-header{
-                font-size: 18px !important;
-               }
-           }
-           .bullet-text{
-               font-size: 13px !important;
            }
        }
    }
