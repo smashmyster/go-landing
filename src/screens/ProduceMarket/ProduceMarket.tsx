@@ -17,7 +17,7 @@ const ProduceMarket = () => {
       </div>
       <div className="row">
         <div className="left-section">
-          <div className="sub-title uppercase">All New</div>
+          <div className="sub-title uppercase">Coming Soon</div>
           <div className="title">Web</div>
           {!isMobile && (
             <div className="title">
@@ -67,7 +67,7 @@ const ProduceMarket = () => {
           className="right-section"
           style={{ marginLeft: isMobile ? 20 : "" }}
         >
-          <div className="sub-title uppercase">In Beta</div>
+          <div className="sub-title uppercase">Coming Soon</div>
           <div className="title">
             {`${isMobile ? "App" : " Fresh Produce Trader App"}`}
           </div>

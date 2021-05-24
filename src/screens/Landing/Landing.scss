@@ -1,9 +1,9 @@
 $truck-size:1000px;
-$truck-mobile-size:550px;
+$truck-mobile-size:450px;
 $left-section-width: 500px;
 $left-section-total-width: 700px;
 $side-off:calc(100vh - #{$truck-size}) / 2;
-$mobile-side-off: 60px;
+$mobile-side-off: -30px;
 $ratio: 318.25/1000;
 
 $duration: 1.8s;
@@ -44,7 +44,7 @@ $duration: 1.8s;
             -o-transition: all $duration ease-in-out;
             transition: all $duration ease-in-out;
             &.animate{
-                left: 0;
+                left: -150px;
             }
         }
 
@@ -60,7 +60,7 @@ $duration: 1.8s;
         justify-content: flex-end;
         align-items: flex-start;
         .left-section{
-            margin-left: $mobile-side-off;
+            margin-left: 60px;
             width: unset;
             text-align: left;
             margin-bottom: 20px;
@@ -79,6 +79,7 @@ $duration: 1.8s;
                 width: 300px;
                 line-height: 24px;
                 letter-spacing: 1px;
+                padding-bottom: 30px;
             }
         }
         .right-section{
