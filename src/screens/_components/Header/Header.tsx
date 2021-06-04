@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BUYER_ROOT, isMobile } from "constants/index";
+import { BUYER_ROOT, isMobile, _GoToStore } from "constants/index";
 const logoSlogan = require("assets/images/khula-logo-slogan.svg");
 const logo = require("assets/images/khula-logo.svg");
 
@@ -53,10 +53,15 @@ const Header = () => {
           </div>
         ) : (
           <div className="navbar-links k-row k-row-center-items">
-            {/* TODO: ABOUT PAGE
-            <div className="link">
-              <div className="nav-dropdown-title">About</div>
-            </div> */}
+            <div className="k-row k-row-center-items action-call">
+              Are you a farmer? Our inputs app is live
+              <div
+                className="btn nav-btn"
+                onClick={() => _GoToStore(undefined, "farmer")}
+              >
+                Get the app
+              </div>
+            </div>
             <div className="link">
               <div className="nav-dropdown-title intercom-ic-launch">
                 Contact Us
