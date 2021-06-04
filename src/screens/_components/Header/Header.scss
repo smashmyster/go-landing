@@ -74,11 +74,22 @@ $nav-btn-height:2.2rem;
             
         }
         .navbar-links{
-            width: 60%;;
             display: flex;
             justify-content: flex-end;
             align-items: center;
             padding-right: 50px;
+            .action-call{
+                width: fit-content;
+                margin-right: 65px;
+                .nav-btn{
+                    background-color: $khula-green;
+                    margin: 0;
+                    height: 40px;
+                    font-size: 13px;
+                    padding: 0 10px;
+                    margin-left: 10px;
+                }
+            }
             .link{
                 height: $header-height / 3;
                 margin: 0 20px;
@@ -150,6 +161,7 @@ $nav-btn-height:2.2rem;
                 }
             }
             .navbar-links{
+                padding-right: 0px;
                 .link{
                     height: $header-mobile-height / 3;
                 }
