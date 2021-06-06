@@ -1,3 +1,4 @@
+import { isMobile } from "constants/index";
 import React from "react";
 
 interface ITestimonialItemProps {
@@ -37,11 +38,15 @@ ITestimonialItemProps) => {
         <img
           className="testimonial-image"
           src={image}
-          alt={`Profile poicture of ${name}, ${position}`}
+          alt={`Profile picture of ${name}, ${position}`}
+          style={{
+            objectPosition:
+              isMobile && name === "Juan Harmse" ? "left" : "unset",
+          }}
         />
       </div>
     </div>
   );
 };
-
+/* style={{width: 200, height: 200}}*/
 export default TestimonialItem;
