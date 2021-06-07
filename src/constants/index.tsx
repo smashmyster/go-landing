@@ -2,7 +2,7 @@ import configFile from "../config.json";
 import dotenv from "dotenv";
 dotenv.config();
 const config: any = configFile;
-const environment: any = "development";
+const environment: any = "production";
 export const IMAGE_API_ROOT = config[environment].IMAGE_API_ROOT;
 export const BUYER_ROOT = config[environment].BUYER_ROOT;
 export const FARMER_ROOT = config[environment].FARMER_ROOT;
