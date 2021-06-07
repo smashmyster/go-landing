@@ -1,16 +1,13 @@
-export const IMAGE_API_ROOT = `https://khula.co.za/ProducePic/`;
-export const BUYER_ROOT = "https://buyer.khula.co.za";
-export const FARMER_ROOT = "https://farmer.khula.co.za";
-export const GRAPH_API = "https://graph.khula.co.za/graphql";
-export const FIREBASE_CONFIG = {
-  apiKey: "AIzaSyB8INGLXc1CM6mKqY_ImrOoCr6OvqjTFwA",
-  authDomain: "khula-landing.firebaseapp.com",
-  projectId: "khula-landing",
-  storageBucket: "khula-landing.appspot.com",
-  messagingSenderId: "327770943734",
-  appId: "1:327770943734:web:0088d96c972c580d177cd7",
-  measurementId: "G-Z4CGDVXNRS",
-};
+import configFile from "../config.json";
+import dotenv from "dotenv";
+dotenv.config();
+const config: any = configFile;
+const environment: any = "development";
+export const IMAGE_API_ROOT = config[environment].IMAGE_API_ROOT;
+export const BUYER_ROOT = config[environment].BUYER_ROOT;
+export const FARMER_ROOT = config[environment].FARMER_ROOT;
+export const GRAPH_API = config[environment].GRAPH_API;
+export const FIREBASE_CONFIG = config[environment].FIREBASE_CONFIG;
 
 export const _GetImagePath = (name: string) =>
   name ? `${IMAGE_API_ROOT}${name.replace(/ /g, "").toLowerCase()}.png` : "";

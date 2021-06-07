@@ -1,0 +1,47 @@
+{
+    "development": {
+        "IMAGE_API_ROOT" : "https://khula.co.za/ProducePic/",
+        "BUYER_ROOT" : "https://buyer.khuladev.co.za",
+        "FARMER_ROOT" : "https://farmer.khuladev.co.za",
+        "GRAPH_API" : "https://graph.khuladev.co.za/graphql",
+        "FIREBASE_CONFIG" : {
+            "apiKey": "AIzaSyB8INGLXc1CM6mKqY_ImrOoCr6OvqjTFwA",
+            "authDomain": "khula-landing.firebaseapp.com",
+            "projectId": "khula-landing",
+            "storageBucket": "khula-landing.appspot.com",
+            "messagingSenderId": "327770943734",
+            "appId": "1:327770943734:web:395e6f1fb9cd42b6177cd7",
+            "measurementId": "G-66WK7410GQ"
+        }
+    },
+    "qa": {
+        "IMAGE_API_ROOT" : "https://khula.co.za/ProducePic/",
+        "BUYER_ROOT" : "https://buyer.khulademo.co.za",
+        "FARMER_ROOT" : "https://farmer.khulademo.co.za",
+        "GRAPH_API" : "https://graph.khulademo.co.za/graphql",
+        "FIREBASE_CONFIG" : {
+            "apiKey": "AIzaSyB8INGLXc1CM6mKqY_ImrOoCr6OvqjTFwA",
+            "authDomain": "khula-landing.firebaseapp.com",
+            "projectId": "khula-landing",
+            "storageBucket": "khula-landing.appspot.com",
+            "messagingSenderId": "327770943734",
+            "appId": "1:327770943734:web:395e6f1fb9cd42b6177cd7",
+            "measurementId": "G-66WK7410GQ"
+        }
+    },
+    "production": {
+        "IMAGE_API_ROOT" : "https://khula.co.za/ProducePic/",
+        "BUYER_ROOT" : "https://buyer.khula.co.za",
+        "FARMER_ROOT" : "https://farmer.khula.co.za",
+        "GRAPH_API" : "https://graph.khula.co.za/graphql",
+        "FIREBASE_CONFIG" : {
+          "apiKey": "AIzaSyB8INGLXc1CM6mKqY_ImrOoCr6OvqjTFwA",
+          "authDomain": "khula-landing.firebaseapp.com",
+          "projectId": "khula-landing",
+          "storageBucket": "khula-landing.appspot.com",
+          "messagingSenderId": "327770943734",
+          "appId": "1:327770943734:web:0088d96c972c580d177cd7",
+          "measurementId": "G-Z4CGDVXNRS"
+        }
+    }
+}
