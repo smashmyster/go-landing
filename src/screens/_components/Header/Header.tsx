@@ -81,8 +81,15 @@ const Header = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <span className="item-name">As a buyer</span>
-                    <span className="item-icon icon-arrow-right"></span>
+                    <span className="item-name">Trader web</span>
+                  </a>
+                  <a
+                    className="nav-dropdown-item pointer"
+                    onClick={() => _GoToStore(undefined, "farmer")}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span className="item-name">Inputs app</span>
                   </a>
                 </div>
               </div>
@@ -101,8 +108,15 @@ const Header = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <span className="item-name">As a buyer</span>
-                    <span className="item-icon icon-arrow-right"></span>
+                    <span className="item-name">Trader web</span>
+                  </a>
+                  <a
+                    className="nav-dropdown-item pointer"
+                    onClick={() => _GoToStore(undefined, "farmer")}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span className="item-name">Inputs app</span>
                   </a>
                 </div>
               </div>
