@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ProduceDetailsItem from "./utils/ProductDetailsItem";
 import PulsatingToggleButtons from "../utils/PulsatingToggleButtons";
-import { isMobile } from "constants/index";
+import { isMobile, _GoToStore } from "constants/index";
 const phoneBezel = require("assets/images/phone-bezel.png");
 const phoneBackground = require("assets/images/phone-background.png");
 const inputsApp = require("assets/images/inputs-app.png");
@@ -129,6 +129,14 @@ const ProductDetails = () => {
             />
           </div>
           <div className="row action-btns">
+            {carouselCurrentSlide === "L" && (
+              <div
+                className="uppercase white-btn"
+                onClick={() => _GoToStore(undefined, "farmer")}
+              >
+                Get the app
+              </div>
+            )}
             <div className="uppercase white-btn intercom-ic-launch">
               Contact us
             </div>

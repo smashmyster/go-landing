@@ -1,18 +1,45 @@
 .footer-screen{
   min-height: 250px !important;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 40px;
+  justify-content: space-between;
+  display: flex;
   .logo{
     img{
-      width: 150px;  
+      width: 50px;  
     }
   }
-  .media-links{
-    font-size: 26px;
-    width: 15%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+  .s-header{
     color: $khula-charcoal;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 26px;
+  }
+  .contact{
+    color: $khula-charcoal;
+    margin: 20px;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 26px;
+    span{
+      margin-right: 10px;
+    }
+  }
+  .social-media{
+    height: 78px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 40px;
+  }
+  .media-links{
+    font-size: 20px;
+    display: flex;
+    color: $khula-charcoal;
+    width: 150px;
+    justify-content: space-between;
     a{
       color: $khula-charcoal;
       text-decoration: none;
@@ -28,12 +55,11 @@
   }
   .document-links{
     font-size: 12px;
-    width: 15%;
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+    width: 200px;
+    flex-direction: column;
     a{
-      color: $khula-green;
+      color: $khula-charcoal;
       text-decoration: none;
     }
     a:hover{
@@ -53,10 +79,20 @@
 }
 @media (max-width: $breakpoint-tablet) {
   .footer-screen{
+    flex-direction: column;
     .logo{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       img{
-        width: 120px;  
+        width: 100px;  
       }
+    }
+    .copyright{
+      font-size: 7px;
+    }
+    .contact{
+      width: 200px;
     }
     .media-links{
       width: 70%;
@@ -64,9 +100,6 @@
       a{
         margin: 0 5px;
       }
-    }
-    .document-links{
-      width: 70%;
     }
   }
 }
