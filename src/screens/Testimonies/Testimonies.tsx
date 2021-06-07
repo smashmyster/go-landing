@@ -3,8 +3,8 @@ import TestimonialItem from "./utils/TestimonialItem";
 import PulsatingToggleButtons from "../utils/PulsatingToggleButtons";
 const testimony1 = require("assets/images/nkanyiso.jpg");
 const testimony2 = require("assets/images/quinton.png");
-const testimony3 = require("assets/images/juan.png");
-const testimony4 = require("assets/images/lungi.png");
+const testimony3 = require("assets/images/juan.jpg");
+const testimony4 = require("assets/images/lungi.jpg");
 const testimony5 = require("assets/images/lorraine.jpg");
 const testimony6 = require("assets/images/dudu.jpeg");
 
