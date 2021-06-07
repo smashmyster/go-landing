@@ -3,8 +3,10 @@ import TestimonialItem from "./utils/TestimonialItem";
 import PulsatingToggleButtons from "../utils/PulsatingToggleButtons";
 const testimony1 = require("assets/images/nkanyiso.jpg");
 const testimony2 = require("assets/images/quinton.png");
-const testimony3 = require("assets/images/jannie.jpg");
-const testimony4 = require("assets/images/lungi.png");
+const testimony3 = require("assets/images/juan.jpg");
+const testimony4 = require("assets/images/lungi.jpg");
+const testimony5 = require("assets/images/lorraine.jpg");
+const testimony6 = require("assets/images/dudu.jpeg");
 
 const TESTIMONIES = [
   {
@@ -24,12 +26,12 @@ const TESTIMONIES = [
     and enhance product stewardship.`,
   },
   {
-    name: "JANNIE WILLEMSE",
-    position: "AECI Plant Health, Business Development Manager",
+    name: "Juan Harmse",
+    position: "AECI Plant Health Crop Advisor in the Gauteng region",
     image: testimony3,
-    message: `When farmers order on the KHULA! Inputs app, it gives the depots more 
-    lead time to get the order together instead of turning farmers away when 
-    the product is out of stock at their depot`,
+    message: `I work with Lungi Robela. When I receive her orders made through
+    Khula! it's my responsibility to process the products, and arrange transport
+    to deliver to the farm as soon as possible.`,
   },
   {
     name: "Lungi Robela",
@@ -40,6 +42,22 @@ const TESTIMONIES = [
     on the farm, and some of the other orders were on my behalf and others I would 
     make myself. And it was a very easy process to get through and most of my 
     products arrived on time`,
+  },
+  {
+    name: "Lorraine Coetzee",
+    position: "General Manager: HR and Logistics of Sakata Seed",
+    image: testimony5,
+    message: `The Khula! Inputs App allows farmers to gain access to credible suppliers
+    and production information through their smartphone whenever they need it. We excited
+    to partner with Khula! as Sakata seed.`,
+  },
+  {
+    name: "Dudu Mashile",
+    position:
+      "Bayer, Technical sales manager: Small Holder & Pre Commercial farmers",
+    image: testimony6,
+    message: `Khula! has partnered with large and reputable companies. This allows farmers of
+    all sizes to order and choose any inputs from the comfort of their home.`,
   },
 ];
 type SlideToggleType = {
@@ -60,7 +78,7 @@ const Testimonies = () => {
           ? slideToggler.counter !== 0
             ? slideToggler.counter - 1
             : slideToggler.counter
-          : slideToggler.counter !== 3
+          : slideToggler.counter !== TESTIMONIES.length - 1
           ? slideToggler.counter + 1
           : slideToggler.counter,
     };
@@ -119,7 +137,7 @@ const Testimonies = () => {
           <div>
             <PulsatingToggleButtons
               showLeftButton={slideToggler.counter > 0}
-              showRightButton={slideToggler.counter < 3}
+              showRightButton={slideToggler.counter < TESTIMONIES.length - 1}
               leftButtonFunc={() => {
                 slideTogglerHndlr("L");
               }}
