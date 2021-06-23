@@ -39,10 +39,10 @@ const Footer = () => {
           <a href="https://www.facebook.com/khulaapp">
             <span className="fab-facebook pointer"></span>
           </a>
-          <a href="https://www.instagram.com/khula_app/?hl=en">
+          <a href="https://www.instagram.com/khula_ecosystem/?hl=en">
             <span className="fab-instagram pointer"></span>
           </a>
-          <a href="https://twitter.com/khulaapp">
+          <a href="https://twitter.com/khulaecosystem">
             <span className="fab-twitter pointer"></span>
           </a>
           <a href="https://www.linkedin.com/company/khulaagriculturetechnology">
