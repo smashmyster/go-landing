@@ -36,16 +36,32 @@ const Footer = () => {
       <div className="social-media contact">
         <div className="s-header">Follow Us</div>
         <div className="media-links">
-          <a href="https://www.facebook.com/khulaapp" target="_blank">
+          <a
+            href="https://www.facebook.com/khulaapp"
+            target="_blank"
+            rel="noreferrer"
+          >
             <span className="fab-facebook pointer"></span>
           </a>
-          <a href="https://www.instagram.com/khula_ecosystem/?hl=en" target="_blank">
+          <a
+            href="https://www.instagram.com/khula_ecosystem/?hl=en"
+            target="_blank"
+            rel="noreferrer"
+          >
             <span className="fab-instagram pointer"></span>
           </a>
-          <a href="https://twitter.com/khulaecosystem" target="_blank">
+          <a
+            href="https://twitter.com/khulaecosystem"
+            target="_blank"
+            rel="noreferrer"
+          >
             <span className="fab-twitter pointer"></span>
           </a>
-          <a href="https://www.linkedin.com/company/khulaagriculturetechnology" target="_blank">
+          <a
+            href="https://www.linkedin.com/company/khulaagriculturetechnology"
+            target="_blank"
+            rel="noreferrer"
+          >
             <span className="fab-linkedin pointer"></span>
           </a>
         </div>
