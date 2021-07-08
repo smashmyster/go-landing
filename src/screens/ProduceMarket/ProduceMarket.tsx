@@ -69,7 +69,7 @@ const ProduceMarket = () => {
         >
           <div className="sub-title uppercase">Currently in closed pilot</div>
           <div className="title">
-            {`${isMobile ? "App" : " Fresh Produce Trader App"}`}
+            {`${isMobile ? "Trader App" : " Fresh Produce Trader App"}`}
           </div>
           <div
             className="section-text"
