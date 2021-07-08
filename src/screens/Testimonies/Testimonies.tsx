@@ -7,8 +7,17 @@ const testimony3 = require("assets/images/juan.jpg");
 const testimony4 = require("assets/images/lungi.jpg");
 const testimony5 = require("assets/images/lorraine.jpg");
 const testimony6 = require("assets/images/dudu.jpeg");
+const testimony7 = require("assets/images/tebogo.png");
 
 const TESTIMONIES = [
+  {
+    name: `Tebogo Nyathela`,
+    position: `Farm manager at Farmer's Hope`,
+    image: testimony7,
+    message: `I used the Khula! Inputs App for quotations while ordering tunnels
+    from Dicla and I received a discount on my final order. I would recommend for 
+    people to use the Inputs App.`,
+  },
   {
     name: "Nonkanyiso Ngubane",
     position: "Director of Dukathole Farm",
