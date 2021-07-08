@@ -6,14 +6,15 @@ const testimony2 = require("assets/images/quinton.png");
 const testimony3 = require("assets/images/juan.jpg");
 const testimony4 = require("assets/images/lungi.jpg");
 const testimony5 = require("assets/images/lorraine.jpg");
-const testimony6 = require("assets/images/dudu.jpeg");
-const testimony7 = require("assets/images/tebogo.png");
+const testimony6 = require("assets/images/dudu.jpg");
+const testimony7 = require("assets/images/gugu.jpg");
+const testimony8 = require("assets/images/tebogo.png");
 
 const TESTIMONIES = [
   {
     name: `Tebogo Nyathela`,
     position: `Farm manager at Farmer's Hope`,
-    image: testimony7,
+    image: testimony8,
     message: `I used the Khula! Inputs App for quotations while ordering tunnels
     from Dicla and I received a discount on my final order. I would recommend for 
     people to use the Inputs App.`,
@@ -67,6 +68,16 @@ const TESTIMONIES = [
     image: testimony6,
     message: `Khula! has partnered with large and reputable companies. This allows farmers of
     all sizes to order and choose any inputs from the comfort of their home.`,
+  },
+  {
+    name: "Gugu Shabangu",
+    position: "Assistant Farm Manager of Ukupha Farming",
+    image: testimony7,
+    message: `The Inputs app was easy to use and gave me direct access to detailed 
+    information which would have otherwise not been rapidly available.
+    I was able to easily find the products I was looking for by
+    searching for them on the app and purchase them on the app. I will
+    definitely be using the app for future purchases.`,
   },
 ];
 type SlideToggleType = {
