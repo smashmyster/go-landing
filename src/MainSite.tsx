@@ -13,6 +13,7 @@ import Header from "screens/_components/Header/Header";
 import Footer from "screens/_components/Footer/Footer";
 import { EScrollSectionIds, isMobile } from "./constants";
 import Intercom from "components/Intercom/Intercom";
+import LaunchVideo from "screens/LaunchVideo/LaunchVideo";
 
 const MainSite = () => {
   return (
@@ -28,6 +29,7 @@ const MainSite = () => {
             {/* <CovidBanner /> */}
             <Landing />
             <SectionNavigation />
+            <LaunchVideo />
             <Stakeholders />
             <Section id={EScrollSectionIds.INPUTSMARKET}>
               <ProductDetails />
