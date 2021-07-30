@@ -18,9 +18,9 @@ const TESTIMONIES = [
     image: testimony9,
     message: `Khula is one of Batlhako Temo’s early adopters
     and their support is always excellent. They have helped us
-    in sourcing the second option exporter being EL Trading as
+    in sourcing the second option exporter being ELE Trading as
     well as accessing other markets globally. We also use the
-    Khula Inputs App for quotations and comparing prises with
+    Khula Inputs App for quotations and comparing prices with
     other suppliers when ordering fertilizers and agrochemicals
     and they also helped us in negotiating discounts with suppliers
     such as AECI Plant Health.`,
