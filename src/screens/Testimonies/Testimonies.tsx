@@ -8,9 +8,23 @@ const testimony4 = require("assets/images/lungi.jpg");
 const testimony5 = require("assets/images/lorraine.jpg");
 const testimony6 = require("assets/images/dudu.jpg");
 const testimony7 = require("assets/images/gugu.jpg");
-const testimony8 = require("assets/images/tebogo.png");
+const testimony8 = require("assets/images/tebogo.jpg");
+const testimony9 = require("assets/images/isaac.jpg");
 
 const TESTIMONIES = [
+  {
+    name: `Isaac Moilwa`,
+    position: `Farm manager of Batlhako Temo Services`,
+    image: testimony9,
+    message: `Khula is one of Batlhako Temo’s early adopters
+    and their support is always excellent. They have helped us
+    in sourcing the second option exporter being ELE Trading as
+    well as accessing other markets globally. We also use the
+    Khula Inputs App for quotations and comparing prices with
+    other suppliers when ordering fertilizers and agrochemicals
+    and they also helped us in negotiating discounts with suppliers
+    such as AECI Plant Health.`,
+  },
   {
     name: `Tebogo Nyathela`,
     position: `Farm manager at Farmer's Hope`,
