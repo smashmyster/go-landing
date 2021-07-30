@@ -1,0 +1,12 @@
+.launch-video-container{
+    flex-direction: column;
+    .title{
+        margin: 40px 0;
+        width: 20%;
+    }
+}
+@media (max-width: $breakpoint-tablet) {
+    .title{
+        width: 100% !important;
+    }
+}
