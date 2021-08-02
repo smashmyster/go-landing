@@ -5,6 +5,8 @@ const sakata = require("assets/images/sakata.png");
 const absa = require("assets/images/absa.png");
 const msd = require("assets/images/msd.png");
 const landbank = require("assets/images/landbank.png");
+const idc = require("assets/images/idc.png");
+const afgri = require("assets/images/AFGRI.png");
 
 const Stakeholders = () => {
   return (
@@ -21,6 +23,8 @@ const Stakeholders = () => {
         <img src={sakata} alt="Sakata logo" className="logo-img" />
         <img src={landbank} alt="logo" className="logo-img" />
         <img src={msd} alt="logo" className="logo-img" />
+        <img src={idc} alt="logo" className="logo-img" />
+        <img src={afgri} alt="logo" className="logo-img" />
       </div>
     </div>
   );
