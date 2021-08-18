@@ -44,7 +44,7 @@ $nav-btn-height:2.2rem;
             border-radius: 3px;
             position: absolute;
             right: 10px;
-            height: 75px;
+            height: 100px;
             display: block;
             background-color: $white;
             .nav-dropdown-title{
@@ -54,6 +54,9 @@ $nav-btn-height:2.2rem;
                 }
                 padding: 5px 10px;
                 border-bottom: solid 1px #c7c7c7;
+                &:last-child{
+                    border-bottom: none;
+                }
             }
         }
         .hide-menu{
@@ -84,19 +87,38 @@ $nav-btn-height:2.2rem;
                 .nav-btn{
                     background-color: $khula-green;
                     margin: 0;
-                    height: 40px;
-                    font-size: 13px;
-                    padding: 0 10px;
-                    margin-left: 10px;
+                    height: 35px;
+                    font-size: 10px;
+                    padding: 0 16px;
+                    margin-left: 30px;
+                    a{
+                        color: inherit;
+                        text-decoration: none;
+                        height: 35px;
+                    }
+                    span{
+                        margin-left:10px;
+                        font-weight: bold;
+                    }
+                    .emoji{
+                        font-size: 18px;
+                        margin-right: 5px;
+                        margin-left:unset;
+                    }
+                }
+                .secondary{
+                    background-color: $white;
+                    color: $khula-green;
+                    border: solid 1px $khula-green;
                 }
             }
             .link{
-                height: $header-height / 3;
+                height: 1rem;
                 margin: 0 20px;
                 .nav-dropdown-title{
-                    height: $nav-btn-height;
+                    height: 1rem;
                     display: flex;
-                    align-items: center;
+                    align-items: flex-end;
                     cursor: pointer;
                 }
                 .nav-dropdown{
