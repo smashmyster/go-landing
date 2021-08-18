@@ -28,6 +28,15 @@ const Header = () => {
             <div className={`${toggleBurger ? "show-menu" : "hide-menu"}`}>
               <div className="nav-dropdown-title">
                 <a
+                  href={`https://techcrunch.com/2021/08/03/south-africas-khula-closes-1-3m-seed-to-scale-its-software-for-agriculture-platform/`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  🎉 We&apos;ve raised $1.3M
+                </a>
+              </div>
+              <div className="nav-dropdown-title">
+                <a
                   className="nav-dropdown-item"
                   href={`${BUYER_ROOT}/sign-up`}
                   target="_blank"
@@ -54,12 +63,23 @@ const Header = () => {
         ) : (
           <div className="navbar-links k-row k-row-center-items">
             <div className="k-row k-row-center-items action-call">
-              Are you a farmer? Our inputs app is live
+              <div className="btn nav-btn uppercase">
+                <a
+                  href="https://techcrunch.com/2021/08/03/south-africas-khula-closes-1-3m-seed-to-scale-its-software-for-agriculture-platform/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span className="emoji">🎉</span>
+                  WE&apos;VE RAISED $1.3M
+                  <span className="fal-long-arrow-right"></span>
+                </a>
+              </div>
               <div
-                className="btn nav-btn"
+                className="btn nav-btn uppercase secondary"
                 onClick={() => _GoToStore(undefined, "farmer")}
               >
-                Get the app
+                Get the Khula Inputs App{" "}
+                <span className="fal-long-arrow-down"></span>
               </div>
             </div>
             <div className="link">
