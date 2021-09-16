@@ -19,7 +19,7 @@ const InputsMarket = () => {
         <div className="right-section">
           <div className="bullet-point">
             <div className="bullet-header">
-              <span className="fal-store-alt"></span> One-Stop-Shop, 86+
+              <span className="fal-store-alt"></span> One-Stop-Shop, 100+
               Suppliers.
             </div>
             <div className="bullet-text">
@@ -29,10 +29,10 @@ const InputsMarket = () => {
           </div>
           <div className="bullet-point">
             <div className="bullet-header">
-              <span className="fal-chart-line"></span> 2000+ Products.
+              <span className="fal-chart-line"></span> 3000+ Products.
             </div>
             <div className="bullet-text">
-              Compare over 2000 products from local and international suppliers.
+              Compare over 3000 products from local and international suppliers.
               Find the best products, at the best price.
             </div>
           </div>
