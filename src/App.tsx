@@ -7,6 +7,8 @@ import AppLoading from "components/AppLoading/AppLoading";
 import { FIREBASE_CONFIG } from "constants/index";
 import firebase from "firebase";
 import { FirebaseAppProvider } from "reactfire";
+import { Route, Routes } from "react-router-dom";
+import GoogleForm from "screens/GoogleForm/GoogleForm";
 const logo = require("assets/images/khula-logo.svg");
 const logoSlogan = require("assets/images/khula-logo-slogan.svg");
 const truck = require("assets/images/truck.png");
@@ -35,7 +37,14 @@ const App = () => {
   }, []);
   return (
     <FirebaseAppProvider firebaseConfig={FIREBASE_CONFIG}>
-      {appLoading ? <AppLoading /> : <MainSite />}
+      {appLoading ? (
+        <AppLoading />
+      ) : (
+        <Routes>
+          <Route path="/fresh-produce" element={<GoogleForm />} />
+          <Route path="*" element={<MainSite />} />
+        </Routes>
+      )}
     </FirebaseAppProvider>
   );
 };
