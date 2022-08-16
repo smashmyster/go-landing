@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BUYER_ROOT, isMobile, _GoToStore } from "constants/index";
+import { Link } from "react-router-dom";
 const logoSlogan = require("assets/images/khula-logo-slogan.svg");
 const logo = require("assets/images/khula-logo.svg");
 
@@ -12,7 +13,9 @@ const Header = () => {
       <div className="header-contents">
         <div className="header-left">
           <div className="logo">
-            <img src={isMobile ? logo : logoSlogan} alt="logo" />
+            <Link to="/">
+              <img src={isMobile ? logo : logoSlogan} alt="logo" />
+            </Link>
           </div>
         </div>
         {isMobile ? (
