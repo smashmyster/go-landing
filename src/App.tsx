@@ -9,6 +9,8 @@ import firebase from "firebase";
 import { FirebaseAppProvider } from "reactfire";
 import { Route, Routes } from "react-router-dom";
 import GoogleForm from "screens/GoogleForm/GoogleForm";
+import Blog from "screens/Blog/Blog";
+import BlogPost from "screens/BlogPost/BlogPost";
 const logo = require("assets/images/khula-logo.svg");
 const logoSlogan = require("assets/images/khula-logo-slogan.svg");
 const truck = require("assets/images/truck.png");
@@ -42,6 +44,8 @@ const App = () => {
       ) : (
         <Routes>
           <Route path="/fresh-produce" element={<GoogleForm />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="*" element={<MainSite />} />
         </Routes>
       )}
