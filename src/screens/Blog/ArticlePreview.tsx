@@ -40,7 +40,13 @@ const ArticlePreview = (props: ArticlePreviewProps) => {
       <div className="article-tile pointer" onClick={() => post}>
         <div
           className="article-image"
-          style={{ backgroundImage: `url(https://picsum.photos/200)` }}
+          style={{
+            backgroundImage: `url(${
+              post.featured_image
+                ? post.featured_image
+                : "https://picsum.photos/200"
+            })`,
+          }}
         ></div>
         <div className="tile-copy">
           <div className="article-citation">
