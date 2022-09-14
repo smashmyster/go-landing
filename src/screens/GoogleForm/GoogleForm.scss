@@ -12,3 +12,10 @@
         width: 100%;
     }
 }
+
+@media (max-width: $breakpoint-tablet) {
+    .google-form-container{
+        height: calc(100vh - #{$header-mobile-height});
+        margin-top: $header-mobile-height;
+    }
+}
