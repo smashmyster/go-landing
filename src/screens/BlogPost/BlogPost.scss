@@ -36,8 +36,15 @@
             width: 80vw;
         }
         blockquote{
-            font-style: italic;
-            font-weight: 100;
+            color: $khula-green;
+            font-size: 20px;
+            border-left: solid 8px;
+            margin: unset;
+            border-radius: 3px;
+            padding-left: 20px;
+            height: 30px;
+            display: flex;
+            align-items: center;
         }
         figure{
             position: relative;
@@ -51,6 +58,43 @@
         }
         h2{
             font-size: 26px;
+        }
+        
+    }
+    .navigation{
+        display: flex;
+        font-weight: 500;
+        color: white;
+        margin-left: 130px;
+        width: 225px;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        .btn{
+            background-color: $khula-green;
+            width: 100px;
+            height: 27px;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            justify-content: center;
+            font-size: 10px;
+        }
+    }
+    .more-posts{
+        .more-posts-heading{
+            margin-left: 130px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .article-tile{
+            width: 20%;
+            height: 250px;
+            .article-image{
+                height: 150px;
+            }
+            .article-title{
+                font-size: 16px;
+            }
         }
     }
     

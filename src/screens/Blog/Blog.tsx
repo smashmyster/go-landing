@@ -11,7 +11,7 @@ const Blog = () => {
         "https://public-api.wordpress.com/rest/v1/sites/khulacoza.wordpress.com/posts/"
       )
       .then((res) => {
-        setPosts(res.data.posts);
+        setPosts(res?.data?.posts);
       })
       .catch((error) => console.log(error));
   }, []);
@@ -26,7 +26,7 @@ const Blog = () => {
       <div className="article-tiles-container">
         {posts &&
           posts.map((post: any, index: any) => (
-            <ArticlePreview key={index} post={post} />
+            <ArticlePreview key={index} post={post} showPreview={true} />
           ))}
       </div>
     </div>
