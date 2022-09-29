@@ -1,5 +1,5 @@
 .blog-page-title {
-    font-size: 24px;
+    font-size: 50px;
     font-weight: 600;
     color: $khula-charcoal;
     margin-left: 130px;
@@ -7,7 +7,7 @@
     display: flex;
 }
 .blog-page-sub-title {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 500;
     color: $khula-charcoal;
     display: flex;
@@ -58,5 +58,27 @@
     }
     .article-tile:hover{
         box-shadow: 0px 0px 20px #4A794680;
+    }
+}
+@media (max-width: $breakpoint-tablet) {
+    .blog-page-title{
+        font-size: 30px;
+        margin-top: 70px;
+        margin-left: 18px;
+    }
+    .blog-page-sub-title{
+        margin-left: 18px;
+        font-size: 16px;
+    }
+    .article-tiles-container{
+        margin: 30px auto;
+        .article-tile{
+            margin: 10px;
+            width: 90%;
+            height: 370px;
+            .article-image {
+                height: 190px;
+            }
+        }
     }
 }
