@@ -31,6 +31,7 @@ const BlogPost = () => {
   useEffect(() => {
     const post = posts.find((it: any) => params.id == it.ID);
     setPost(post);
+    window.scrollTo(0, 0);
   }, [posts, params.id]);
 
   const formatDate = (date: any) => {
