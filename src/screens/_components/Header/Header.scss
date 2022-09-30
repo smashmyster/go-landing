@@ -44,7 +44,7 @@ $nav-btn-height:2.2rem;
             border-radius: 3px;
             position: absolute;
             right: 10px;
-            height: 100px;
+            height: fit-content;
             display: block;
             background-color: $white;
             .nav-dropdown-title{

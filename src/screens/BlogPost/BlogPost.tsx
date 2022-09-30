@@ -8,10 +8,12 @@ import ArticlePreview from "screens/Blog/ArticlePreview";
 import Contact from "screens/Contact/Contact";
 import Footer from "screens/_components/Footer/Footer";
 import Intercom from "components/Intercom/Intercom";
+import Loader from "components/Loader/Loader";
 
 const BlogPost = () => {
   const [posts, setPosts] = useState<Array<any>>([]);
   const [post, setPost] = useState<any>();
+  const [loading, setLoading] = useState<boolean>(true);
   const params = useParams();
 
   useEffect(() => {
@@ -21,6 +23,7 @@ const BlogPost = () => {
       )
       .then((res) => {
         setPosts(res?.data?.posts);
+        setLoading(false);
       })
       .catch((error) => console.log(error));
   }, []);
@@ -28,6 +31,7 @@ const BlogPost = () => {
   useEffect(() => {
     const post = posts.find((it: any) => params.id == it.ID);
     setPost(post);
+    window.scrollTo(0, 0);
   }, [posts, params.id]);
 
   const formatDate = (date: any) => {
@@ -57,15 +61,21 @@ const BlogPost = () => {
             posts
           </div>
         </Link>
-        <div className="blog-post-container">
-          <div className="blog-author">
-            Written by {post?.author?.name} | {formatDate(post?.date)}{" "}
+        {loading ? (
+          <div style={{ height: "100vh" }}>
+            <Loader />
           </div>
-          <div className="blog-title">{post?.title} </div>
-          <div className="blog-content">
-            <DOMParserReact source={post?.content ?? ""} />
+        ) : (
+          <div className="blog-post-container">
+            <div className="blog-author">
+              Written by {post?.author?.name} | {formatDate(post?.date)}{" "}
+            </div>
+            <div className="blog-title">{post?.title} </div>
+            <div className="blog-content">
+              <DOMParserReact source={post?.content ?? ""} />
+            </div>
           </div>
-        </div>
+        )}
         <div className="navigation">
           <Link to="/blog">
             <div className="btn pointer">Go back to all posts</div>
@@ -76,7 +86,10 @@ const BlogPost = () => {
         </div>
         <div className="more-posts">
           <div className="more-posts-heading">You may also like</div>
-          <div className="article-tiles-container">
+          <div
+            className="article-tiles-container"
+            style={{ paddingBottom: 50 }}
+          >
             {posts.slice(0, 4).map((post: any) => (
               <ArticlePreview post={post} key={1} />
             ))}
