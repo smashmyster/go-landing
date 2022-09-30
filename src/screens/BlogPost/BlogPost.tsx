@@ -76,7 +76,10 @@ const BlogPost = () => {
         </div>
         <div className="more-posts">
           <div className="more-posts-heading">You may also like</div>
-          <div className="article-tiles-container">
+          <div
+            className="article-tiles-container"
+            style={{ paddingBottom: 50 }}
+          >
             {posts.slice(0, 4).map((post: any) => (
               <ArticlePreview post={post} key={1} />
             ))}
