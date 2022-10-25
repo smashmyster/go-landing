@@ -21,8 +21,10 @@
         flex-direction: column;
         align-items: center;
         margin: 0 400px;
-        text-align: justify;
-
+        
+        h1,h2,h3,h4,h5{
+            letter-spacing: 2px;
+        }
         .blog-author{
             font-size: 14px;
             font-weight: 100;
@@ -30,15 +32,18 @@
         }
         .blog-title{
             font-size: 50px;
-            font-weight: 600;
+            font-weight: 500;
             margin-top: 16px;
+            line-height: 75px;
+            letter-spacing: 2px;
         }
         .blog-content{
             position: relative;
             margin-top: 30px;
-            font-weight: 500;
+            font-weight: 200;
             font-size: 16px;
             width: 45vw;
+            text-align: justify;
         }
         blockquote{
             color: $khula-green;
@@ -116,7 +121,7 @@
                 height: 150px;
             }
             .article-title{
-                font-size: 16px;
+                font-size: 14px;
             }
         }
     }
