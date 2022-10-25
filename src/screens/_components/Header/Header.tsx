@@ -58,6 +58,16 @@ const Header = () => {
                   Sign In
                 </a>
               </div>
+              <div className="nav-dropdown-title">
+                <a
+                  className="nav-dropdown-item"
+                  href={`/blog`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Blog
+                </a>
+              </div>
               <div className="nav-dropdown-title intercom-ic-launch">
                 Contact Us
               </div>
@@ -84,6 +94,11 @@ const Header = () => {
                 Get the Khula Inputs App{" "}
                 <span className="fal-long-arrow-down"></span>
               </div>
+            </div>
+            <div className="link">
+              <Link to="/blog" className="nav-dropdown-title">
+                Blog
+              </Link>
             </div>
             <div className="link">
               <div className="nav-dropdown-title intercom-ic-launch">

@@ -1,0 +1,183 @@
+.blog-post{
+    color: $khula-charcoal !important;
+
+    a{
+        text-decoration: none !important;
+    }
+    
+    .back-btn{
+        font-size: 14px;
+        font-weight: 500;
+        margin: 30px 0 50px;
+        margin-left: 130px;
+        color: $khula-charcoal !important;
+        height: 20px;
+        span{
+            margin-right: 10px;
+        }
+    }
+    .blog-post-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 400px;
+        
+        h1,h2,h3,h4,h5{
+            letter-spacing: 2px;
+        }
+        .blog-author{
+            font-size: 14px;
+            font-weight: 100;
+            margin-top: 30px;
+        }
+        .blog-title{
+            font-size: 50px;
+            font-weight: 500;
+            margin-top: 16px;
+            line-height: 75px;
+            letter-spacing: 2px;
+        }
+        .blog-content{
+            position: relative;
+            margin-top: 30px;
+            font-weight: 200;
+            font-size: 16px;
+            width: 45vw;
+            text-align: justify;
+        }
+        blockquote{
+            color: $khula-green;
+            font-size: 24px;
+            border-left: solid 8px;
+            margin: unset;
+            border-radius: 10px;
+            padding: 5px 20px;
+            height: 30px;
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+            height: fit-content;
+            margin-bottom: 15px;
+            p{
+                margin: 0 !important;
+            }
+        }
+        cite{
+            font-size: 16px;
+            font-style: normal;
+            margin-top: 5px;
+        }
+        figure{
+            position: relative;
+            margin: unset;
+            text-align: center;
+            img{
+                border-radius: 5px;
+                width: 100%;
+                height: auto;
+                aspect-ratio: unset;
+            }
+        }
+        h2{
+            font-size: 26px;
+        }
+        
+    }
+    .navigation{
+        display: flex;
+        font-weight: 500;
+        color: white;
+        margin: 0 395px;
+        width: 270px;
+        justify-content: space-between;
+        margin-bottom: 100px;
+        .btn{
+            background-color: $khula-green;
+            width: 125px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 100;
+        }
+    }
+    .more-posts{
+        border-top: solid 1px #c7c7c7;
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .more-posts-heading{
+            margin-left: 130px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .article-tile{
+            width: 20%;
+            height: 250px;
+            .article-image{
+                height: 150px;
+            }
+            .article-title{
+                font-size: 14px;
+            }
+        }
+    }
+    
+}
+@media (max-width: $breakpoint-tablet) {
+    .blog-post{
+        .back-btn{
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 100px;
+            margin-left: 18px;
+        }
+        .blog-post-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 50px;
+            .blog-title{
+                font-size: 30px;
+                text-align: center;
+            }
+            .blog-content{
+                width: 80vw;
+            }
+           
+        }
+        .navigation{
+            margin: 0 50px;
+            width: 270px;
+            margin-bottom: 60px;
+        }
+        .more-posts{
+            border-top: solid 1px #c7c7c7;
+            padding-top: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+
+            .more-posts-heading{
+                margin-left: 0px;
+                font-size: 24px;
+                font-weight: 600;
+            }
+            .article-tile{
+                width: 90%;
+                height: 280px;
+                .article-image{
+                    height: 130px;
+                }
+                .article-title{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    
+}
