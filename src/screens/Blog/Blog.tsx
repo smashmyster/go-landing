@@ -40,11 +40,9 @@ const Blog = () => {
         ) : (
           <div className="article-tiles-container">
             {posts &&
-              posts
-                .slice(0, 4)
-                .map((post: any, index: any) => (
-                  <ArticlePreview key={index} post={post} showPreview={true} />
-                ))}
+              posts.map((post: any, index: any) => (
+                <ArticlePreview key={index} post={post} showPreview={true} />
+              ))}
           </div>
         )}
         <Contact />
