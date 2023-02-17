@@ -1,6 +1,6 @@
 import React from "react";
 const aeci = require("assets/images/aeci.png");
-const e2 = require("assets/images/e2.png");
+const e2 = require("assets/images/esquared-logo.png");
 const sakata = require("assets/images/sakata.png");
 const absa = require("assets/images/absa.png");
 const msd = require("assets/images/msd.png");
@@ -16,7 +16,7 @@ const Stakeholders = () => {
         The power of our network means gaining value from all members of the
         ecosystem.
       </div>
-      <div className="stakeholder-logos row">
+      <div className="stakeholder-logos">
         <img src={aeci} alt="AECI logo" className="logo-img" />
         <img src={absa} alt="Absa logo" className="logo-img" />
         <img src={e2} alt="E-Squared logo" className="logo-img" />
