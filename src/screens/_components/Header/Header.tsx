@@ -3,6 +3,7 @@ import { BUYER_ROOT, isMobile, _GoToStore } from "constants/index";
 import { Link } from "react-router-dom";
 const logoSlogan = require("assets/images/khula-logo-slogan.svg");
 const logo = require("assets/images/khula-logo.svg");
+const absalogo = require("assets/images/absalogo.svg");
 
 const Header = () => {
   const [loginOpen, setLoginOpen] = useState<boolean>(false);
@@ -31,11 +32,14 @@ const Header = () => {
             <div className={`${toggleBurger ? "show-menu" : "hide-menu"}`}>
               <div className="nav-dropdown-title">
                 <a
-                  href={`https://techcrunch.com/2021/08/03/south-africas-khula-closes-1-3m-seed-to-scale-its-software-for-agriculture-platform/`}
+                  href={`https://www.foodformzansi.co.za/icymi-khula-and-absa-to-revolutionise-agritech/`}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  🎉 We&apos;ve raised $1.3M
+                  <div className="row-center">
+                    🎉 We&apos;ve partnered with
+                    <img src={absalogo} className="ml-1 w-10" />
+                  </div>
                 </a>
               </div>
               <div className="nav-dropdown-title">
@@ -76,14 +80,15 @@ const Header = () => {
         ) : (
           <div className="navbar-links k-row k-row-center-items">
             <div className="k-row k-row-center-items action-call">
-              <div className="btn nav-btn uppercase">
+              <div className="btn nav-btn uppercase secondary">
                 <a
-                  href="https://techcrunch.com/2021/08/03/south-africas-khula-closes-1-3m-seed-to-scale-its-software-for-agriculture-platform/"
+                  href="https://www.foodformzansi.co.za/icymi-khula-and-absa-to-revolutionise-agritech/"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <span className="emoji">🎉</span>
-                  WE&apos;VE RAISED $1.3M
+                  WE&apos;VE PARTNERED WITH ABSA
+                  <img src={absalogo} className="ml-2 w-12" />
                   <span className="fal-long-arrow-right"></span>
                 </a>
               </div>
