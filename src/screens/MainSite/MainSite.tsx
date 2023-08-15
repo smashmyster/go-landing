@@ -1,19 +1,18 @@
 import React from "react";
 import { ScrollingProvider, Section } from "react-scroll-section";
-import Landing from "screens/Landing/Landing";
-import Stakeholders from "screens/Stakeholders/Stakeholders";
-import ProductDetails from "screens/ProductDetails/ProductDetails";
-import InputsMarket from "screens/InputsMarket/InputsMarket";
-import ProduceMarket from "screens/ProduceMarket/ProduceMarket";
-import FreshProduceBenefits from "screens/FreshProduceBenefits/FreshProduceBenefits";
-import Testimonies from "screens/Testimonies/Testimonies";
-import Contact from "screens/Contact/Contact";
-import SectionNavigation from "screens/_components/SectionNavigation/SectionNavigation";
-import Header from "screens/_components/Header/Header";
-import Footer from "screens/_components/Footer/Footer";
-import { EScrollSectionIds, isMobile } from "./constants";
+import Landing from "./Landing/Landing";
+import Stakeholders from "./Stakeholders/Stakeholders";
+import ProductDetails from "./ProductDetails/ProductDetails";
+import InputsMarket from "./InputsMarket/InputsMarket";
+import ProduceMarket from "./ProduceMarket/ProduceMarket";
+import FreshProduceBenefits from "./FreshProduceBenefits/FreshProduceBenefits";
+import Testimonies from "./Testimonies/Testimonies";
+import Contact from "./Contact/Contact";
+import SectionNavigation from "./_components/SectionNavigation/SectionNavigation";
+import Header from "./_components/Header/Header";
+import Footer from "./_components/Footer/Footer";
+import { EScrollSectionIds, isMobile } from "../../constants";
 import Intercom from "components/Intercom/Intercom";
-import LaunchVideo from "screens/LaunchVideo/LaunchVideo";
 
 const MainSite = () => {
   return (
@@ -26,10 +25,8 @@ const MainSite = () => {
         >
           <Header />
           <div className="section">
-            {/* <CovidBanner /> */}
             <Landing />
             <SectionNavigation />
-            <LaunchVideo />
             <Stakeholders />
             <Section id={EScrollSectionIds.INPUTSMARKET}>
               <ProductDetails />

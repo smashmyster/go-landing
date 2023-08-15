@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "App.css";
 import "assets/styles/index.css";
 import "assets/styles/fonts/icomoon/style.css";
-import MainSite from "MainSite";
+import MainSite from "screens/MainSite/MainSite";
 import AppLoading from "components/AppLoading/AppLoading";
 import { FIREBASE_CONFIG } from "constants/index";
 import firebase from "firebase";

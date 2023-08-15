@@ -2,9 +2,9 @@ import axios from "axios";
 import Intercom from "components/Intercom/Intercom";
 import Loader from "components/Loader/Loader";
 import React, { useEffect, useState } from "react";
-import Contact from "screens/Contact/Contact";
-import Footer from "screens/_components/Footer/Footer";
-import Header from "screens/_components/Header/Header";
+import Contact from "screens/MainSite/Contact/Contact";
+import Footer from "screens/MainSite/_components/Footer/Footer";
+import Header from "screens/MainSite/_components/Header/Header";
 import ArticlePreview from "./ArticlePreview";
 
 const Blog = () => {

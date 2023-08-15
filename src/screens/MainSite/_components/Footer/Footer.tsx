@@ -39,28 +39,28 @@ const Footer = () => {
           <a
             href="https://www.facebook.com/khulaapp"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             <span className="fab-facebook pointer"></span>
           </a>
           <a
             href="https://www.instagram.com/khula_ecosystem/?hl=en"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             <span className="fab-instagram pointer"></span>
           </a>
           <a
             href="https://twitter.com/khulaecosystem"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             <span className="fab-twitter pointer"></span>
           </a>
           <a
             href="https://www.linkedin.com/company/khulaagriculturetechnology"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             <span className="fab-linkedin pointer"></span>
           </a>

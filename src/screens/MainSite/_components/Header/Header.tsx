@@ -34,11 +34,14 @@ const Header = () => {
                 <a
                   href={`https://www.foodformzansi.co.za/icymi-khula-and-absa-to-revolutionise-agritech/`}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   <div className="row-center">
-                    🎉 We&apos;ve partnered with
-                    <img src={absalogo} className="ml-1 w-10" />
+                    <span role="img" aria-label="celebration">
+                      🎉
+                    </span>{" "}
+                    We&apos;ve partnered with
+                    <img src={absalogo} alt="absa-logo" className="ml-1 w-10" />
                   </div>
                 </a>
               </div>
@@ -84,11 +87,13 @@ const Header = () => {
                 <a
                   href="https://www.foodformzansi.co.za/icymi-khula-and-absa-to-revolutionise-agritech/"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
-                  <span className="emoji">🎉</span>
+                  <span className="emoji" role="img" aria-label="celebration">
+                    🎉
+                  </span>
                   WE&apos;VE PARTNERED WITH ABSA
-                  <img src={absalogo} className="ml-2 w-12" />
+                  <img src={absalogo} alt="absa-logo" className="ml-2 w-12" />
                   <span className="fal-long-arrow-right"></span>
                 </a>
               </div>
@@ -126,14 +131,12 @@ const Header = () => {
                   >
                     <span className="item-name">Trader web</span>
                   </a>
-                  <a
+                  <div
                     className="nav-dropdown-item pointer"
                     onClick={() => _GoToStore(undefined, "farmer")}
-                    target="_blank"
-                    rel="noopener noreferrer"
                   >
                     <span className="item-name">Inputs app</span>
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -153,14 +156,12 @@ const Header = () => {
                   >
                     <span className="item-name">Trader web</span>
                   </a>
-                  <a
+                  <div
                     className="nav-dropdown-item pointer"
                     onClick={() => _GoToStore(undefined, "farmer")}
-                    target="_blank"
-                    rel="noopener noreferrer"
                   >
                     <span className="item-name">Inputs app</span>
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>

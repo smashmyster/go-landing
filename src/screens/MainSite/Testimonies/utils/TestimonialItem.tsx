@@ -38,7 +38,7 @@ ITestimonialItemProps) => {
         <img
           className="testimonial-image"
           src={image}
-          alt={`Profile picture of ${name}, ${position}`}
+          alt={`Profile of ${name}, ${position}`}
           style={{
             objectPosition:
               isMobile && name === "Juan Harmse" ? "left" : "unset",

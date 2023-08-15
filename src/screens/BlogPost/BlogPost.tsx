@@ -1,12 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import Header from "screens/_components/Header/Header";
+import { useNavigate, useParams } from "react-router-dom";
+import Header from "screens/MainSite/_components/Header/Header";
 import { Link } from "react-router-dom";
 import DOMParserReact from "dom-parser-react";
 import ArticlePreview from "screens/Blog/ArticlePreview";
-import Contact from "screens/Contact/Contact";
-import Footer from "screens/_components/Footer/Footer";
+import Contact from "screens/MainSite/Contact/Contact";
+import Footer from "screens/MainSite/_components/Footer/Footer";
 import Intercom from "components/Intercom/Intercom";
 import Loader from "components/Loader/Loader";
 
@@ -15,6 +15,10 @@ const BlogPost = () => {
   const [post, setPost] = useState<any>();
   const [loading, setLoading] = useState<boolean>(true);
   const params = useParams();
+  const navigate = useNavigate();
+  const goBack = () => {
+    navigate(-1);
+  };
 
   useEffect(() => {
     axios
@@ -29,7 +33,7 @@ const BlogPost = () => {
   }, []);
 
   useEffect(() => {
-    const post = posts.find((it: any) => params.id == it.ID);
+    const post = posts.find((it: any) => String(params.id) === String(it.ID));
     setPost(post);
     window.scrollTo(0, 0);
   }, [posts, params.id]);
@@ -55,12 +59,9 @@ const BlogPost = () => {
       <Intercom />
       <div className="blog-post App roboto k-row-center-items">
         <Header />
-        <Link to="/blog">
-          <div className="back-btn pointer">
-            <span className="fal-long-arrow-left pointer"></span>Back to all
-            posts
-          </div>
-        </Link>
+        <div onClick={() => goBack()} className="back-btn pointer">
+          <span className="fal-long-arrow-left pointer"></span>Back
+        </div>
         {loading ? (
           <div style={{ height: "100vh" }}>
             <Loader />
