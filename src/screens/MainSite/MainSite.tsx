@@ -13,6 +13,7 @@ import Header from "./_components/Header/Header";
 import Footer from "./_components/Footer/Footer";
 import { EScrollSectionIds, isMobile } from "../../constants";
 import Intercom from "components/Intercom/Intercom";
+import Blogs from "./Blogs/Blogs";
 
 const MainSite = () => {
   return (
@@ -27,6 +28,7 @@ const MainSite = () => {
           <div className="section">
             <Landing />
             <SectionNavigation />
+            <Blogs />
             <Stakeholders />
             <Section id={EScrollSectionIds.INPUTSMARKET}>
               <ProductDetails />

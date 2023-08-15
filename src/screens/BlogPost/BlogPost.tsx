@@ -9,6 +9,7 @@ import Contact from "screens/MainSite/Contact/Contact";
 import Footer from "screens/MainSite/_components/Footer/Footer";
 import Intercom from "components/Intercom/Intercom";
 import Loader from "components/Loader/Loader";
+import { POSTS_API } from "constants/index";
 
 const BlogPost = () => {
   const [posts, setPosts] = useState<Array<any>>([]);
@@ -22,9 +23,7 @@ const BlogPost = () => {
 
   useEffect(() => {
     axios
-      .get(
-        `https://public-api.wordpress.com/rest/v1/sites/khulacoza.wordpress.com/posts/`
-      )
+      .get(POSTS_API)
       .then((res) => {
         setPosts(res?.data?.posts);
         setLoading(false);

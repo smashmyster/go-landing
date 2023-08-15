@@ -6,15 +6,14 @@ import Contact from "screens/MainSite/Contact/Contact";
 import Footer from "screens/MainSite/_components/Footer/Footer";
 import Header from "screens/MainSite/_components/Header/Header";
 import ArticlePreview from "./ArticlePreview";
+import { POSTS_API } from "constants/index";
 
 const Blog = () => {
   const [posts, setPosts] = useState<any>();
   const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
     axios
-      .get(
-        "https://public-api.wordpress.com/rest/v1/sites/khulacoza.wordpress.com/posts/"
-      )
+      .get(POSTS_API)
       .then((res) => {
         setPosts(res?.data?.posts);
         setLoading(false);
