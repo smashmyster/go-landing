@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Header from "screens/_components/Header/Header";
+import Header from "screens/MainSite/_components/Header/Header";
 
 const GoogleForm = () => {
   useEffect(() => {}, []);

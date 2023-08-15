@@ -2,19 +2,18 @@ import axios from "axios";
 import Intercom from "components/Intercom/Intercom";
 import Loader from "components/Loader/Loader";
 import React, { useEffect, useState } from "react";
-import Contact from "screens/Contact/Contact";
-import Footer from "screens/_components/Footer/Footer";
-import Header from "screens/_components/Header/Header";
+import Contact from "screens/MainSite/Contact/Contact";
+import Footer from "screens/MainSite/_components/Footer/Footer";
+import Header from "screens/MainSite/_components/Header/Header";
 import ArticlePreview from "./ArticlePreview";
+import { POSTS_API } from "constants/index";
 
 const Blog = () => {
   const [posts, setPosts] = useState<any>();
   const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
     axios
-      .get(
-        "https://public-api.wordpress.com/rest/v1/sites/khulacoza.wordpress.com/posts/"
-      )
+      .get(POSTS_API)
       .then((res) => {
         setPosts(res?.data?.posts);
         setLoading(false);

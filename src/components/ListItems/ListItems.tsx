@@ -1,6 +1,6 @@
 import React from "react";
 import { IListItems } from "../../constants/interfaces";
-import TitleLine from "screens/_components/Footer/TitleLine";
+import TitleLine from "screens/MainSite/_components/Footer/TitleLine";
 type ListItemProps = {
   listItem: IListItems;
   className?: string;

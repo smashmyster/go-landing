@@ -8,6 +8,8 @@ export const BUYER_ROOT = config[environment].BUYER_ROOT;
 export const FARMER_ROOT = config[environment].FARMER_ROOT;
 export const GRAPH_API = config[environment].GRAPH_API;
 export const FIREBASE_CONFIG = config[environment].FIREBASE_CONFIG;
+export const POSTS_API =
+  "https://public-api.wordpress.com/rest/v1/sites/khulacoza.wordpress.com/posts/";
 
 export const _GetImagePath = (name: string) =>
   name ? `${IMAGE_API_ROOT}${name.replace(/ /g, "").toLowerCase()}.png` : "";
