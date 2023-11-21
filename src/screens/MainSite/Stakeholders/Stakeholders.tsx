@@ -1,3 +1,4 @@
+import { isMobile } from "constants/index";
 import React from "react";
 const aeci = require("assets/images/aeci.png");
 const e2 = require("assets/images/esquared-logo.png");
@@ -7,6 +8,7 @@ const msd = require("assets/images/msd.png");
 const landbank = require("assets/images/landbank.png");
 const idc = require("assets/images/idc.png");
 const afgri = require("assets/images/AFGRI.png");
+const pepsicologo = require("assets/images/pepsico-logo.jpeg");
 
 const Stakeholders = () => {
   return (
@@ -25,6 +27,12 @@ const Stakeholders = () => {
         <img src={msd} alt="logo" className="logo-img" />
         <img src={idc} alt="logo" className="logo-img" />
         <img src={afgri} alt="logo" className="logo-img" />
+        <img
+          src={pepsicologo}
+          alt="logo"
+          className="logo-img"
+          style={!isMobile ? { height: 80 } : {}}
+        />
       </div>
     </div>
   );

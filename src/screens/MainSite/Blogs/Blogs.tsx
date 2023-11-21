@@ -2,18 +2,17 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { POSTS_API } from "constants/index";
 import ArticlePreview from "screens/Blog/ArticlePreview";
+import BlogsLoader from "./components/BlogsLoader";
 
-type BlogsProps = {};
-
-const Blogs = (props: BlogsProps) => {
+const Blogs = () => {
   const [posts, setPosts] = useState<any>();
-  // const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
     axios
       .get(POSTS_API)
       .then((res) => {
         setPosts((res?.data?.posts || []).slice(0, 3));
-        //   setLoading(false);
+        setLoading(false);
       })
       .catch((error) => console.log(error));
   }, []);
@@ -25,9 +24,11 @@ const Blogs = (props: BlogsProps) => {
           We write about agriculture, technology, new KHULA updates and more.
         </div>
         <div className="article-tiles-container">
-          {posts?.map((post: any, index: any) => (
-            <ArticlePreview key={index} post={post} showPreview={true} />
-          ))}
+          {loading
+            ? [1, 2, 3].map((i) => <BlogsLoader key={i} />)
+            : posts?.map((post: any, index: any) => (
+                <ArticlePreview key={index} post={post} showPreview={true} />
+              ))}
         </div>
       </>
     </div>
