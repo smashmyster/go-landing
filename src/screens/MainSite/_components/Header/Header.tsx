@@ -3,7 +3,7 @@ import { BUYER_ROOT, isMobile, _GoToStore } from "constants/index";
 import { Link } from "react-router-dom";
 const logoSlogan = require("assets/images/khula-logo-slogan.svg");
 const logo = require("assets/images/khula-logo.svg");
-const absalogo = require("assets/images/absalogo.svg");
+const pepsicologo = require("assets/images/pepsico-logo-inline.png");
 
 const Header = () => {
   const [loginOpen, setLoginOpen] = useState<boolean>(false);
@@ -32,7 +32,7 @@ const Header = () => {
             <div className={`${toggleBurger ? "show-menu" : "hide-menu"}`}>
               <div className="nav-dropdown-title">
                 <a
-                  href={`https://www.foodformzansi.co.za/icymi-khula-and-absa-to-revolutionise-agritech/`}
+                  href={`https://www.foodformzansi.co.za/kgodiso-fund-backs-khula-to-empower-mzansi-farmers/`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -40,8 +40,13 @@ const Header = () => {
                     <span role="img" aria-label="celebration">
                       🎉
                     </span>{" "}
-                    We&apos;ve partnered with
-                    <img src={absalogo} alt="absa-logo" className="ml-1 w-10" />
+                    We&apos;ve raised from
+                    <img
+                      src={pepsicologo}
+                      alt="absa-logo"
+                      className="ml-1 w-26"
+                      style={{ marginBottom: 7 }}
+                    />
                   </div>
                 </a>
               </div>
@@ -85,15 +90,20 @@ const Header = () => {
             <div className="k-row k-row-center-items action-call">
               <div className="btn nav-btn uppercase secondary">
                 <a
-                  href="https://www.foodformzansi.co.za/icymi-khula-and-absa-to-revolutionise-agritech/"
+                  href="https://www.foodformzansi.co.za/kgodiso-fund-backs-khula-to-empower-mzansi-farmers/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <span className="emoji" role="img" aria-label="celebration">
                     🎉
                   </span>
-                  WE&apos;VE PARTNERED WITH ABSA
-                  <img src={absalogo} alt="absa-logo" className="ml-2 w-12" />
+                  WE&apos;VE RAISED FROM
+                  <img
+                    src={pepsicologo}
+                    alt="absa-logo"
+                    className="ml-2 w-36"
+                    style={{ marginBottom: 10 }}
+                  />
                   <span className="fal-long-arrow-right"></span>
                 </a>
               </div>

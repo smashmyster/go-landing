@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="contact">
         <div className="s-header">Contact</div>
         <div className="">
-          <span className="fal-mobile-alt"></span>+27 72 875 5331
+          <span className="fal-mobile-alt"></span>+27 63 933 6375
         </div>
         <div className="">
           <span className="fal-envelope"></span>info@khula.co.za
