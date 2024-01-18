@@ -17,7 +17,8 @@ export const isMobile = window.innerWidth < 768;
 
 export const _GoToStore = (
   platform?: "android" | "ios",
-  type?: "buyer" | "farmer"
+  type?: "buyer" | "farmer",
+  shouldReturnPath?: boolean
 ) => {
   let link = "";
   const generalIos =
@@ -48,6 +49,8 @@ export const _GoToStore = (
     link =
       type === "farmer" ? farmerApp : type === "buyer" ? clientApp : generalApp;
   }
+  console.log({ link });
+  if (shouldReturnPath) return link;
   window.open(link, "_blank");
 };
 
